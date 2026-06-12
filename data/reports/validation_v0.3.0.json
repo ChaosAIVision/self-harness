@@ -1,0 +1,35 @@
+[
+  {
+    "proposal_id": "p_001",
+    "harness_version": "v0.2.0_cand",
+    "delta_in": 0.031746031746031744,
+    "delta_out": 0.12698412698412698,
+    "agreement_in": 0.6666666666666666,
+    "agreement_out": 0.746031746031746,
+    "baseline_in": 0.6349206349206349,
+    "baseline_out": 0.6190476190476191,
+    "accepted": true
+  },
+  {
+    "proposal_id": "p_002",
+    "harness_version": "v0.2.0_cand",
+    "delta_in": 0.05555555555555558,
+    "delta_out": 0.0793650793650793,
+    "agreement_in": 0.6904761904761905,
+    "agreement_out": 0.6984126984126984,
+    "baseline_in": 0.6349206349206349,
+    "baseline_out": 0.6190476190476191,
+    "accepted": true
+  },
+  {
+    "proposal_id": "p_003",
+    "harness_version": "v0.2.0_cand",
+    "delta_in": 0.00793650793650802,
+    "delta_out": 0.09523809523809523,
+    "agreement_in": 0.6428571428571429,
+    "agreement_out": 0.7142857142857143,
+    "baseline_in": 0.6349206349206349,
+    "baseline_out": 0.6190476190476191,
+    "accepted": true
+  }
+]
