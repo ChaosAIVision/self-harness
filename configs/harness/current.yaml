@@ -1,0 +1,6 @@
+based_on: v0.1.0
+delta_in: 0.015873015873015817
+delta_out: 0.19047619047619047
+promoted_proposal: p_001
+system_prompt_file: /home/chaos/Documents/chaos/self-harness/configs/harness/versions/v0.2.0.md
+version: v0.2.0

@@ -1,0 +1,8 @@
+version: v0.1.0
+description: "Base harness - original system prompt from PROMPT.md"
+system_prompt_file: prompts/system.md
+editable_surfaces:
+  - system_prompt
+policy:
+  temperature: 0
+  output_format: json_list

@@ -1,0 +1,26 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "Empathy overgeneralization",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* Genuine empathy or soothing language requires more than minimal acknowledgments (e.g., 'Dạ', 'Ừ rồi dạ chị'). Look for explicit empathetic content such as recognizing customer feelings or concerns.",
+    "expected_gain": "Reduce false positives marking minimal polite responses as empathy, improving accuracy on làm_dịu steps.",
+    "risk": "May cause some borderline empathetic utterances to be missed if too strict."
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "Clarifying question misclassification",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* Clarifying questions must be open-ended and aimed at understanding customer refusal reasons; simple repeats or closed yes/no questions do NOT qualify as làm_rõ.",
+    "expected_gain": "Improve detection of genuine clarifying questions, reducing false positives on làm_rõ steps.",
+    "risk": "May miss some borderline clarifications that are semi-open-ended or context-dependent."
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "Incomplete transcript false positives",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to SOURCE DATA LOGIC:\n\n* If transcript ends early or customer does not complete refusal rounds, do NOT mark làm_dịu, làm_rõ, or làm_hài_lòng steps in later rounds as successful without clear evidence of telesales action.",
+    "expected_gain": "Reduce false positives on steps 7-9 when calls end prematurely or refusals are incomplete.",
+    "risk": "May under-score some valid late-round actions if transcript is partial but telesales acted correctly."
+  }
+]

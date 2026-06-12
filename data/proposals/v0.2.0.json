@@ -1,0 +1,26 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "làm_dịu minimal acknowledgments false positive",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, require genuine empathetic or soothing language beyond minimal acknowledgments like 'Dạ', 'Ừm', or 'rồi dạ'. Minimal polite cues alone do NOT qualify as làm_dịu success.",
+    "expected_gain": "Reduce false positives where minimal polite acknowledgments are incorrectly scored as làm_dịu success, improving agreement on empathy detection.",
+    "risk": "May increase false negatives if telesales use subtle empathy not clearly verbalized; requires careful balance."
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "làm_rõ closed or irrelevant questions false positive",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_rõ steps, confirm that questions are open-ended or clarifying to understand customer objections or needs. Closed or irrelevant questions do NOT qualify as làm_rõ success.",
+    "expected_gain": "Reduce false positives where closed or irrelevant questions are incorrectly scored as làm_rõ success, improving accuracy in clarifying intent detection.",
+    "risk": "May miss borderline clarifying questions that are somewhat closed; slight increase in false negatives possible."
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "làm_dịu incomplete or abrupt ending false positive",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, verify that telesales complete a genuine soothing attempt; abrupt call endings or silence do NOT qualify as làm_dịu success.",
+    "expected_gain": "Reduce false positives where abrupt endings or incomplete soothing attempts are incorrectly scored as làm_dịu success, improving detection of genuine empathy.",
+    "risk": "May penalize calls with genuine but brief empathy if not clearly articulated; slight risk of false negatives."
+  }
+]

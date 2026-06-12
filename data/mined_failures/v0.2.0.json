@@ -1,0 +1,72 @@
+{
+  "harness_version": "v0.2.0",
+  "total_calls": 14,
+  "total_steps": 126,
+  "overall_agreement": 0.6349206349206349,
+  "clusters": [
+    {
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 15,
+      "pattern": "Model incorrectly labels lack of empathy or soothing language as present; telesales only use minimal acknowledgments ('Dạ', 'Ừm', 'rồi dạ') without genuine empathetic or soothing responses.",
+      "mechanism": "The model's rule for làm_dịu relies on presence of polite or minimal verbal cues rather than detecting true empathetic content or emotional engagement, leading to false positives when only generic acknowledgments are present.",
+      "representative_cases": [
+        "call=C-117557096 step=1",
+        "call=C-117557096 step=4",
+        "call=C-117557096 step=7"
+      ]
+    },
+    {
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "source_types": [],
+      "count": 8,
+      "pattern": "Model marks làm_rõ as done despite telesales failing to ask open-ended or clarifying questions to understand customer objections or needs.",
+      "mechanism": "The model's criteria for làm_rõ may be triggered by any question or statement, without verifying if the question is open-ended or truly clarifying, causing false positives when telesales ask closed or irrelevant questions.",
+      "representative_cases": [
+        "call=C-118283047 step=2",
+        "call=C-118283047 step=5",
+        "call=NEMO22575977581 step=2"
+      ]
+    },
+    {
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "source_types": [],
+      "count": 7,
+      "pattern": "Model marks làm_hài_lòng as present when telesales only mention benefits or programs superficially without providing concrete solutions or effective objection handling.",
+      "mechanism": "The model's detection of làm_hài_lòng relies on presence of keywords related to benefits or promotions, missing the need for actual customer satisfaction or resolution of objections.",
+      "representative_cases": [
+        "call=C-118283047 step=3",
+        "call=C-118283047 step=6",
+        "call=C-118283047 step=9"
+      ]
+    },
+    {
+      "step_id": 4,
+      "step_type": "làm_dịu|làm_rõ",
+      "source_types": [],
+      "count": 6,
+      "pattern": "Model fails to detect missing empathy or clarifying questions after customer explicitly states refusal or lack of need; telesales proceed directly to sales pitch or closed questions.",
+      "mechanism": "The model lacks integration of customer rejection signals with telesales response evaluation, causing it to miss absence of empathetic or clarifying follow-up after refusals.",
+      "representative_cases": [
+        "call=C-118283047 step=4",
+        "call=C-118283047 step=5",
+        "call=NEMO22575977581 step=4"
+      ]
+    },
+    {
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 3,
+      "pattern": "Model marks làm_dịu as present even when transcript ends abruptly or telesales does not complete soothing attempt.",
+      "mechanism": "The model does not verify completeness of telesales response or presence of actual soothing content, leading to false positives when calls end or telesales remain silent.",
+      "representative_cases": [
+        "call=WEB00003893791 step=7",
+        "call=FB1360268702816497 step=7"
+      ]
+    }
+  ]
+}

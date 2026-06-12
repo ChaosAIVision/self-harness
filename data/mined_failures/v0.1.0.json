@@ -1,0 +1,73 @@
+{
+  "harness_version": "v0.1.0",
+  "total_calls": 14,
+  "total_steps": 126,
+  "overall_agreement": 0.5873015873015873,
+  "clusters": [
+    {
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 15,
+      "pattern": "Model incorrectly marks presence of empathy or soothing language when telesales only gives minimal or generic acknowledgments (e.g., 'Dạ', 'Ừ rồi dạ chị') without actual empathetic content.",
+      "mechanism": "Lack of clear criteria or insufficient training data to distinguish between mere polite acknowledgments and genuine empathetic or soothing responses; model may overgeneralize polite particles as empathy.",
+      "representative_cases": [
+        "call=C-117557096 step=1",
+        "call=C-117557096 step=4",
+        "call=C-117557096 step=7"
+      ]
+    },
+    {
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "source_types": [],
+      "count": 10,
+      "pattern": "Model falsely detects presence of open-ended or clarifying questions when telesales only repeats or asks closed questions, or fails to ask any clarifying questions after customer refusal.",
+      "mechanism": "Model lacks nuanced understanding of question types (open vs closed) and context of refusal handling; instructions or training data insufficiently emphasize the need for open-ended questions to qualify as làm_rõ.",
+      "representative_cases": [
+        "call=C-117557096 step=8",
+        "call=C-118283047 step=2",
+        "call=C-118283047 step=5"
+      ]
+    },
+    {
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "source_types": [],
+      "count": 7,
+      "pattern": "Model marks presence of satisfaction or positive resolution attempts when telesales only lists product benefits or promotions without addressing customer objections or providing tailored solutions.",
+      "mechanism": "Model confuses generic product information or promotional talk with actual objection handling or customer satisfaction efforts; lacks grounding in whether telesales addresses customer concerns effectively.",
+      "representative_cases": [
+        "call=C-118283047 step=3",
+        "call=C-118283047 step=6",
+        "call=WEB00003893791 step=6"
+      ]
+    },
+    {
+      "step_id": 7,
+      "step_type": "làm_dịu|làm_rõ|làm_hài_lòng",
+      "source_types": [],
+      "count": 8,
+      "pattern": "Model predicts telesales handling multiple rounds of refusal (round 3) when transcript ends early or customer does not complete refusal rounds, resulting in false positives for làm_dịu, làm_rõ, làm_hài_lòng steps.",
+      "mechanism": "Model does not account for incomplete or truncated transcripts and assumes full refusal handling cycles; lacks integration with call length or conversation completeness signals.",
+      "representative_cases": [
+        "call=WEB00003893791 step=7",
+        "call=WEB00003893791 step=8",
+        "call=WEB00003893791 step=9"
+      ]
+    },
+    {
+      "step_id": 1,
+      "step_type": "làm_dịu|làm_rõ",
+      "source_types": [],
+      "count": 9,
+      "pattern": "Model fails to detect absence of empathy or clarifying questions when telesales immediately pushes sales or urgency without acknowledging customer concerns or exploring refusal reasons.",
+      "mechanism": "Model over-relies on presence of any telesales speech as positive signal; instructions or training data insufficiently emphasize negative cases where telesales skips empathy or clarification and goes straight to sales pitch or urgency creation.",
+      "representative_cases": [
+        "call=FB1270006001243244 step=1",
+        "call=FB1270006001243244 step=4",
+        "call=FB1270006001243244 step=7"
+      ]
+    }
+  ]
+}
