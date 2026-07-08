@@ -36,7 +36,7 @@ def load_all_feedback(harness_version: str | None = None) -> list[TraceFeedback]
     all_fb = []
     for f in sorted(FEEDBACK_DIR.glob("*.json")):
         try:
-            batch = FeedbackBatch.model_validate_json(f.read_text())
+            batch = FeedbackBatch.model_validate_json(f.read_text(encoding="utf-8"))
             for tf in batch.feedbacks:
                 if harness_version is None or tf.harness_version == harness_version:
                     all_fb.append(tf)

@@ -1,0 +1,29 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "làm_dịu steps (1, 4, 7) - perfunctory empathy not tied to specific objection",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"1,4,7\" name=\"LÀM DỊU\">: \"Empathy must reference the specific objection raised in the current round. Generic empathy statements without connecting to the customer's stated concern do not count. Example: 'Dạ em hiểu chị lo lắng về giá' (if objection was price) vs 'Dạ em hiểu chị' (generic, insufficient).\"",
+    "insertion_point": "after existing <group id=\"1,4,7\" name=\"LÀM DỊU\"> block",
+    "expected_gain": "Eliminates false positives where telesales says 'em hiểu' or 'em thông cảm' without connecting to the actual objection, forcing genuine empathetic language that matches customer's concern.",
+    "risk": "May reduce pass rate slightly if telesales uses brief but relevant empathy; unlikely to cause false negatives since the rule is permissive for relevant empathy."
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "làm_rõ steps (2, 5, 8) - irrelevant or non-clarifying questions",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"2,5,8\" name=\"LÀM RÕ\">: \"Questions must directly probe the objection raised in the current round. Irrelevant questions (e.g., 'chị có nhu cầu mua không?' when objection is health concern) do not count. Accept: 'Dạ chị có thể chia sẻ thêm lý do chị chưa muốn dùng thử không ạ?'\"",
+    "insertion_point": "after existing <group id=\"2,5,8\" name=\"LÀM RÕ\"> block",
+    "expected_gain": "Eliminates false positives where telesales asks generic or irrelevant questions that don't actually clarify the customer's objection, forcing questions that are contextually relevant.",
+    "risk": "May reduce pass rate if telesales asks a relevant but slightly different question; unlikely false negatives since the rule is permissive for relevant probing."
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "làm_hài_lòng steps (3, 6, 9) - indirect reassurance not tied to objection",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"3,6,9\" name=\"LÀM HÀI LÒNG\">: \"Response must directly address the objection raised in the current round. Indirect reassurance (e.g., mentioning unrelated product benefits) without connecting to the customer's concern does not count. Example: If objection is 'sức khỏe', must address health concern specifically, not just mention 'sữa tốt cho sức khỏe' generically.\"\"",
+    "insertion_point": "after existing <group id=\"3,6,9\" name=\"LÀM HÀI LÒNG\"> block",
+    "expected_gain": "Eliminates false positives where telesales mentions product benefits or incentives that don't actually address the customer's specific objection, forcing responses that are objection-specific.",
+    "risk": "May reduce pass rate if telesales uses indirect but relevant language; unlikely false negatives since the rule is permissive for indirect but objection-connected language."
+  }
+]

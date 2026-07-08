@@ -49,7 +49,7 @@ def save_snapshot(snapshot: dict) -> Path:
 def load_all_snapshots() -> list[dict]:
     if not TRENDS_DIR.exists():
         return []
-    return [json.loads(f.read_text()) for f in sorted(TRENDS_DIR.glob("*.json"))]
+    return [json.loads(f.read_text(encoding="utf-8")) for f in sorted(TRENDS_DIR.glob("*.json"))]
 
 
 def build_trend_context() -> str:

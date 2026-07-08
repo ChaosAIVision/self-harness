@@ -1,0 +1,35 @@
+{
+  "harness_version": "drop.0.1.0",
+  "total_calls": 1,
+  "total_steps": 8,
+  "overall_agreement": 0.375,
+  "clusters": [
+    {
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 1,
+      "pattern": "Model misclassifies step 4 (làm_dịu)",
+      "mechanism": "Harness rule for step 4 needs clarification",
+      "representative_cases": []
+    },
+    {
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "source_types": [],
+      "count": 1,
+      "pattern": "Model misclassifies step 5 (làm_rõ)",
+      "mechanism": "Harness rule for step 5 needs clarification",
+      "representative_cases": []
+    },
+    {
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 1,
+      "pattern": "Model misclassifies step 7 (làm_dịu)",
+      "mechanism": "Harness rule for step 7 needs clarification",
+      "representative_cases": []
+    }
+  ]
+}

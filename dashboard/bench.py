@@ -164,7 +164,7 @@ def _steps_meta(step_ids: list[int]) -> list[dict]:
     return [{"id": sid, "type": STEP_TYPE.get(sid, "")} for sid in step_ids]
 
 
-def _build_result(run_id: str, label: str, prompt: str, traces: list[Trace]) -> dict:
+def _build_result(run_id: str, label: str, prompt: str, traces: list[Trace], records: list[dict] | None = None) -> dict:
     # Step set is data-driven (any count), not hardcoded to 9.
     step_ids = sorted({s.id for t in traces for s in t.ground_truth_steps})
     if not step_ids:
@@ -244,6 +244,7 @@ def _build_result(run_id: str, label: str, prompt: str, traces: list[Trace]) -> 
         "disagreements": disagreements,
         "prompt": prompt,
         "prompt_chars": len(prompt),
+        "records": records or [],  # raw records để restore lại đúng data khi send to Runner
     }
 
 
@@ -278,7 +279,7 @@ def _run_bench_bg(run_id: str, label: str, prompt: str, records: list[dict]) -> 
             _event("record", index=i, total=len(records), task_id=t.task_id,
                    status=t.status, agreement=rate,
                    running_overall=_running_overall(traces))
-        result = _build_result(run_id, label, prompt, traces)
+        result = _build_result(run_id, label, prompt, traces, records)
         _save_run(result)
         with _lock:
             bench_state["result"] = result

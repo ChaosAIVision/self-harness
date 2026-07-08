@@ -20,7 +20,7 @@ from feedback_collector import export_for_review, generate_preference_pairs, loa
 
 def _load_data() -> list[dict]:
     records = []
-    with open(config.BENCHMARK_PATH) as f:
+    with open(config.BENCHMARK_PATH, encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:
@@ -30,8 +30,8 @@ def _load_data() -> list[dict]:
 
 def _load_split() -> tuple[list[int], list[int]]:
     import yaml
-    held_in_ids = yaml.safe_load(config.HELD_IN_IDS_FILE.read_text())["ids"]
-    held_out_ids = yaml.safe_load(config.HELD_OUT_IDS_FILE.read_text())["ids"]
+    held_in_ids = yaml.safe_load(config.HELD_IN_IDS_FILE.read_text(encoding="utf-8"))["ids"]
+    held_out_ids = yaml.safe_load(config.HELD_OUT_IDS_FILE.read_text(encoding="utf-8"))["ids"]
     return held_in_ids, held_out_ids
 
 

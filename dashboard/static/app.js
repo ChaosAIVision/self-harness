@@ -64,10 +64,19 @@ function pickVersionEmpty(what) {
 // ── Pipeline (pick a version → its round detail) ──
 route(/^\/pipeline(?:\/(.+))?$/, async (version) => {
   const vs = await api("/versions").catch(() => ({ versions: [], current: null }));
+  // Default to the current harness version when no version is in the URL
+  const selected = version || vs.current || "";
   const header = `<div class="row"><div class="grow"><h1>Pipeline</h1></div>
-      ${versionBar("pipeline", version || "", vs.versions || [])}
+      ${versionBar("pipeline", selected, vs.versions || [])}
       <button onclick="go('#/runner')">Run Pipeline</button></div>`;
-  if (!version) { app.innerHTML = header + pickVersionEmpty("chi tiết pipeline của version đó"); return; }
+  if (!version) {
+    // Auto-redirect to current version if available, else show picker
+    if (vs.current && (vs.versions || []).includes(vs.current)) {
+      go(`#/pipeline/${vs.current}`);
+      return;
+    }
+    app.innerHTML = header + pickVersionEmpty("chi tiết pipeline của version đó"); return;
+  }
   app.innerHTML = header + `<h2 style="margin:16px 0 4px">Round — ${esc(version)}</h2>` + await roundDetailBody(version);
 });
 
@@ -244,6 +253,9 @@ route(/^\/runner$/, async () => {
   if (!runner.loaded) {
     try { const d = await api("/bench/defaults"); runner.model = d.model || ""; } catch (e) {}
     runner.loaded = true;
+  } else if (!runner.model) {
+    // loaded via sendToRunner but model not fetched yet
+    try { const d = await api("/bench/defaults"); runner.model = d.model || ""; } catch (e) {}
   }
   const st = await api("/run/status").catch(() => ({}));
   app.innerHTML = runnerShell(st);
@@ -671,7 +683,7 @@ function renderBenchResult(res) {
     <div class="matrix-wrap"><table class="matrix"><thead>${matrixHead(steps)}</thead><tbody>${rows}</tbody></table>${matrixLegend()}</div>
     <div class="section-label">Disagreements · ${res.disagreements.length}</div>
     ${dis ? `<div class="disagreements">${dis}</div>` : '<div class="empty">Perfect agreement — no disagreements.</div>'}
-    <div style="margin-top:14px"><button class="mini" onclick="benchUsePrompt('${res.run_id}')">Load this prompt into editor</button> <button class="mini" onclick="clearBenchResult()">Clear</button></div>`;
+    <div style="margin-top:14px"><button class="mini" onclick="benchUsePrompt('${res.run_id}')">Load this prompt into editor</button> <button class="mini" onclick="sendToRunner('${res.run_id}')" title="Copy prompt + data sang Runner để chạy pipeline">→ Send to Runner</button> <button class="mini" onclick="clearBenchResult()">Clear</button></div>`;
 }
 
 async function benchUsePrompt(runId) {
@@ -679,6 +691,40 @@ async function benchUsePrompt(runId) {
   bench.prompt = r.prompt || ""; const pt = document.getElementById("bPrompt");
   if (pt) { pt.value = bench.prompt; document.getElementById("bPromptFoot").textContent = `${bench.prompt.length} chars`; }
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function benchUseData(runId) {
+  const r = await api("/bench/runs/" + runId);
+  if (!r.matrix || !r.matrix.length) return;
+  // Reconstruct JSONL from the run's matrix (task_id + cells carry no raw input,
+  // so we fetch the actual records from bench/defaults as fallback, or just
+  // surface a clear message that the raw data must come from the original source).
+  // Best effort: load the current sample data as a starting point.
+  const d = await api("/bench/defaults").catch(() => null);
+  if (d && d.sample_data) {
+    bench.data = d.sample_data;
+    dataMode["b"] = "jsonl";
+    rerenderData("b");
+  }
+}
+
+// Send a Bench run's prompt + data straight to the Runner tab
+async function sendToRunner(runId) {
+  const r = await api("/bench/runs/" + runId);
+  // Copy prompt
+  runner.prompt = r.prompt || "";
+  // Copy data — dùng records đã lưu trong run (đúng số records bench đã chạy)
+  if (r.records && r.records.length) {
+    runner.data = r.records.map(rec => JSON.stringify(rec)).join("\n");
+  } else {
+    // fallback cho các run cũ chưa có field records
+    const d = await api("/bench/defaults").catch(() => null);
+    if (d && d.sample_data) runner.data = d.sample_data;
+  }
+  dataMode["r"] = "jsonl";
+  runner.loaded = true;
+  // Navigate to Runner
+  go("#/runner");
 }
 
 async function loadBenchHistory() {
@@ -695,7 +741,9 @@ async function loadBenchHistory() {
       <div class="rp">${benchPct(r.overall)}%</div>
       <div class="rl">${esc(r.label || r.run_id)}</div>
       <div class="rl">${r.n_records} rec · ${esc((r.created_at || "").slice(11, 16))}</div>
-      <div class="spark">${spark}</div></div>`;
+      <div class="spark">${spark}</div>
+      <div class="rchip-actions"><button class="mini" onclick="event.stopPropagation();sendToRunner('${r.run_id}')" title="Gửi sang Runner">→ Runner</button></div>
+    </div>`;
   }).join("");
   el.innerHTML = `<div class="section-label">Run history · ${runs.length}</div><div class="rail">${chips}</div>`;
 }

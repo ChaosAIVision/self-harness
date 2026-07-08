@@ -39,7 +39,7 @@ def _build_reflect_prompt(
         ensure_ascii=False, indent=2,
     )
 
-    proposals_raw = json.loads(proposals_file.read_text()) if proposals_file.exists() else []
+    proposals_raw = json.loads(proposals_file.read_text(encoding="utf-8")) if proposals_file.exists() else []
     outcomes_text = ""
     for vr in validation_results:
         p_data = next((p for p in proposals_raw if p["proposal_id"] == vr.proposal_id), {})
@@ -96,7 +96,7 @@ def generate_reflection(
 
     prev_reflections = load_all_reflections()
 
-    proposals_raw = json.loads(proposals_file.read_text()) if proposals_file.exists() else []
+    proposals_raw = json.loads(proposals_file.read_text(encoding="utf-8")) if proposals_file.exists() else []
     proposal_outcomes = []
     for vr in validation_results:
         p_data = next((p for p in proposals_raw if p["proposal_id"] == vr.proposal_id), {})
@@ -192,7 +192,7 @@ def load_all_reflections() -> list[Reflection]:
     reflections = []
     for f in files:
         try:
-            reflections.append(Reflection.model_validate_json(f.read_text()))
+            reflections.append(Reflection.model_validate_json(f.read_text(encoding="utf-8")))
         except Exception:
             continue
     return reflections

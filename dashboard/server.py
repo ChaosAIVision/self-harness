@@ -396,12 +396,24 @@ async def overview():
 
 @app.get("/api/versions")
 async def versions():
-    """All harness versions that have a run, newest first, + the current one."""
+    """All harness versions that have a run, newest first, + the current one.
+
+    Bench runs are also included so a freshly-completed Bench run shows up in
+    Pipeline/Review immediately without needing a full pipeline round.
+    """
     vs = _run_versions()
     cur = _current_version()
-    if cur not in vs:
-        vs.append(cur)
-    return {"current": cur, "versions": sorted(set(vs), reverse=True)}
+
+    # Always include the current harness version even if it has no traces yet.
+    all_vs = set(vs) | {cur}
+
+    # Natural sort: split on digits so "v0.2.0" < "v0.10.0" and mixed names
+    # like "xltc-v1" sort after plain semver strings correctly.
+    import re as _re
+    def _nat_key(s: str):
+        return [int(c) if c.isdigit() else c.lower() for c in _re.split(r"(\d+)", s)]
+
+    return {"current": cur, "versions": sorted(all_vs, key=_nat_key, reverse=True)}
 
 
 @app.get("/api/trends")

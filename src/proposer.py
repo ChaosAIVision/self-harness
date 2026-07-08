@@ -1,6 +1,7 @@
 """Propose minimal harness edits based on failure clusters."""
 from __future__ import annotations
 import json
+import re
 from openai import OpenAI
 from trace_schema import FailureBundle, HarnessProposal
 from reflector import build_proposer_context
@@ -33,20 +34,59 @@ Each proposal must:
 4. Be a concrete text addition or replacement to the system prompt
 5. Be MEANINGFULLY DIFFERENT from any previous attempts listed in the episodic memory above
 
-Output JSON only:
-{{
-  "proposals": [
-    {{
-      "proposal_id": "p_001",
-      "target_failure": "brief name of the failure cluster",
-      "editable_surface": "system_prompt",
-      "proposed_change": "EXACT text to add/modify in the system prompt",
-      "insertion_point": "after which section to insert (e.g. 'after STEP RULES section')",
-      "expected_gain": "what specific improvement is expected",
-      "risk": "potential regression risk"
-    }}
-  ]
-}}"""
+IMPORTANT: Output ONLY valid JSON, no explanation text before or after.
+{{\n  "proposals": [\n    {{\n      "proposal_id": "p_001",\n      "target_failure": "brief name of the failure cluster",\n      "editable_surface": "system_prompt",\n      "proposed_change": "EXACT text to add/modify in the system prompt",\n      "insertion_point": "after which section to insert (e.g. 'after STEP RULES section')",\n      "expected_gain": "what specific improvement is expected",\n      "risk": "potential regression risk"\n    }}\n  ]\n}}"""
+
+
+def _extract_json(raw: str) -> str:
+    """Strip markdown fences and extract the first JSON object from raw text."""
+    # Remove ```json ... ``` or ``` ... ``` fences
+    raw = re.sub(r"^```(?:json)?\s*", "", raw.strip(), flags=re.IGNORECASE)
+    raw = re.sub(r"\s*```$", "", raw.strip())
+    raw = raw.strip()
+
+    # If model prepended explanation text, find the first { ... } block
+    match = re.search(r'\{[\s\S]*\}', raw)
+    if match:
+        return match.group(0)
+    return raw
+
+
+def _safe_parse(raw: str) -> dict:
+    """Try json.loads, then fall back to sanitizing control characters."""
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        pass
+
+    # Replace literal newlines/tabs inside JSON string values with escaped versions.
+    # Strategy: parse char-by-char, replace bare control chars inside strings.
+    sanitized = []
+    in_string = False
+    escape_next = False
+    for ch in raw:
+        if escape_next:
+            sanitized.append(ch)
+            escape_next = False
+            continue
+        if ch == "\\" and in_string:
+            escape_next = True
+            sanitized.append(ch)
+            continue
+        if ch == '"':
+            in_string = not in_string
+            sanitized.append(ch)
+            continue
+        if in_string and ch == "\n":
+            sanitized.append("\\n")
+        elif in_string and ch == "\r":
+            sanitized.append("\\r")
+        elif in_string and ch == "\t":
+            sanitized.append("\\t")
+        else:
+            sanitized.append(ch)
+
+    return json.loads("".join(sanitized))
 
 
 def generate_proposals(bundle: FailureBundle, current_system_prompt: str) -> list[HarnessProposal]:
@@ -62,11 +102,11 @@ def generate_proposals(bundle: FailureBundle, current_system_prompt: str) -> lis
         temperature=0.3,
     )
     raw = resp.choices[0].message.content or ""
-    raw = raw.strip().lstrip("```json").lstrip("```").rstrip("```").strip()
+    raw = _extract_json(raw)
 
     proposals = []
     try:
-        data = json.loads(raw)
+        data = _safe_parse(raw)
         for p in data.get("proposals", []):
             proposals.append(HarnessProposal(
                 proposal_id=p.get("proposal_id", "p_000"),
