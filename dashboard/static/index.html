@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self-Harness Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="go('#/')"><i class="mark"></i>Self-Harness <span>Bench</span></div>
+    <nav>
+      <a href="#/" data-seg="">Bench</a>
+      <a href="#/pipeline" data-seg="pipeline">Pipeline</a>
+      <a href="#/memory" data-seg="memory">Memory</a>
+      <a href="#/review" data-seg="review">Review</a>
+      <a href="#/runner" data-seg="runner">Runner</a>
+    </nav>
+  </header>
+  <main id="app"><div class="loading">Loading…</div></main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

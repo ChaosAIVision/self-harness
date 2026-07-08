@@ -27,7 +27,12 @@ def main():
         current_cfg = yaml.safe_load((config.HARNESS_DIR / "current.yaml").read_text())
         current_version = current_cfg["version"]
         prompt_file = current_cfg.get("system_prompt_file", "prompts/system.md")
-        current_prompt = Path(prompt_file).read_text()
+        prompt_path = Path(prompt_file)
+        if not prompt_path.is_absolute():
+            prompt_path = config.ROOT / prompt_path
+        if not prompt_path.exists():
+            prompt_path = config.HARNESS_DIR / "versions" / f"{current_version}.md"
+        current_prompt = prompt_path.read_text(encoding="utf-8")
 
         print(f"\n{'#'*60}")
         print(f"  LOOP ROUND {round_num} / {MAX_ROUNDS}  —  harness: {current_version}")

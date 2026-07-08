@@ -19,7 +19,12 @@ def main():
     current_cfg = yaml.safe_load((config.HARNESS_DIR / "current.yaml").read_text())
     current_version = current_cfg.get("version", "v0.1.0")
     prompt_file = current_cfg.get("system_prompt_file", "prompts/system.md")
-    current_prompt = (config.ROOT / prompt_file).read_text()
+    prompt_path = Path(prompt_file)
+    if not prompt_path.is_absolute():
+        prompt_path = config.ROOT / prompt_path
+    if not prompt_path.exists():
+        prompt_path = config.HARNESS_DIR / "versions" / f"{current_version}.md"
+    current_prompt = prompt_path.read_text(encoding="utf-8")
 
     result = run_round(current_prompt, current_version)
 

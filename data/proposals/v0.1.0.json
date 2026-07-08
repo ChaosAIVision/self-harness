@@ -1,26 +1,20 @@
 [
   {
     "proposal_id": "p_001",
-    "target_failure": "Empathy overgeneralization",
+    "target_failure": "làm_dịu minimal acknowledgments false positive",
     "editable_surface": "system_prompt",
-    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* Genuine empathy or soothing language requires more than minimal acknowledgments (e.g., 'Dạ', 'Ừ rồi dạ chị'). Look for explicit empathetic content such as recognizing customer feelings or concerns.",
-    "expected_gain": "Reduce false positives marking minimal polite responses as empathy, improving accuracy on làm_dịu steps.",
-    "risk": "May cause some borderline empathetic utterances to be missed if too strict."
+    "proposed_change": "* For làm_dịu steps, explicitly exclude responses that only repeat or minimally acknowledge customer objections without adding new empathetic content or addressing the concern. Responses must show active engagement with the customer's emotional state or objection, not just polite markers.",
+    "insertion_point": "after IMPORTANT INTERPRETATION RULES section",
+    "expected_gain": "Reduce false positives where minimal acknowledgments are mistaken for genuine làm_dịu, improving precision on empathetic response detection.",
+    "risk": "May cause some borderline empathetic responses to be scored as unsuccessful if they do not clearly demonstrate active engagement."
   },
   {
     "proposal_id": "p_002",
-    "target_failure": "Clarifying question misclassification",
+    "target_failure": "làm_hài_lòng false negative on indirect reassurance",
     "editable_surface": "system_prompt",
-    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* Clarifying questions must be open-ended and aimed at understanding customer refusal reasons; simple repeats or closed yes/no questions do NOT qualify as làm_rõ.",
-    "expected_gain": "Improve detection of genuine clarifying questions, reducing false positives on làm_rõ steps.",
-    "risk": "May miss some borderline clarifications that are semi-open-ended or context-dependent."
-  },
-  {
-    "proposal_id": "p_003",
-    "target_failure": "Incomplete transcript false positives",
-    "editable_surface": "system_prompt",
-    "proposed_change": "Add to SOURCE DATA LOGIC:\n\n* If transcript ends early or customer does not complete refusal rounds, do NOT mark làm_dịu, làm_rõ, or làm_hài_lòng steps in later rounds as successful without clear evidence of telesales action.",
-    "expected_gain": "Reduce false positives on steps 7-9 when calls end prematurely or refusals are incomplete.",
-    "risk": "May under-score some valid late-round actions if transcript is partial but telesales acted correctly."
+    "proposed_change": "* For làm_hài_lòng steps, accept indirect positive telesales language such as product benefits, incentives, or reassurances embedded in sales pitch as valid làm_hài_lòng attempts, even if not explicitly framed as satisfaction confirmation.",
+    "insertion_point": "after IMPORTANT INTERPRETATION RULES section",
+    "expected_gain": "Increase true positive detection of làm_hài_lòng by recognizing implicit reassurance and value-adding language.",
+    "risk": "Might slightly increase false positives if promotional language is used without genuine intent to satisfy."
   }
 ]

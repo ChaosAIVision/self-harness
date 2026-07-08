@@ -1,0 +1,197 @@
+{
+  "run_id": "bench_1783484091",
+  "label": "run of 1 records",
+  "created_at": "2026-07-08T11:14:59",
+  "model": "gpt-4.1-mini",
+  "n_records": 1,
+  "n_failed": 0,
+  "overall": 0.8888888888888888,
+  "step_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 2,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 3,
+      "type": "làm_hài_lòng"
+    },
+    {
+      "id": 4,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 5,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 6,
+      "type": "làm_hài_lòng"
+    },
+    {
+      "id": 7,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 8,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 9,
+      "type": "làm_hài_lòng"
+    }
+  ],
+  "by_step": {
+    "1": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_dịu"
+    },
+    "2": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_rõ"
+    },
+    "3": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_hài_lòng"
+    },
+    "4": {
+      "matched": 0,
+      "total": 1,
+      "rate": 0.0,
+      "step_type": "làm_dịu"
+    },
+    "5": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_rõ"
+    },
+    "6": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_hài_lòng"
+    },
+    "7": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_dịu"
+    },
+    "8": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_rõ"
+    },
+    "9": {
+      "matched": 1,
+      "total": 1,
+      "rate": 1.0,
+      "step_type": "làm_hài_lòng"
+    }
+  },
+  "by_type": {
+    "làm_dịu": 0.6666666666666666,
+    "làm_rõ": 1.0,
+    "làm_hài_lòng": 1.0
+  },
+  "matrix": [
+    {
+      "task_id": "rec-1",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        }
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "task_id": "rec-1",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] [02:34] Để đó chị coi thì cái ông chị mới mua cho ông uống vẫn còn em tại vì chị mua hai lon á cho nên là ông uống vẫn còn.; [customer] [02:41] Nên khi nào hết thì chị cứ chị tự chủ động chị mua thôi chứ còn chị không có đăng ký ",
+      "gt_evidence": "[Customer] [03:42] 'Thôi, để chị chủ động chị mua, chị không cần thiết mà chị phải đăng ký đâu em' ; [Telesale] [03:49] 'Dạ không, tại vì số này là số một chiều á chị' — không thể hiện sự đồng cảm hay thấu hiểu, chỉ phản bác lại khách.",
+      "model_thinking": ""
+    }
+  ],
+  "prompt": "<system> <role>ABBOTT QUALITY CONTROL XỬ LÝ TỪ CHỐI</role>  <task> Read transcript → score 9 steps → output JSON array only. </task>  <pre_processing> Trước khi chấm điểm, đọc toàn transcript và xác định:  OBJECTION_MAP = { \"round_1\": \"objection customer nêu lần đầu\", \"round_2\": \"objection customer nêu lần hai\", \"round_3\": \"objection customer nêu lần ba\" }  Nếu round_3 khác hẳn round_1/2 → ghi \"(reset)\",  đánh giá độc lập, không so sánh với vòng trước.  OBJECTION_MAP là chuẩn duy nhất để chấm điểm. Xử lý sai objection của vòng = UNSUCCESS dù hành động kỹ thuật đúng. </pre_processing>  <steps> <group id=\"1,4,7\" name=\"LÀM DỊU\"> Cần: empathy, acknowledgment, validation đúng objection của vòng. </group> <group id=\"2,5,8\" name=\"LÀM RÕ\"> Cần: câu hỏi mở để hiểu sâu objection của vòng. </group> <group id=\"3,6,9\" name=\"LÀM HÀI LÒNG\"> Cần: xử lý trực tiếp objection của vòng. Ví dụ: nhắc CTKM, giảm combo, giữ quà tặng,  dời lịch giao, mua trước dùng sau, giải thích đúng trọng tâm. </group> </steps>  <scoring> <success> Hành động đúng kỹ thuật VÀ nhắm đúng objection của vòng. </success> <unsuccess> Thiếu hành động, né tránh, chuyển sang bán hàng ngay, hoặc xử lý sai objection của vòng. </unsuccess> </scoring>  <output_format> JSON array only. No explanation outside JSON.  If S: omit \"g\" If U: \"g\" required, must start with \"Cải thiện:\"  [ {\"id\":1,\"r\":\"S\",\"e\":\"...\"}, {\"id\":2,\"r\":\"S\",\"e\":\"...\"}, {\"id\":3,\"r\":\"S\",\"e\":\"...\"}, {\"id\":4,\"r\":\"S\",\"e\":\"...\"}, {\"id\":5,\"r\":\"S\",\"e\":\"...\"}, {\"id\":6,\"r\":\"S\",\"e\":\"...\"}, {\"id\":7,\"r\":\"S\",\"e\":\"...\"}, {\"id\":8,\"r\":\"S\",\"e\":\"...\"}, {\"id\":9,\"r\":\"S\",\"e\":\"...\"} ]  EVIDENCE FORMAT: [Telesale] [timestamp] quote ; [Customer] [timestamp] quote If no evidence: \"e\":\"NO_DATA\" </output_format> </system>",
+  "prompt_chars": 1736
+}

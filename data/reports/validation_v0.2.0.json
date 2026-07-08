@@ -2,34 +2,34 @@
   {
     "proposal_id": "p_001",
     "harness_version": "v0.1.0_cand",
-    "delta_in": 0.015873015873015817,
-    "delta_out": 0.19047619047619047,
-    "agreement_in": 0.6031746031746031,
-    "agreement_out": 0.7777777777777778,
-    "baseline_in": 0.5873015873015873,
-    "baseline_out": 0.5873015873015873,
-    "accepted": true
+    "delta_in": -0.11111111111111105,
+    "delta_out": 0.4444444444444444,
+    "agreement_in": 0.5555555555555556,
+    "agreement_out": 0.4444444444444444,
+    "baseline_in": 0.6666666666666666,
+    "baseline_out": 0.0,
+    "accepted": false
   },
   {
     "proposal_id": "p_002",
     "harness_version": "v0.1.0_cand",
-    "delta_in": -0.023809523809523836,
-    "delta_out": -0.015873015873015928,
-    "agreement_in": 0.5634920634920635,
-    "agreement_out": 0.5714285714285714,
-    "baseline_in": 0.5873015873015873,
-    "baseline_out": 0.5873015873015873,
-    "accepted": false
+    "delta_in": 0.0,
+    "delta_out": 0.4444444444444444,
+    "agreement_in": 0.6666666666666666,
+    "agreement_out": 0.4444444444444444,
+    "baseline_in": 0.6666666666666666,
+    "baseline_out": 0.0,
+    "accepted": true
   },
   {
-    "proposal_id": "p_003",
+    "proposal_id": "combo_001_002",
     "harness_version": "v0.1.0_cand",
-    "delta_in": 0.0793650793650793,
-    "delta_out": 0.0793650793650793,
+    "delta_in": 0.0,
+    "delta_out": 0.4444444444444444,
     "agreement_in": 0.6666666666666666,
-    "agreement_out": 0.6666666666666666,
-    "baseline_in": 0.5873015873015873,
-    "baseline_out": 0.5873015873015873,
+    "agreement_out": 0.4444444444444444,
+    "baseline_in": 0.6666666666666666,
+    "baseline_out": 0.0,
     "accepted": true
   }
 ]

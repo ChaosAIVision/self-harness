@@ -1,0 +1,20 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "minimal/formulaic làm_dịu false positive after explicit refusals",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, explicitly require detection of explicit customer refusal or objection signals in the immediately preceding customer turn(s). If such signals are present, làm_dịu responses must demonstrate clear, context-sensitive empathetic language that directly addresses the refusal, not generic or formulaic acknowledgments. Otherwise, label as UNSUCCESS.",
+    "insertion_point": "after IMPORTANT INTERPRETATION RULES section",
+    "expected_gain": "Reduce false positives where minimal acknowledgments are misclassified as làm_dịu despite clear prior customer refusals, improving precision by integrating explicit refusal detection with làm_dịu sincerity assessment.",
+    "risk": "May increase false negatives if telesales empathetic language is subtle or indirect, requiring careful balance in refusal signal detection."
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "failure to differentiate genuine empathetic làm_dịu from perfunctory politeness or sales pivot",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, incorporate multi-turn dialogue context by verifying that telesales responses do not immediately pivot to sales offers or unrelated topics after acknowledgment. Genuine làm_dịu must maintain focus on customer objection and include empathetic or validating language before any sales attempt. Responses that shift topic prematurely should be labeled UNSUCCESS.",
+    "insertion_point": "after IMPORTANT INTERPRETATION RULES section",
+    "expected_gain": "Improve discrimination between sincere empathetic làm_dịu and perfunctory or sales-pivoting responses, reducing false positives and increasing agreement with human judgment.",
+    "risk": "May penalize some valid làm_dịu steps that naturally transition to sales if not clearly separated, requiring nuanced interpretation."
+  }
+]

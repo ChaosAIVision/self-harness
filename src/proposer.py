@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from openai import OpenAI
 from trace_schema import FailureBundle, HarnessProposal
+from reflector import build_proposer_context
 import config
 
 
@@ -11,9 +12,12 @@ def _build_proposal_prompt(bundle: FailureBundle, current_system_prompt: str) ->
         [c.model_dump() for c in bundle.clusters],
         ensure_ascii=False, indent=2
     )
+    memory_context = build_proposer_context()
     return f"""You are a harness optimizer for a QC AI scoring telesales calls.
 The current system prompt is shown below. The AI scores 9 steps (3 rounds × 3 steps each).
 Current agreement rate: {bundle.overall_agreement:.1%}
+
+{memory_context}
 
 CURRENT SYSTEM PROMPT (first 1500 chars):
 {current_system_prompt[:1500]}
@@ -27,6 +31,7 @@ Each proposal must:
 2. Be a MINIMAL change (add/clarify one rule, not rewrite everything)
 3. NOT change benchmark data, verifier logic, or scoring structure
 4. Be a concrete text addition or replacement to the system prompt
+5. Be MEANINGFULLY DIFFERENT from any previous attempts listed in the episodic memory above
 
 Output JSON only:
 {{
@@ -68,6 +73,7 @@ def generate_proposals(bundle: FailureBundle, current_system_prompt: str) -> lis
                 target_failure=p.get("target_failure", ""),
                 editable_surface=p.get("editable_surface", "system_prompt"),
                 proposed_change=p.get("proposed_change", ""),
+                insertion_point=p.get("insertion_point", "end of STEP RULES section"),
                 expected_gain=p.get("expected_gain", ""),
                 risk=p.get("risk", ""),
             ))

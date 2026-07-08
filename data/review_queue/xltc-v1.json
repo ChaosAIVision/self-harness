@@ -1,0 +1,26 @@
+[
+  {
+    "task_id": "rec-1",
+    "record_id": "rec-1",
+    "source": "manual",
+    "harness_version": "xltc-v1",
+    "step_id": 4,
+    "model_said": "S",
+    "model_evidence": "[customer] [03:25] Không, ông bị ông bị suy thận mức độ ba cho nên là ông cũng không nên uống sữa nhiều.",
+    "ground_truth": "U",
+    "gt_evidence": "[Customer] [03:42] 'Thôi, để chị chủ động chị mua, chị không cần thiết mà chị phải đăng ký đâu em' ; [Telesale] [03:49] 'Dạ không, tại vì số này là số một chiều á chị' — không thể hiện sự đồng cảm hay",
+    "model_thinking": ""
+  },
+  {
+    "task_id": "rec-1",
+    "record_id": "rec-1",
+    "source": "manual",
+    "harness_version": "xltc-v1",
+    "step_id": 4,
+    "model_said": "S",
+    "model_evidence": "[customer] [02:34] Để đó chị coi thì cái ông chị mới mua cho ông uống vẫn còn em tại vì chị mua hai lon á cho nên là ông uống vẫn còn.; [customer] [02:41] Nên khi nào hết thì chị cứ chị tự chủ động ch",
+    "ground_truth": "U",
+    "gt_evidence": "[Customer] [03:42] 'Thôi, để chị chủ động chị mua, chị không cần thiết mà chị phải đăng ký đâu em' ; [Telesale] [03:49] 'Dạ không, tại vì số này là số một chiều á chị' — không thể hiện sự đồng cảm hay",
+    "model_thinking": ""
+  }
+]

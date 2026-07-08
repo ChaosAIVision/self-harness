@@ -4,6 +4,9 @@ import json
 import collections
 from openai import OpenAI
 from trace_schema import Trace, FailureSignature, FailureBundle
+from reflector import build_miner_context
+from feedback_collector import build_feedback_context_for_miner
+from trend_tracker import build_trend_context
 import config
 
 
@@ -15,27 +18,54 @@ _STEP_TYPE = {
 
 
 def _build_mining_prompt(traces: list[Trace]) -> str:
-    failures_text = []
+    # Group mismatches per call so the model's own reasoning (per-step evidence +
+    # the call's thinking trace) is available as diagnostic signal for the miner.
+    blocks = []
     for t in traces:
-        if not t.verifier:
+        if not t.verifier or not t.verifier.mismatched_steps:
             continue
+        gt_map = {s.id: s for s in t.ground_truth_steps}
+        pred_map = {s.id: s for s in t.parsed_steps}
+        rows = []
         for step_id in t.verifier.mismatched_steps:
-            gt = next((s for s in t.ground_truth_steps if s.id == step_id), None)
-            pred = next((s for s in t.parsed_steps if s.id == step_id), None)
+            gt = gt_map.get(step_id)
+            pred = pred_map.get(step_id)
             if gt and pred:
-                failures_text.append(
-                    f"call={t.task_id} source={t.source} step={step_id} "
-                    f"type={_STEP_TYPE.get(step_id,'?')} "
+                rows.append(
+                    f"  step={step_id} type={_STEP_TYPE.get(step_id,'?')} "
                     f"model_said={pred.r} truth={gt.r} "
-                    f"truth_evidence={gt.e[:120]}"
+                    f"model_reason={pred.e[:140]!r} truth_evidence={gt.e[:140]!r}"
                 )
+        if not rows:
+            continue
+        head = f"call={t.task_id} source={t.source}"
+        if t.thinking:
+            head += f" | model_thinking={t.thinking[:400]!r}"
+        blocks.append(head + "\n" + "\n".join(rows))
+        if len(blocks) >= 40:
+            break
 
-    if not failures_text:
+    if not blocks:
         return ""
 
-    lines = "\n".join(failures_text[:80])
+    lines = "\n\n".join(blocks)
+
+    memory_context = build_miner_context()
+    feedback_context = build_feedback_context_for_miner(
+        traces[0].harness_version if traces else ""
+    )
+    trend_context = build_trend_context()
+
     return f"""You are analyzing failures of a QC AI that scores telesales calls.
-Below are mismatches where the model's S/U judgment differed from ground truth.
+Below are mismatches where the model's S/U judgment differed from ground truth,
+grouped by call. Each shows the model's own reason (model_reason) and, when
+available, its reasoning trace (model_thinking) — use them to infer WHY it erred.
+
+{memory_context}
+
+{feedback_context}
+
+{trend_context}
 
 FAILURES:
 {lines}

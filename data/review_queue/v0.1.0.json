@@ -1,0 +1,134 @@
+[
+  {
+    "task_id": "C-117557096",
+    "record_id": "71166431",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 1,
+    "model_said": "S",
+    "model_evidence": "[telesales] 01:21 Dạ. Và chị Nann mình thấy cái chương trình mình chưa ưng hả hay sao?",
+    "ground_truth": "U",
+    "gt_evidence": "[telesales] 01:21 Telesale chỉ nói 'Dạ' trước khi chuyển sang hỏi, không có lời đồng cảm hay thấu hiểu với khách"
+  },
+  {
+    "task_id": "C-117557096",
+    "record_id": "71166431",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 3,
+    "model_said": "U",
+    "model_evidence": "[telesales] 01:25 Dạ tại vì em thấy là sữa bố mẹ cũng dùng mà. Thì nếu mà được em thấy là cái chương trình quà tặng cũng tốt đó chị Nann thì mình lấy thêm cho bố mẹ dùng thêm.",
+    "ground_truth": "S",
+    "gt_evidence": "[telesales] 01:25 'em thấy là cái chương trình quà tặng cũng tốt đó chị Nann thì mình lấy thêm cho bố mẹ dùng thêm' — nhắc quà tặng, chốt đơn mời mua thêm"
+  },
+  {
+    "task_id": "C-117557096",
+    "record_id": "71166431",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 4,
+    "model_said": "S",
+    "model_evidence": "[telesales] 01:21 Dạ. Và chị Nann mình thấy cái chương trình mình chưa ưng hả hay sao?",
+    "ground_truth": "U",
+    "gt_evidence": "[telesales] 01:36 Sau khi khách nói mua ngoài rẻ hơn, telesale đi thẳng vào hỏi giá mà không có lời đồng cảm"
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 1,
+    "model_said": "S",
+    "model_evidence": "[telesales] 03:51:000 - 04:13:000 Rồi dạ chị. Tại vì em thấy riêng về sữa Ensure thì cũng tốt quá chị. Dạ tại vì cái dòng này là hỗ trợ thay thế bữa ăn được, giống như là khi nào mà bận bịu quá hay tr",
+    "ground_truth": "U",
+    "gt_evidence": "[Telesale] [03:51] \"Rồi dạ chị. Tại vì em thấy riêng về sữa Ensure thì cũng tốt quá chị\" — Không thể hiện sự đồng cảm hay thấu hiểu với việc khách uống sữa hạt và chỉ có nhu cầu dùng Ensure khi ở viện"
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 2,
+    "model_said": "S",
+    "model_evidence": "[customer] 03:43:100 - 03:49:900 Ừ đúng rồi. Hoặc là chị uống sữa hạt nên là chị cũng nói thật là cũng chỉ có nhu cầu uống chứ mà ở viện thôi. ; [telesales] 04:39:700 - 04:42:000 Dạ, nên là em mới liê",
+    "ground_truth": "U",
+    "gt_evidence": "[Telesale] [03:51-04:42] Không đặt câu hỏi mở nào để tìm hiểu thêm lý do từ chối, chuyển thẳng sang giới thiệu lợi ích sản phẩm và chương trình khuyến mãi."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 3,
+    "model_said": "S",
+    "model_evidence": "[telesales] 04:14:300 - 04:38:900 Đó nên là đợt này cũng có chương trình tốt nè, vẫn hỗ trợ giao hàng miễn phí về tận nhà. Đó mà khi nào sữa về thì mình được ra kiểm tra trước, xác nhận đúng sữa đủ sữ",
+    "ground_truth": "U",
+    "gt_evidence": "[Telesale] [03:51-04:42] Có đề cập lợi ích (thay thế bữa ăn, để dành trong tủ lạnh), chương trình (giao hàng miễn phí, kiểm tra chính hãng) nhưng không có lời mời chốt đơn rõ ràng. [Telesale] [04:39] "
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 4,
+    "model_said": "S",
+    "model_evidence": "[customer] 04:43:200 - 05:00:000 Ừ chị biết rồi thì chị hôm trước bạn gì đấy bạn cũng hướng dẫn chị ở Zalo các thứ rồi đặt hàng này nọ ấy thì để khi nào chị có nhu cầu thì chị đặt đi tại vì bây giờ th",
+    "ground_truth": "U",
+    "gt_evidence": "[Customer] [04:43] Khách từ chối lần 2: \"để khi nào chị có nhu cầu thì chị đặt... bây giờ thì ra là cũng không có nhu cầu\" — Không có phản hồi làm dịu từ telesale trong transcript."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 5,
+    "model_said": "S",
+    "model_evidence": "[customer] 03:43:100 - 03:49:900 Ừ đúng rồi. Hoặc là chị uống sữa hạt nên là chị cũng nói thật là cũng chỉ có nhu cầu uống chứ mà ở viện thôi.",
+    "ground_truth": "U",
+    "gt_evidence": "[Customer] [04:43] Khách nói chưa có nhu cầu, sẽ đặt khi cần — Không có câu hỏi làm rõ từ telesale trong transcript."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 6,
+    "model_said": "S",
+    "model_evidence": "Auto-S — Không có yêu cầu Urbox hoặc CLP trong kịch bản này",
+    "ground_truth": "U",
+    "gt_evidence": "NO_DATA — Không có phản hồi làm hài lòng từ telesale sau từ chối lần 2."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 7,
+    "model_said": "S",
+    "model_evidence": "Auto-S — Cuộc gọi không có bước làm dịu tiếp theo sau bước 4",
+    "ground_truth": "U",
+    "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 8,
+    "model_said": "S",
+    "model_evidence": "Auto-S — Cuộc gọi không có bước làm rõ tiếp theo sau bước 5",
+    "ground_truth": "U",
+    "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+  },
+  {
+    "task_id": "C-118283047",
+    "record_id": "73075467",
+    "source": "RTN",
+    "harness_version": "v0.1.0",
+    "step_id": 9,
+    "model_said": "S",
+    "model_evidence": "Auto-S — Cuộc gọi kết thúc trước bước 9",
+    "ground_truth": "U",
+    "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+  }
+]

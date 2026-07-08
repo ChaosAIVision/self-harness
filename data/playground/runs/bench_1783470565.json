@@ -1,0 +1,1963 @@
+{
+  "run_id": "bench_1783470565",
+  "label": "full run · current harness",
+  "created_at": "2026-07-08T07:35:00",
+  "model": "gpt-4.1-mini",
+  "n_records": 21,
+  "n_failed": 0,
+  "overall": 0.656084656084656,
+  "by_step": {
+    "1": {
+      "matched": 14,
+      "total": 21,
+      "rate": 0.6666666666666666,
+      "step_type": "làm_dịu"
+    },
+    "2": {
+      "matched": 14,
+      "total": 21,
+      "rate": 0.6666666666666666,
+      "step_type": "làm_rõ"
+    },
+    "3": {
+      "matched": 14,
+      "total": 21,
+      "rate": 0.6666666666666666,
+      "step_type": "làm_hài_lòng"
+    },
+    "4": {
+      "matched": 11,
+      "total": 21,
+      "rate": 0.5238095238095238,
+      "step_type": "làm_dịu"
+    },
+    "5": {
+      "matched": 17,
+      "total": 21,
+      "rate": 0.8095238095238095,
+      "step_type": "làm_rõ"
+    },
+    "6": {
+      "matched": 13,
+      "total": 21,
+      "rate": 0.6190476190476191,
+      "step_type": "làm_hài_lòng"
+    },
+    "7": {
+      "matched": 10,
+      "total": 21,
+      "rate": 0.47619047619047616,
+      "step_type": "làm_dịu"
+    },
+    "8": {
+      "matched": 15,
+      "total": 21,
+      "rate": 0.7142857142857143,
+      "step_type": "làm_rõ"
+    },
+    "9": {
+      "matched": 16,
+      "total": 21,
+      "rate": 0.7619047619047619,
+      "step_type": "làm_hài_lòng"
+    }
+  },
+  "by_type": {
+    "làm_dịu": 0.5555555555555555,
+    "làm_rõ": 0.7301587301587302,
+    "làm_hài_lòng": 0.6825396825396824
+  },
+  "matrix": [
+    {
+      "task_id": "C-117557096",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-118283047",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.0,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "FB1270006001243244",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.6666666666666666,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "WEB00003893791",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.7777777777777778,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "FB2075275439871229",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "NEMO22575977581",
+      "source": "Ethical",
+      "status": "ok",
+      "agreement": 0.6666666666666666,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "FB4440236169552534",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "WEB00003891040",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-117667918",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.6666666666666666,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-118598746",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "source": "Ethical",
+      "status": "ok",
+      "agreement": 0.4444444444444444,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "NEMO22575909157",
+      "source": "Ethical",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.4444444444444444,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "WEB00003884024",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.7777777777777778,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "NEMO22575955230",
+      "source": "Ethical",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "FB915807584567822",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.7777777777777778,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-118080909",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.7777777777777778,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "WEB00003881169",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.4444444444444444,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "WEB00003908929",
+      "source": "Digital",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-118236529",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "C-118600191",
+      "source": "RTN",
+      "status": "ok",
+      "agreement": 1.0,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "task_id": "C-117557096",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 01:21 Dạ. Và chị Nann mình thấy cái chương trình mình chưa ưng hả hay sao?",
+      "gt_evidence": "[telesales] 01:21 Telesale chỉ nói 'Dạ' trước khi chuyển sang hỏi, không có lời đồng cảm hay thấu hiểu với khách"
+    },
+    {
+      "task_id": "C-117557096",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 01:25 Dạ tại vì em thấy là sữa bố mẹ cũng dùng mà. Thì nếu mà được em thấy là cái chương trình quà tặng cũng tốt đó chị Nann thì mình lấy thêm cho bố mẹ dùng thêm.",
+      "gt_evidence": "[telesales] 01:25 'em thấy là cái chương trình quà tặng cũng tốt đó chị Nann thì mình lấy thêm cho bố mẹ dùng thêm' — nhắc quà tặng, chốt đơn mời mua thêm"
+    },
+    {
+      "task_id": "C-117557096",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 01:36 Ờ dạ chứ nếu mà thường ngoài tiệm là người ta bán cho chị bao nhiêu?",
+      "gt_evidence": "[telesales] 01:36 Sau khi khách nói mua ngoài rẻ hơn, telesale đi thẳng vào hỏi giá mà không có lời đồng cảm"
+    },
+    {
+      "task_id": "C-117557096",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 01:21 Dạ. Và chị Nann mình thấy cái chương trình mình chưa ưng hả hay sao?",
+      "gt_evidence": "[telesales] 02:43 'Dạ chị nói sao?' — không có lời đồng cảm hay thấu hiểu khi khách kiên quyết mua ở cửa hàng quen"
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 03:51:000 - 04:13:000] Rồi dạ chị. Tại vì em thấy riêng về sữa Ensure thì cũng tốt quá chị. Dạ tại vì cái dòng này là hỗ trợ thay thế bữa ăn được, giống như là khi nào mà bận bịu quá hay trái gió trở trời á chị, thì nhà mình cũn",
+      "gt_evidence": "[Telesale] [03:51] \"Rồi dạ chị. Tại vì em thấy riêng về sữa Ensure thì cũng tốt quá chị\" — Không thể hiện sự đồng cảm hay thấu hiểu với việc khách uống sữa hạt và chỉ có nhu cầu dùng Ensure khi ở viện, chỉ nói \"dạ\" rồi chuyển sang giới thiệ"
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] 03:43:100 - 03:49:900] Ừ đúng rồi. Hoặc là chị uống sữa hạt nên là chị cũng nói thật là cũng chỉ có nhu cầu uống chứ mà ở viện thôi. ; [customer] 04:43:200 - 05:00:000] Ừ chị biết rồi thì chị hôm trước bạn gì đấy bạn cũng hướng d",
+      "gt_evidence": "[Telesale] [03:51-04:42] Không đặt câu hỏi mở nào để tìm hiểu thêm lý do từ chối, chuyển thẳng sang giới thiệu lợi ích sản phẩm và chương trình khuyến mãi."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 04:14:300 - 04:38:900] Đó nên là đợt này cũng có chương trình tốt nè, vẫn hỗ trợ giao hàng miễn phí về tận nhà. Đó mà khi nào sữa về thì mình được ra kiểm tra trước, xác nhận đúng sữa đủ sữa, xác nhận chính hãng yên tâm hết rồi ",
+      "gt_evidence": "[Telesale] [03:51-04:42] Có đề cập lợi ích (thay thế bữa ăn, để dành trong tủ lạnh), chương trình (giao hàng miễn phí, kiểm tra chính hãng) nhưng không có lời mời chốt đơn rõ ràng. [Telesale] [04:39] \"em mới liên hệ tới tư vấn cho mình tham"
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] 03:43:100 - 03:49:900] Ừ đúng rồi. Hoặc là chị uống sữa hạt nên là chị cũng nói thật là cũng chỉ có nhu cầu uống chứ mà ở viện thôi.",
+      "gt_evidence": "[Customer] [04:43] Khách từ chối lần 2: \"để khi nào chị có nhu cầu thì chị đặt... bây giờ thì ra là cũng không có nhu cầu\" — Không có phản hồi làm dịu từ telesale trong transcript."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] 04:43:200 - 05:00:000] Ừ chị biết rồi thì chị hôm trước bạn gì đấy bạn cũng hướng dẫn chị ở Zalo các thứ rồi đặt hàng này nọ ấy thì để khi nào chị có nhu cầu thì chị đặt đi tại vì bây giờ thì ra là cũng không có nhu cầu mà sữa th",
+      "gt_evidence": "[Customer] [04:43] Khách nói chưa có nhu cầu, sẽ đặt khi cần — Không có câu hỏi làm rõ từ telesale trong transcript."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 04:14:300 - 04:38:900] Đó nên là đợt này cũng có chương trình tốt nè, vẫn hỗ trợ giao hàng miễn phí về tận nhà. Đó mà khi nào sữa về thì mình được ra kiểm tra trước, xác nhận đúng sữa đủ sữa, xác nhận chính hãng yên tâm hết rồi ",
+      "gt_evidence": "NO_DATA — Không có phản hồi làm hài lòng từ telesale sau từ chối lần 2."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 03:51:000 - 04:13:000] Rồi dạ chị. Tại vì em thấy riêng về sữa Ensure thì cũng tốt quá chị. Dạ tại vì cái dòng này là hỗ trợ thay thế bữa ăn được, giống như là khi nào mà bận bịu quá hay trái gió trở trời á chị, thì nhà mình cũn",
+      "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] 03:43:100 - 03:49:900] Ừ đúng rồi. Hoặc là chị uống sữa hạt nên là chị cũng nói thật là cũng chỉ có nhu cầu uống chứ mà ở viện thôi. ; [customer] 04:43:200 - 05:00:000] Ừ chị biết rồi thì chị hôm trước bạn gì đấy bạn cũng hướng d",
+      "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+    },
+    {
+      "task_id": "C-118283047",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Auto-S — Khách không chốt đơn, không cúp máy, không có yêu cầu đổi quà, không có chương trình tích điểm trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng xử lý từ chối lần 3."
+    },
+    {
+      "task_id": "FB1270006001243244",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 03:18.697 làm dịu bằng cách nhấn mạnh quyền lợi và tặng quà, thể hiện sự quan tâm đến khách hàng.",
+      "gt_evidence": "[Telesale] [03:18.697] Không thể hiện sự đồng cảm, đi thẳng vào chào bán: \"Dạ mình đăng ký một thùng thường đi, một thùng thường có 996.000 thôi, vẫn được tặng cho mình là hai gói sữa 120 gram\""
+    },
+    {
+      "task_id": "FB1270006001243244",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 04:35.197 làm dịu bằng cách nhắc đóng data, tạo cảm giác cấp bách nhẹ nhàng.",
+      "gt_evidence": "[Telesale] [03:33.597] Không thể hiện đồng cảm, đi thẳng vào tạo urgency: \"Dạ tại vì ý là cái này mình đăng ký chỉ được có một lần thôi chị, hôm nay là ngày cuối cùng em đóng data rồi ạ\""
+    },
+    {
+      "task_id": "FB1270006001243244",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 04:43.397 làm dịu bằng cách đồng cảm với khách, nhắc giao hàng cuối tháng phù hợp nhu cầu.",
+      "gt_evidence": "[Telesale] [04:35.197] Không thể hiện đồng cảm với khách đã chi 6-7 triệu, đi thẳng vào urgency: \"Dạ tại hôm nay là bên em đóng data luôn rồi đó chị\""
+    },
+    {
+      "task_id": "WEB00003893791",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [05:10.607 - 05:17.407] Nhưng mà riêng về cái dòng Ensure Gold đó anh thì về cái thành phần đường lactose này á nó rất là ít được xem như là không có đó anh, nên là anh cứ yên tâm khi mà anh sử dụng sữa. ; [telesales] [05:17.707",
+      "gt_evidence": "[Telesale] [06:40] hướng dẫn uống nửa chai, cất tủ lạnh ; [Telesale] [06:52] \"chứ nếu mà bây giờ anh sợ về cái vấn đề đi ngoài thì làm sao mà mình hỗ trợ thêm cho cái sức khỏe của mình được\" — đáp lý do từ chối nhưng không có close attempt/"
+    },
+    {
+      "task_id": "WEB00003893791",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [06:01.307 - 06:07.407] Thì em vẫn hỗ trợ cho anh Vinh lấy thử một lốc là một lốc 6 chai anh thì theo giá niêm yết là 372 thì em không có giảm được nha. Nhưng mà em vẫn tặng ở đây cho anh Vinh đó là thêm hai gói sữa bột nữa thì ",
+      "gt_evidence": "NO_DATA — Transcript kết thúc, khách chưa nói xong câu, telesale chưa thực hiện làm dịu lần 3"
+    },
+    {
+      "task_id": "FB2075275439871229",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 04:49:00 Mới mua một thùng ha. Dạ rồi em hiểu là chị Hương đang sợ còn nhiều đúng không? ; [telesales] 05:41:00 Dạ thì em hiểu là chị Hương đang đang còn sữa rồi. Thì như em nói chị Hương còn thì Hương cứ dùng bình thường đi. ; ",
+      "gt_evidence": "[telesales] 06:34 \"Ừm\" — chỉ nói \"Ừm\" rồi chuyển sang nói về chương trình, không thể hiện sự đồng cảm hay thấu hiểu khi khách nói \"em không có nhu cầu\" nhiều lần"
+    },
+    {
+      "task_id": "NEMO22575977581",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 5:06 - 5:13 Ừm em em không biết là chị Nhi suy nghĩ là vấn đề nhu cầu ở đây là cô chưa có nhu cầu dùng sữa hay là như thế nào á chị? Em chưa hiểu lắm.",
+      "gt_evidence": "[Customer] 4:36 \"có nhu cầu thì em sẽ tự mua\" ; [Telesale] 4:41-4:59 không đặt câu hỏi mở để tìm hiểu lý do từ chối, đi thẳng vào đề xuất giải pháp."
+    },
+    {
+      "task_id": "NEMO22575977581",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 4:41 - 4:49 À em biết là khi nào mình có nhu cầu tự mua nhưng mà hiện tại bây giờ á em thấy tình trạng của sức khỏe của cô á thì được thì chị lấy một lốc về, chị để tủ lạnh cho cô dùng từ từ cũng được.",
+      "gt_evidence": "[Customer] 5:01 \"giờ chưa có mua được\" ; [Telesale] 5:06 đi thẳng vào câu hỏi làm rõ mà không có lời đồng cảm/làm dịu trước."
+    },
+    {
+      "task_id": "NEMO22575977581",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 5:06 - 5:13 Ừm em em không biết là chị Nhi suy nghĩ là vấn đề nhu cầu ở đây là cô chưa có nhu cầu dùng sữa hay là như thế nào á chị? Em chưa hiểu lắm.",
+      "gt_evidence": "[Customer] 6:19 \"người lớn thì cũng hơi khó thuyết phục, để về hỏi trước\" ; [Telesale] 6:23 không đặt câu hỏi mở mà đi thẳng vào xử lý."
+    },
+    {
+      "task_id": "FB4440236169552534",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [02:09] Có số một Hoa Kỳ mà sao rẻ quá vậy chị? ; [telesales] [02:30] Dạ là bao nhiêu tiền? Lốc số một là bao nhiêu tiền vậy?",
+      "gt_evidence": "[Telesales] [02:30] Dạ là bao nhiêu tiền? Lốc số một là bao nhiêu tiền vậy? — telesale hỏi mở để làm rõ mức giá khách mua bên ngoài, hiểu rõ hơn lý do từ chối"
+    },
+    {
+      "task_id": "WEB00003891040",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [06:00.000 - 06:02.000] Anh anh hiện tại đang làm ngành nào? Anh học ngành nào? ; [telesales] [06:10.000 - 06:16.000] Anh ở Thủ Đức á, có đi theo hướng là tới theo hướng Cộng Hòa không? ; [telesales] [06:25.000 - 06:32.000] À. Ờ",
+      "gt_evidence": "[customer] [05:02] Em nghĩ tầm cỡ trăm mấy đổ lại chứ nó mắc dữ anh ; [telesales] [05:07] Ensure Gold là cái dòng này là 372.000. Nó gọi là anh có thể tra trên Google luôn đi."
+    },
+    {
+      "task_id": "WEB00003891040",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [05:07.000 - 05:35.000] Ensure Gold là cái dòng này là 372.000... Cho anh đăng ký nên là hôm nay được tặng thêm.",
+      "gt_evidence": "[telesales] [05:15] Tra trên Google một lốc, lốc sáu chai đó cũng ba trăm mấy à, mà không phải được tám chai nữa. Anh em được tám chai luôn mà 372.000 giữ nguyên giá một lốc ; [telesales] [05:26] anh đăng ký trên hãng mua giá lẻ thì vẫn giá"
+    },
+    {
+      "task_id": "WEB00003891040",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[customer] [05:35.000 - 05:39.000] Dạ thôi chắc em cảm ơn anh chứ em hiện tại không có tiền nhiều như thế để mà mua. ; [telesales] [05:40.000 - 05:43.000] Rồi. Nhưng mà bình tĩnh giúp em đi.",
+      "gt_evidence": "[customer] [05:35] Dạ thôi chắc em cảm ơn anh chứ em hiện tại không có tiền nhiều như thế để mà mua ; [telesales] [05:40] Rồi ; [telesales] [05:41] Nhưng mà bình tĩnh giúp em đi"
+    },
+    {
+      "task_id": "WEB00003891040",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [06:25.000 - 06:52.000] Giới thiệu công việc sale Abbott, lương thu nhập cũng ok, không nhắc đến CTKM hay ưu đãi sản phẩm.",
+      "gt_evidence": "[telesales] [05:44] em nghĩ nếu mà mình được á, mình chi ra giúp em một lốc Ensure Gold này hôm nay mình trải nghiệm thử thôi — Giảm combo xuống 1 lốc, có close attempt"
+    },
+    {
+      "task_id": "C-117667918",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [00:47] Ờ nó không xay được hả chị? Cái máy xay đó.",
+      "gt_evidence": "[telesales] [03:35] 'Ừ rồi dạ chị' — Chỉ nói 'rồi dạ' không thể hiện sự đồng cảm với việc khách thích mua ở cửa hàng gần nhà"
+    },
+    {
+      "task_id": "C-117667918",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [01:28] Ờ rồi dạ. Chị lấy 2 lon thì khuyến mãi mấy? À, 2 lon giá bao nhiêu? ; [telesales] [02:04] Ừ rồi dạ. Như cái sự cố lần đó thì chị nhắn Zalo á chị, giờ tụi em kiểm tra cho mình. Trời ơi. Dạ, hiện tại nhà mình còn nhiêu sữa",
+      "gt_evidence": "[customer] [03:31] 'gần đây chị cũng có shop nhà đại lý mà mấy shop ở gần đây cũng bán này' ; [telesales] [03:35] Không hỏi thêm câu hỏi mở để tìm hiểu lý do khách thích mua ngoài, mà đi thẳng vào giới thiệu chương trình"
+    },
+    {
+      "task_id": "C-117667918",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [00:47] Ờ nó không xay được hả chị? Cái máy xay đó.",
+      "gt_evidence": "[customer] [04:00] 'Chứ đâu có đi đâu đâu mà chị làm một cái cạnh nhà mà' ; [customer] [04:11] 'Chứ chị là phòng khám' ; [telesales] [04:13] 'Ờ trời ơi dạ chị' — Chỉ nói 'trời ơi dạ chị' không thể hiện sự đồng cảm thực sự"
+    },
+    {
+      "task_id": "C-118598746",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [2:08.000 - 2:15.000] Dạ. Tức là chủ yếu mình duy trì thường xuyên để mà đảm bảo được cái sự cảm nhận hiệu quả của mình trong vòng từ bốn tới tám tuần chị Thảo nha. Dạ.",
+      "gt_evidence": "[customer] [1:27] 'Tại vì má con vẫn còn á nên con chưa có nhu cầu mua thêm á.' ; [telesales] [1:34] 'Dạ bữa chị có biết là bác mình dùng cỡ tầm mấy mấy chai không?' — Không có câu đồng cảm, nhảy thẳng vào hỏi thăm."
+    },
+    {
+      "task_id": "C-118598746",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [1:34.600 - 1:37.700] Dạ bữa chị có biết là bác mình dùng cỡ tầm mấy mấy chai không? ; [telesales] [1:48.000 - 1:53.000] À dạ, tức là bữa giờ mẹ cũng dùng OK rồi đó chị, cũng chịu dùng rồi đó, còn có sáu chai thôi ha.",
+      "gt_evidence": "[customer] [2:44] 'giờ mà mua nữa không được đâu, má không chịu' ; [telesales] [2:58] 'Nhiều khi người ta sợ tốn tiền của mình thôi à' — Không hỏi câu mở để tìm hiểu tại sao má không chịu, mà tự suy đoán."
+    },
+    {
+      "task_id": "C-118598746",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [2:52.000 - 2:57.000] Trời, cái đó không chịu chị. Người ta mừng không hết luôn á. Thấy con cái mình quan tâm chăm sóc sức khỏe cho họ như vậy rất là vui đó chị.",
+      "gt_evidence": "[customer] [4:04] 'khi nào em có nhu cầu thì có gì em ra ngoài cửa hàng cũng được' ; [telesales] [4:10] 'nhưng mà ý là đợt này chương trình là công ty liên kết với shop đó chị thì nó mới có giá ưu đãi trực tiếp cho mình' — Không có câu đồng"
+    },
+    {
+      "task_id": "C-118598746",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [1:34.600 - 1:37.700] Dạ bữa chị có biết là bác mình dùng cỡ tầm mấy mấy chai không? ; [telesales] [1:48.000 - 1:53.000] À dạ, tức là bữa giờ mẹ cũng dùng OK rồi đó chị, cũng chịu dùng rồi đó, còn có sáu chai thôi ha.",
+      "gt_evidence": "[customer] [4:45] 'Có gì em liên hệ lại sau chứ giờ em cũng chưa cần' ; [customer] [4:49] 'Không biết là má như thế nào nên cũng không biết được' ; [telesales] [4:52] 'thì như chị nói em thấy là bác mình dùng bữa giờ còn có năm chai thôi' —"
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:45 Dạ. Thì không biết là chị em mình đang cần xem lại hay là đang cần tham khảo thêm về thông tin gì thì em hỗ trợ thêm cho mình luôn ạ.",
+      "gt_evidence": "[telesales] 02:45 \"Dạ. Thì không biết là chị em mình đang cần xem lại hay là đang cần tham khảo thêm về thông tin gì thì em hỗ trợ thêm cho mình luôn ạ.\""
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 03:21 Dạ tại vì em thấy là bà cũng lớn tuổi rồi và đặc biệt là bà cũng đang gặp vấn đề về sức khỏe đó thì em thấy cái dòng Ensure Gold này nó rất là phù hợp để cho bà hỗ trợ thêm luôn chị. Mà đợt này chỉ có hỗ trợ trên lon nhỏ t",
+      "gt_evidence": "[telesales] 03:08 \"em cũng hiểu là chị em mình cũng mong muốn là mình tham khảo kỹ trước cái dòng sữa để cho bà khi mà sử dụng\" ; [telesales] 03:21 \"em thấy cái dòng Ensure Gold này nó rất là phù hợp để cho bà hỗ trợ thêm luôn chị... em khu"
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 03:21 Dạ tại vì em thấy là bà cũng lớn tuổi rồi và đặc biệt là bà cũng đang gặp vấn đề về sức khỏe đó thì em thấy cái dòng Ensure Gold này nó rất là phù hợp để cho bà hỗ trợ thêm luôn chị. Mà đợt này chỉ có hỗ trợ trên lon nhỏ t",
+      "gt_evidence": "[telesales] 04:16 \"bà cũng lớn tuổi rồi với lại bà cũng đang gặp vấn đề về xương khớp... mình bổ sung thêm cái dòng Ensure cho bà thì rất là tốt\" ; [telesales] 04:16 \"em mới mời cho chị em mình lấy trước lon nhỏ để cho bà có thể là trải ngh"
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 03:55 Ừ ý là mình đang cần xem lại là xem lại về vấn đề gì đó chị Anh?; [telesales] 04:06 Dạ alo.",
+      "gt_evidence": "Auto-S — Không có lần từ chối thứ 3 rõ ràng trong transcript, cuộc hội thoại kết thúc sau round 2"
+    },
+    {
+      "task_id": "NEMO22576004423",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 03:21 Dạ tại vì em thấy là bà cũng lớn tuổi rồi và đặc biệt là bà cũng đang gặp vấn đề về sức khỏe đó thì em thấy cái dòng Ensure Gold này nó rất là phù hợp để cho bà hỗ trợ thêm luôn chị. Mà đợt này chỉ có hỗ trợ trên lon nhỏ t",
+      "gt_evidence": "Auto-S — Không có lần từ chối thứ 3 rõ ràng trong transcript, cuộc hội thoại kết thúc sau round 2"
+    },
+    {
+      "task_id": "NEMO22575909157",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [00:25 - 00:29] Dạ anh nói cho em hỏi thăm á là không biết là đợt vừa rồi mình dẫn ai đi thăm khám vậy anh ha? ; [customer] [00:23 - 00:24] Em cảm ơn bạn, cái này mình không cần nữa.",
+      "gt_evidence": "[telesales] [00:25-00:29] Dạ anh nói cho em hỏi thăm á là không biết là đợt vừa rồi mình dẫn ai đi thăm khám vậy anh ha? — Telesale đặt câu hỏi mở để tìm hiểu thêm về nhu cầu khách hàng."
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [02:15] Dạ đúng rồi, chị mua hai lốc là tụi em hỗ trợ giá cho mình chỉ có 355.000 một lốc thôi đó chị Hoàng Anh.",
+      "gt_evidence": "[Customer] [02:26] 'thế thôi, thế bọn em bán còn đắt hơn chỗ ngoài á' ; [Telesale] [02:31] 'Ờ ở ngoài ở ngoài hiện tại bây giờ giá thị trường dao động từ 62 tới 65.000 một chai á chị' — Telesale không có lời đồng cảm hay làm dịu, đi thẳng v"
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [02:31] Ờ ở ngoài ở ngoài hiện tại bây giờ giá thị trường dao động từ 62 tới 65.000 một chai á chị. Nhưng mà 355 đây là chia ra thì bình quân một chai như vậy chỉ có 59.000 thôi á chị.",
+      "gt_evidence": "[Telesale] [02:51] 'Dạ còn em là dòng sữa Ensure Gold bên em' ; [Telesale] [03:04] 'cái dòng sữa Ensure Gold á là bình thường. Còn cái dòng sữa mà Ensure Original chị nói hai trăm mấy là hiện tại bên em một lốc như vậy là 249.000 đó chị Hoà"
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [03:04] Đúng rồi, cái dòng sữa Ensure Gold á là bình thường. Còn cái dòng sữa mà Ensure Original chị nói hai trăm mấy là hiện tại bên em một lốc như vậy là 249.000 đó chị Hoàng Anh. ; [telesales] [02:31] Ờ ở ngoài ở ngoài hiện t",
+      "gt_evidence": "[Telesale] [03:51] 'Dạ còn bên em là Ensure Gold thì giá nó cũng sẽ khác đi... một chai bên em chỉ có 62.000 là cao nhất thôi' — Telesale giải thích giá nhưng không đáp ứng đúng lý do từ chối (khách chỉ mua thăm người ốm), không có CTA chốt"
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Khách cúp máy — Auto-S"
+    },
+    {
+      "task_id": "FB1360268702816497",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Khách cúp máy — Auto-S"
+    },
+    {
+      "task_id": "WEB00003884024",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] [04:12 - 04:15] Mình chỉ chọn loại sữa bình dân thôi, tầm 5.000 một hộp mình mua. ; [customer] [04:16 - 04:18] Hộp sữa tươi một hộp 180ml. ; [telesales] [04:19 - 04:23] Dạ anh không, cái Ensure Gold này là 237ml anh, chứ không ph",
+      "gt_evidence": "[telesales] [04:19-04:23] 'Dạ anh không, cái Ensure Gold này là 237ml anh, chứ không phải 180ml' — Telesale chỉ sửa thông tin sản phẩm, không thể hiện sự đồng cảm với việc khách chỉ muốn mua sữa bình dân."
+    },
+    {
+      "task_id": "WEB00003884024",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [05:16 - 05:17] Ừ dạ rồi.",
+      "gt_evidence": "[telesales] [04:52-04:59] 'Dạ thì em cũng hiểu là bây giờ mình cũng chưa có kịp tài chính lấy một lượt quá nhiều đó, cho nên em không dám mời nhiều luôn' — Thể hiện sự đồng cảm với khó khăn tài chính của khách."
+    },
+    {
+      "task_id": "NEMO22575955230",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:10 - 02:10: À.",
+      "gt_evidence": "[telesales] 02:15 - 02:16: \"Bệnh nền của cô là gì ạ?\" — Telesale không thể hiện sự đồng cảm/thấu hiểu khi khách nói mẹ bị bệnh nền, chỉ hỏi thẳng vào vấn đề."
+    },
+    {
+      "task_id": "NEMO22575955230",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:51 - 02:56: Không được, tại kiểu như bên em đang có chương trình gọi ra khách hàng nghe máy thì tụi em cũng cũng là hỗ trợ cho khách hàng luôn đó anh.",
+      "gt_evidence": "[telesales] 02:51 - 02:56: \"Không được, tại kiểu như bên em đang có chương trình gọi ra khách hàng nghe máy thì tụi em cũng cũng là hỗ trợ cho khách hàng luôn đó anh.\" — Không thể hiện đồng cảm khi khách nói mới mua chưa dùng hết, nói thẳng"
+    },
+    {
+      "task_id": "NEMO22575955230",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:10 - 02:10: À.",
+      "gt_evidence": "[telesales] 03:28 - 03:33: \"À, không thì anh Hảo lấy dạng nước cho cô này\" — Telesale không thể hiện đồng cảm khi khách nói bà chán uống, nhảy thẳng vào đề xuất sản phẩm khác."
+    },
+    {
+      "task_id": "NEMO22575955230",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:22 - 03:11: Trời ơi, Ensure Gold bên em là dùng được hết, trừ tiểu đường với lại ung thư thôi. Dạ, cho nên anh cứ yên tâm, Ensure Gold bên em cũng có thông báo với khách hàng là hết rồi, thông báo cho nhân viên hết rồi. Thì t",
+      "gt_evidence": "[telesales] 03:28 - 03:41: \"anh Hảo lấy dạng nước cho cô này, dạng nước thì nó rẻ hơn á, có 372.000 thôi. Một lốc nó sáu chai...\" — Telesale có đề xuất giảm combo (dạng nước rẻ hơn) và close attempt, nhưng thiếu yếu tố urgency/scarcity (khô"
+    },
+    {
+      "task_id": "FB915807584567822",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] 04:18:990 --> 04:24:990: Thì chủ yếu là mình tham gia chương trình lần này mình được những cái lợi về sau đó chị. Dạ mình được cái hỗ trợ mua hàng về sau á.",
+      "gt_evidence": "[telesales] 04:05:990 'mình mua một lon nhỏ hoặc là một lốc để mình tham gia chương trình lần này thôi, mình cứ giữ cái chương trình lần này thôi à' — Đáp trực tiếp vào lý do còn nhiều bằng cách giảm combo, có close attempt."
+    },
+    {
+      "task_id": "FB915807584567822",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] 03:09:00.000 --> 03:11:00.990: Thôi chị mới mua mấy thùng ở bên Long Châu rồi.",
+      "gt_evidence": "[telesales] 04:18:990 'chủ yếu là mình tham gia chương trình lần này mình được những cái lợi về sau đó chị' — Khách nêu vấn đề giá, telesale không hỏi thêm để hiểu rõ (giá cụ thể bao nhiêu, so sánh ra sao), nhảy thẳng vào pitch."
+    },
+    {
+      "task_id": "C-118080909",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [04:58 - 05:05] Thì em hiểu là anh muốn hỏi mẹ thì không biết anh Long muốn hỏi mẹ là hỏi vấn đề gì ta? Là sợ mua về mẹ không dùng hay là anh Long còn lăn tăn vấn đề gì?",
+      "gt_evidence": "[Telesale] [02:54-03:03] Không đặt câu hỏi mở để tìm hiểu lý do từ chối thực sự, mà đi thẳng vào giải thích tâm lý người lớn và đề xuất giải pháp"
+    },
+    {
+      "task_id": "C-118080909",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [02:50 - 02:53] Dạ, nhưng mà mẹ dùng Ensure được thì anh cứ động viên dùng tại đôi khi em sợ tâm lý người lớn á ; [telesales] [04:14 - 04:19] Tại vì cái tâm lý họ cũng sợ con cái tốn tiền, làm ăn cực khổ mà, cũng lo cho con cho ",
+      "gt_evidence": "[Telesale] [03:54-04:02] 'Dạ chứ đợt này không biết anh Long đang còn cân nhắc vấn đề gì' — không thể hiện sự đồng cảm/làm dịu mà đi thẳng vào hỏi lý do"
+    },
+    {
+      "task_id": "WEB00003881169",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [05:00.000 - 05:18.000] Thì cho nên là em cũng muốn hỏi kỹ cho mình là cái cái là tình trạng của cô là bị tiểu đường hay là bị cao đường, tại vì nếu mà bị tiểu đường á thì sản phẩm bên em là còn phải có sự chấp nhận của bác sĩ t",
+      "gt_evidence": "[Telesale] [05:00-05:31] Giải thích về dòng ít đường phù hợp ; [Telesale] [05:45-05:58] \"mình cứ hỏi ý kiến bác sĩ, bác sĩ mà chấp nhận... thì bên em sẽ hỗ trợ lại cho mình\" — Có đáp lý do từ chối nhưng không có close attempt (không mời chố"
+    },
+    {
+      "task_id": "WEB00003881169",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Auto-S — Không có thêm vòng từ chối thứ 2, cuộc gọi kết thúc sau vòng 1."
+    },
+    {
+      "task_id": "WEB00003881169",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Auto-S — Không có thêm vòng từ chối thứ 3, cuộc gọi kết thúc sau vòng 1."
+    },
+    {
+      "task_id": "WEB00003881169",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Auto-S — Không có thêm vòng từ chối thứ 3, cuộc gọi kết thúc sau vòng 1."
+    },
+    {
+      "task_id": "WEB00003881169",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "",
+      "gt_evidence": "Auto-S — Không có thêm vòng từ chối thứ 3, cuộc gọi kết thúc sau vòng 1."
+    },
+    {
+      "task_id": "WEB00003908929",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[customer] [05:21.390 - 05:22.090] Thôi vậy thôi anh ; [telesales] [05:23.690 - 05:27.690] Hỏi rõ lý do khách e dè, sợ tốn tiền hay sợ hàng giả ; [telesales] [05:30.490 - 05:35.090] Hỏi thêm về tài chính và người mua cho ba ; [telesales] [0",
+      "gt_evidence": "[customer] [05:21] Thôi vậy thôi anh ; [telesales] [05:23] Không biết là sao chị e dè vậy nè — không thể hiện đồng cảm, đi thẳng vào hỏi lý do"
+    },
+    {
+      "task_id": "C-118236529",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "NO_DATA",
+      "gt_evidence": "Auto-S — Khách nêu lý do sức khỏe cụ thể: [Customer] [00:51.696] 'Mẹ uống ói... Mẹ bệnh vô bệnh viện rồi'"
+    },
+    {
+      "task_id": "C-118236529",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[customer] [01:25.006 - 01:31.606] Bác sĩ kêu đổi sữa khác rồi, uống sữa khác rồi. Mẹ kêu không uống, hỏi ý kiến của bác sĩ, sữa này uống sữa kia rồi.",
+      "gt_evidence": "[Telesales] [01:14.676] Đáp ứng objection bằng giải pháp phù hợp: 'mua cho mẹ cái dòng Ensure Gold vị ít ngọt với lại vị hạnh nhân á, cái dòng hạnh nhân là dòng đạm thực vật á, nó sẽ tiêu hóa tốt hơn so với dòng Ensure Gold đạm động vật'"
+    },
+    {
+      "task_id": "C-118236529",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "NO_DATA",
+      "gt_evidence": "Auto-S — Khách nêu lý do sức khỏe cụ thể: [Customer] [01:36.106] 'Uống được, còn bột uống là ói' ; [Customer] [01:41.506] 'uống nước yến, nước sữa Ensure mà có nước'"
+    },
+    {
+      "task_id": "C-118236529",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[customer] [01:25.006 - 01:31.606] Bác sĩ kêu đổi sữa khác rồi, uống sữa khác rồi. Mẹ kêu không uống, hỏi ý kiến của bác sĩ, sữa này uống sữa kia rồi.",
+      "gt_evidence": "[Telesales] [02:01.706] Đáp ứng objection sữa nước + CTKM + close attempt: 'đợt này công ty cũng có nè. Dạ mình đăng ký combo hai thùng cho mẹ ha' ; [Telesales] [02:06.506] 'hãng đang hỗ trợ chương trình giảm giá cho mình là 6% trên mỗi thù"
+    }
+  ],
+  "prompt": "You are a QC AI scoring the XỬ LÝ TỪ CHỐI skill of telesales staff.\nYour only job: read transcript → score 9 steps → output JSON only.\nDO NOT add any text outside JSON.\n\nCORE PRINCIPLE\nEvaluate TELESALE ACTION only — not customer response.\nTelesale acted correctly → S regardless of customer outcome.\nACTION > OUTCOME.\n\nIMPORTANT INTERPRETATION RULES\n\n* Prefer SUCCESS if telesale attempted the required behavior.\n* Do NOT require perfect wording.\n* Do NOT require objection to be fully resolved.\n* Evaluate telesale intent/action, not persuasion quality.\n* For làm_dịu steps, require genuine empathetic or soothing language beyond minimal acknowledgments like 'Dạ', 'Ừm', or 'rồi dạ'. Minimal polite cues alone do NOT qualify as làm_dịu success.\n\nENUM\nr: \"S\" = SUCCESS, \"U\" = UNSUCCESS\nIf S: omit \"g\"\nIf U: \"g\" must start with \"Cải thiện:\"\n\nOUTPUT FORMAT\n[\n{\"id\":1,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":2,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":3,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":4,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":5,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":6,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":7,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":8,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":9,\"r\":\"S\",\"e\":\"...\"}\n]\n\nMust output all 9 items.\n\nEVIDENCE FORMAT\n[Telesale] [timestamp] [context] verbatim quote\n[Customer] [timestamp] [context] verbatim quote\n\nJoin multiple with \" ; \"\n\nNo evidence:\n\"e\":\"NO_DATA\"\n\nAuto-S:\n\"e\":\"Auto-S — [reason]\"\n\nCustomer bought:\n\"e\":\"Khách chốt đơn — Auto-S\"\n\nCall ended:\n\"e\":\"Khách cúp máy — Auto-S\"\n\nSOURCE DATA LOGIC\n\n* DGT / RTN → Urbox required at steps 3, 6, 9\n* ETC / CRM → Urbox not required\n* CLP source → CLP required at steps 3, 6, 9\n* If Urbox/voucher/đổi quà already mentioned clearly in earlier round,\n  do NOT require repeating every round.\n\nUrbox synonyms:\n\n* tích điểm đổi quà\n* voucher trên từng lon\n* điểm đổi quà\n* chương trình tích lũy\n\nSTEP RULES\n\n1 / 4 / 7 — LÀM DỊU\nNeed empathy / acknowledgment.\n“Dạ” alone ≠ empathy.\n\n2 / 5 / 8 — LÀM RÕ\nNeed open-ended probing to understand real buying objection.\n\nBusy customer:\nIf customer says busy / call later / not convenient\n→ telesale MUST ask callback time.\n\nEXEMPT LIST — Auto-S for Làm rõ:\n\n* mới mua / vừa mua / mới lấy hàng\n* còn nhiều sữa\n* còn số lượng cụ thể\n* sợ hàng giả / không chính hãng\n* sức khỏe cụ thể\n* tài chính cụ thể\n\nExamples:\n\n* “mới mua hôm qua”\n* “còn nhiều”\n* “sợ hàng giả”\n* “không có tiền”\n\n→ No further probing required.\n\n3 / 6 / 9 — LÀM HÀI LÒNG\n\nNeed:\n(a) respond directly to main objection\n(remind CTKM, reduce combo, giữ quà, dời lịch giao, mua trước dùng sau...)\n(b) Urbox if required\n(c) CLP if required\n(d) close attempt\n\nClose attempt includes soft CTA:\n\n* “Em mời mẹ combo hai lon đi”\n* “Mình lấy giúp em nha”\n* “Em giữ ưu đãi cho mình nha”\n\nStep 9 additionally requires urgency/scarcity:\n\n* “chỉ còn hôm nay”\n* “ưu đãi giới hạn”\n* “sắp hết chương trình”\n\nSKIP LOGIC\n\n* Customer buys → remaining steps Auto-S\n* Call ends → remaining steps Auto-S\n\nFLEXIBLE ORDER\nMap by meaning, not exact order.\n\nThink step by step before generating output.\n\n* Genuine empathy or soothing language requires more than minimal acknowledgments (e.g., 'Dạ', 'Ừ rồi dạ chị'). Look for explicit empathetic content such as recognizing customer feelings or concerns.",
+  "prompt_chars": 3172
+}

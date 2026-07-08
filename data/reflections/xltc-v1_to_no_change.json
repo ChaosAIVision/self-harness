@@ -1,0 +1,35 @@
+{
+  "round_id": "xltc-v1_to_no_change",
+  "from_version": "xltc-v1",
+  "to_version": null,
+  "baseline_in": 0.8888888888888888,
+  "baseline_out": 0.8888888888888888,
+  "final_in": null,
+  "final_out": null,
+  "proposals_tried": [],
+  "failure_statuses": [
+    {
+      "pattern": "Model falsely labels minimal or formulaic acknowledgments as làm_dịu even after explicit customer refusals or objections",
+      "step_type": "làm_dịu",
+      "first_seen": "xltc-v1",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 1,
+      "count_after": null
+    },
+    {
+      "pattern": "Model fails to differentiate between genuine empathetic calming and perfunctory politeness or pivoting sales pitches",
+      "step_type": "làm_dịu",
+      "first_seen": "xltc-v1",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 1,
+      "count_after": null
+    }
+  ],
+  "what_worked": "No new proposals were accepted this round, so no improvements were realized in score or behavior.",
+  "what_failed": "No proposals were rejected this round, indicating no active attempts were made that negatively impacted performance.",
+  "what_persists": "The model continues to falsely label minimal or formulaic telesales acknowledgments as làm_dịu even after explicit customer refusals or objections. This failure persists because the current approach still relies on isolated keyword presence without integrating explicit detection of customer refusal signals or multi-turn contextual analysis to evaluate the sincerity and appropriateness of calming responses. Consequently, the model cannot differentiate genuine empathetic engagement from perfunctory politeness or sales pivots in context.",
+  "lesson": "Next round should implement explicit customer refusal and objection detection combined with multi-turn dialogue context modeling that dynamically modulates làm_dịu labeling based on preceding customer sentiment and objection cues. This requires rules or models that assess telesales responses in direct relation to prior customer utterances, moving beyond static keyword heuristics to context-sensitive intent and sentiment evaluation.",
+  "avoid_next": "Avoid relying solely on keyword-based heuristics or isolated utterance-level rules without integrating cross-turn context or explicit refusal detection, as these approaches have repeatedly failed to resolve false positives in làm_dịu labeling."
+}

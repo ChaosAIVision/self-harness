@@ -1,0 +1,64 @@
+{
+  "round_id": "v0.1.0_to_v0.2.0",
+  "from_version": "v0.1.0",
+  "to_version": "v0.2.0",
+  "baseline_in": 0.6666666666666666,
+  "baseline_out": 0.0,
+  "final_in": 0.6666666666666666,
+  "final_out": 0.4444444444444444,
+  "proposals_tried": [
+    {
+      "proposal_id": "p_001",
+      "target_failure": "làm_dịu minimal acknowledgments false positive",
+      "proposed_change_summary": "* For làm_dịu steps, explicitly exclude responses that only repeat or minimally acknowledge customer objections without adding new empathetic content or addressing the concern. Responses must show act",
+      "accepted": false,
+      "delta_in": -0.11111111111111105,
+      "delta_out": 0.4444444444444444
+    },
+    {
+      "proposal_id": "p_002",
+      "target_failure": "làm_hài_lòng false negative on indirect reassurance",
+      "proposed_change_summary": "* For làm_hài_lòng steps, accept indirect positive telesales language such as product benefits, incentives, or reassurances embedded in sales pitch as valid làm_hài_lòng attempts, even if not explicit",
+      "accepted": true,
+      "delta_in": 0.0,
+      "delta_out": 0.4444444444444444
+    },
+    {
+      "proposal_id": "combo_001_002",
+      "target_failure": "",
+      "proposed_change_summary": "",
+      "accepted": true,
+      "delta_in": 0.0,
+      "delta_out": 0.4444444444444444
+    }
+  ],
+  "failure_statuses": [
+    {
+      "pattern": "Model marks minimal acknowledgments (e.g., 'Dạ') as làm_dịu despite lack of genuine empathy or understanding, especially after customer objections or price comparisons.",
+      "step_type": "làm_dịu",
+      "first_seen": "v0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_001"
+      ],
+      "count_before": 2,
+      "count_after": null
+    },
+    {
+      "pattern": "Model fails to recognize positive telesales attempts to reassure or add value (làm_hài_lòng) when phrased as product benefits or incentives, resulting in false negatives.",
+      "step_type": "làm_hài_lòng",
+      "first_seen": "v0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_002"
+      ],
+      "count_before": 1,
+      "count_after": null
+    }
+  ],
+  "what_worked": "Proposal p_002 improved recall for làm_hài_lòng by expanding rule coverage to include indirect positive telesales language embedded in sales pitches, capturing more nuanced reassurance attempts. The combo_001_002 acceptance maintained these gains without harming precision.",
+  "what_failed": "Proposal p_001 was rejected because its exclusion of minimal acknowledgments as làm_dịu overly penalized cases where polite acknowledgments might still be contextually empathetic, leading to a net decrease in in-domain performance and increased out-of-domain errors.",
+  "what_persists": "The model still mislabels minimal acknowledgments like 'Dạ' as làm_dịu even when they do not convey genuine empathy or address customer concerns, especially following objections or price comparisons. Current rules rely on keyword presence without evaluating the sincerity or contextual appropriateness of the response, failing to differentiate superficial politeness from substantive empathetic engagement. Additionally, subtle telesales strategies that combine acknowledgment with pivoting to sales pitches remain undetected due to lack of cross-turn contextual analysis.",
+  "lesson": "Next round should develop context-sensitive rules that incorporate multi-turn dialogue analysis, specifically detecting customer objection signals and evaluating telesales responses for genuine empathetic content versus perfunctory acknowledgments. This requires integrating sentiment or intent detection to modulate step labeling dynamically based on preceding customer utterances rather than isolated keyword checks.",
+  "avoid_next": "Avoid relying solely on keyword presence or exclusion lists targeting minimal acknowledgments without context, as this approach has proven insufficient and can degrade performance. Also, do not attempt further broadening of indirect language capture without addressing contextual relevance, since that risks increasing false positives."
+}

@@ -33,6 +33,7 @@ class Trace(BaseModel):
     status: str  # "ok" | "failed" | "parse_error"
     system_prompt_hash: str
     raw_output: str
+    thinking: Optional[str] = None  # model's reasoning trace (kept as a scoring resource)
     parsed_steps: list[StepResult]
     ground_truth_steps: list[StepResult]
     verifier: Optional[TraceVerifier] = None
@@ -63,6 +64,7 @@ class HarnessProposal(BaseModel):
     target_failure: str
     editable_surface: str  # "system_prompt" | "policy_field"
     proposed_change: str
+    insertion_point: str = "end of STEP RULES section"
     expected_gain: str
     risk: str
 

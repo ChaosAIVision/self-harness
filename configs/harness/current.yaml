@@ -1,6 +1,2 @@
-based_on: v0.2.0
-delta_in: 0.031746031746031744
-delta_out: 0.12698412698412698
-promoted_proposal: p_001
-system_prompt_file: /home/chaos/Documents/chaos/self-harness/configs/harness/versions/v0.3.0.md
-version: v0.3.0
+system_prompt_file: /Users/chaos/Documents/project/chaos/self-harness/configs/harness/versions/xltc-v1.md
+version: xltc-v1

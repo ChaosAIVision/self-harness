@@ -1,0 +1,95 @@
+{
+  "round_id": "v0.2.0_to_v0.3.0",
+  "from_version": "v0.2.0",
+  "to_version": "v0.3.0",
+  "baseline_in": 0.6349206349206349,
+  "baseline_out": 0.619,
+  "final_in": 0.667,
+  "final_out": 0.746,
+  "proposals_tried": [
+    {
+      "proposal_id": "p_001",
+      "target_failure": "làm_dịu minimal acknowledgments false positive",
+      "proposed_change_summary": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, require genuine empathetic or soothing language beyond minimal acknowledgments like 'Dạ', 'Ừm', or 'rồi dạ'. Minimal polite cues alone do N",
+      "accepted": true,
+      "delta_in": 0.031746031746031744,
+      "delta_out": 0.12698412698412698
+    },
+    {
+      "proposal_id": "p_002",
+      "target_failure": "làm_rõ closed or irrelevant questions false positive",
+      "proposed_change_summary": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_rõ steps, confirm that questions are open-ended or clarifying to understand customer objections or needs. Closed or irrelevant questions do NOT qualif",
+      "accepted": true,
+      "delta_in": 0.05555555555555558,
+      "delta_out": 0.0793650793650793
+    },
+    {
+      "proposal_id": "p_003",
+      "target_failure": "làm_dịu incomplete or abrupt ending false positive",
+      "proposed_change_summary": "Add to IMPORTANT INTERPRETATION RULES:\n\n* For làm_dịu steps, verify that telesales complete a genuine soothing attempt; abrupt call endings or silence do NOT qualify as làm_dịu success.",
+      "accepted": true,
+      "delta_in": 0.00793650793650802,
+      "delta_out": 0.09523809523809523
+    }
+  ],
+  "failure_statuses": [
+    {
+      "pattern": "Model incorrectly labels lack of empathy or soothing language as present; telesales only use minimal acknowledgments ('Dạ', 'Ừm', 'rồi dạ') without genuine empathetic or soothing responses.",
+      "step_type": "làm_dịu",
+      "first_seen": "v0.2.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 15,
+      "count_after": null
+    },
+    {
+      "pattern": "Model marks làm_rõ as done despite telesales failing to ask open-ended or clarifying questions to understand customer objections or needs.",
+      "step_type": "làm_rõ",
+      "first_seen": "v0.2.0",
+      "still_present": true,
+      "attempts": [
+        "p_002"
+      ],
+      "count_before": 8,
+      "count_after": null
+    },
+    {
+      "pattern": "Model marks làm_hài_lòng as present when telesales only mention benefits or programs superficially without providing concrete solutions or effective objection handling.",
+      "step_type": "làm_hài_lòng",
+      "first_seen": "v0.2.0",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 7,
+      "count_after": null
+    },
+    {
+      "pattern": "Model fails to detect missing empathy or clarifying questions after customer explicitly states refusal or lack of need; telesales proceed directly to sales pitch or closed questions.",
+      "step_type": "làm_dịu|làm_rõ",
+      "first_seen": "v0.2.0",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 6,
+      "count_after": null
+    },
+    {
+      "pattern": "Model marks làm_dịu as present even when transcript ends abruptly or telesales does not complete soothing attempt.",
+      "step_type": "làm_dịu",
+      "first_seen": "v0.2.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 3,
+      "count_after": null
+    }
+  ],
+  "what_worked": "Proposals p_001, p_002, and p_003 improved scores by refining interpretation rules to require genuine empathetic language for làm_dịu and open-ended clarifying questions for làm_rõ, reducing false positives from minimal acknowledgments and irrelevant questions. These targeted edits helped the model better distinguish superficial from substantive telesales behaviors.",
+  "what_failed": "No proposals were rejected this round, so no failures to report in this category.",
+  "what_persists": "Failures remain where the model misses the contextual integration of customer rejection signals with telesales responses, particularly in steps labeled làm_dịu|làm_rõ after explicit refusals. The current rules do not incorporate customer sentiment or refusal detection to modulate step labeling, causing the model to still mark empathetic or clarifying steps as present when telesales proceed directly to sales pitches or closed questions. Additionally, the model continues to rely heavily on keyword presence without assessing the effectiveness or appropriateness of telesales responses in context.",
+  "lesson": "Next round should focus on developing context-aware rules that incorporate customer sentiment and explicit refusal detection to dynamically adjust step labeling. This means implementing cross-turn analysis that evaluates telesales responses in direct relation to preceding customer objections or refusals, rather than isolated utterance-level keyword checks.",
+  "avoid_next": "Avoid retrying purely keyword-based or minimal linguistic cue rules for làm_dịu and làm_rõ, as these have proven insufficient. Also, do not attempt isolated step-level rule refinements without integrating customer response context, since prior edits failed to capture interaction dynamics."
+}

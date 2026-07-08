@@ -13,6 +13,9 @@ from proposer import generate_proposals
 from patcher import merge_proposals
 from validator import validate_proposal, _compute_agreement
 from promoter import promote
+from reflector import generate_reflection
+from trend_tracker import compute_version_snapshot, save_snapshot
+from feedback_collector import export_for_review, generate_preference_pairs, load_all_feedback
 
 
 def _load_data() -> list[dict]:
@@ -91,6 +94,25 @@ def run_round(current_prompt: str, current_version: str) -> dict:
 
     if not proposals:
         print("    No proposals generated. Round complete with no changes.")
+        # Still generate reflection and snapshot even with no proposals
+        print(f"\n[7] Generating reflection...")
+        reflection = generate_reflection(
+            from_version=current_version,
+            to_version=None,
+            bundle=bundle,
+            proposals_file=proposals_file,
+            validation_results=[],
+            baseline_in=baseline_in,
+            baseline_out=baseline_out,
+            final_in=None,
+            final_out=None,
+        )
+        print(f"\n[8] Saving trend snapshot and exporting review queue...")
+        snapshot = compute_version_snapshot(all_traces, current_version)
+        save_snapshot(snapshot)
+        review_path = config.DATA_DIR / "review_queue" / f"{current_version}.json"
+        n_exported = export_for_review(all_traces, review_path)
+        print(f"    {n_exported} disagreements exported for review.")
         return {"promoted": False, "baseline_in": baseline_in, "baseline_out": baseline_out}
 
     # Step 4: Apply patches
@@ -119,15 +141,74 @@ def run_round(current_prompt: str, current_version: str) -> dict:
     if promo:
         new_version, new_prompt = promo
         print(f"\n✓ Round complete. New harness: {new_version}")
+        final_in = max(r.agreement_in for r in results if r.accepted)
+        final_out = max(r.agreement_out for r in results if r.accepted)
+
+        # Step 7: Generate reflection
+        print(f"\n[7] Generating reflection...")
+        reflection = generate_reflection(
+            from_version=current_version,
+            to_version=new_version,
+            bundle=bundle,
+            proposals_file=proposals_file,
+            validation_results=results,
+            baseline_in=baseline_in,
+            baseline_out=baseline_out,
+            final_in=final_in,
+            final_out=final_out,
+        )
+        print(f"    Lesson: {reflection.lesson[:100]}...")
+
+        # Step 8: Save trend snapshot + export disagreements for review
+        print(f"\n[8] Saving trend snapshot and exporting review queue...")
+        snapshot = compute_version_snapshot(all_traces, current_version)
+        save_snapshot(snapshot)
+        review_path = config.DATA_DIR / "review_queue" / f"{current_version}.json"
+        n_exported = export_for_review(all_traces, review_path)
+        print(f"    {n_exported} disagreements exported for review.")
+        # Generate preference pairs from any existing feedback
+        existing_feedback = load_all_feedback(current_version)
+        if existing_feedback:
+            pairs = generate_preference_pairs(all_traces, existing_feedback, current_version)
+            print(f"    Generated {len(pairs)} DPO preference pairs.")
+
         return {
             "promoted": True,
             "new_version": new_version,
             "new_prompt": new_prompt,
             "baseline_in": baseline_in,
             "baseline_out": baseline_out,
-            "final_in": max(r.agreement_in for r in results if r.accepted),
-            "final_out": max(r.agreement_out for r in results if r.accepted),
+            "final_in": final_in,
+            "final_out": final_out,
         }
     else:
         print(f"\n✗ No improvement found. Current harness unchanged.")
+
+        # Step 7: Generate reflection even when not promoted
+        print(f"\n[7] Generating reflection...")
+        reflection = generate_reflection(
+            from_version=current_version,
+            to_version=None,
+            bundle=bundle,
+            proposals_file=proposals_file,
+            validation_results=results,
+            baseline_in=baseline_in,
+            baseline_out=baseline_out,
+            final_in=None,
+            final_out=None,
+        )
+        print(f"    Lesson: {reflection.lesson[:100]}...")
+
+        # Step 8: Save trend snapshot + export disagreements for review
+        print(f"\n[8] Saving trend snapshot and exporting review queue...")
+        snapshot = compute_version_snapshot(all_traces, current_version)
+        save_snapshot(snapshot)
+        review_path = config.DATA_DIR / "review_queue" / f"{current_version}.json"
+        n_exported = export_for_review(all_traces, review_path)
+        print(f"    {n_exported} disagreements exported for review.")
+        existing_feedback = load_all_feedback(current_version)
+        if existing_feedback:
+            pairs = generate_preference_pairs(all_traces, existing_feedback, current_version)
+            print(f"    Generated {len(pairs)} DPO preference pairs.")
+
         return {"promoted": False, "baseline_in": baseline_in, "baseline_out": baseline_out}

@@ -1,0 +1,30 @@
+{
+  "harness_version": "xltc-v1",
+  "total_calls": 1,
+  "total_steps": 9,
+  "overall_agreement": 0.8888888888888888,
+  "clusters": [
+    {
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 1,
+      "pattern": "Model falsely labels minimal or formulaic acknowledgments as làm_dịu even after explicit customer refusals or objections",
+      "mechanism": "Lack of explicit detection and integration of customer refusal signals and insufficient multi-turn context analysis to assess sincerity of telesales calming responses; model relies on keyword presence without evaluating preceding customer sentiment",
+      "representative_cases": [
+        "call=rec-1 step=4"
+      ]
+    },
+    {
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 1,
+      "pattern": "Model fails to differentiate between genuine empathetic calming and perfunctory politeness or pivoting sales pitches",
+      "mechanism": "Rules do not incorporate cross-turn dialogue context or intent/sentiment detection to modulate làm_dịu labeling dynamically; keyword-based heuristics treat minimal acknowledgments as empathetic regardless of context",
+      "representative_cases": [
+        "call=rec-1 step=4"
+      ]
+    }
+  ]
+}
