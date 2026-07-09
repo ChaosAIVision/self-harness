@@ -1,2 +1,6 @@
-system_prompt_file: D:\Concentrix\self-harness\configs\harness\versions\dropcall.0.1.0.md
-version: dropcall.0.1.0
+based_on: Cup.0.2.0
+delta_in: 0.1358024691358024
+delta_out: 0.15555555555555556
+promoted_proposal: p_003
+system_prompt_file: D:\Concentrix\self-harness\configs\harness\versions\vCup.1.0.md
+version: vCup.1.0

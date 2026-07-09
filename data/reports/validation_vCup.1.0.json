@@ -1,0 +1,46 @@
+[
+  {
+    "proposal_id": "p_001",
+    "harness_version": "Cup.0.2.0_cand",
+    "delta_in": 0.07407407407407407,
+    "delta_out": 0.1777777777777778,
+    "agreement_in": 0.7283950617283951,
+    "agreement_out": 0.7111111111111111,
+    "baseline_in": 0.654320987654321,
+    "baseline_out": 0.5333333333333333,
+    "accepted": true
+  },
+  {
+    "proposal_id": "p_002",
+    "harness_version": "Cup.0.2.0_cand",
+    "delta_in": 0.061728395061728336,
+    "delta_out": 0.1333333333333333,
+    "agreement_in": 0.7160493827160493,
+    "agreement_out": 0.6666666666666666,
+    "baseline_in": 0.654320987654321,
+    "baseline_out": 0.5333333333333333,
+    "accepted": true
+  },
+  {
+    "proposal_id": "p_003",
+    "harness_version": "Cup.0.2.0_cand",
+    "delta_in": 0.1358024691358024,
+    "delta_out": 0.15555555555555556,
+    "agreement_in": 0.7901234567901234,
+    "agreement_out": 0.6888888888888889,
+    "baseline_in": 0.654320987654321,
+    "baseline_out": 0.5333333333333333,
+    "accepted": true
+  },
+  {
+    "proposal_id": "combo_001_002",
+    "harness_version": "Cup.0.2.0_cand",
+    "delta_in": 0.03703703703703698,
+    "delta_out": 0.022222222222222254,
+    "agreement_in": 0.691358024691358,
+    "agreement_out": 0.5555555555555556,
+    "baseline_in": 0.654320987654321,
+    "baseline_out": 0.5333333333333333,
+    "accepted": true
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "harness_version": "Cup.0.1.0",
+  "total_calls": 9,
+  "total_steps": 81,
+  "overall_agreement": 0.6172839506172839,
+  "clusters": [
+    {
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 6,
+      "pattern": "Model misclassifies step 4 (làm_dịu)",
+      "mechanism": "Harness rule for step 4 needs clarification",
+      "representative_cases": []
+    },
+    {
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "source_types": [],
+      "count": 5,
+      "pattern": "Model misclassifies step 7 (làm_dịu)",
+      "mechanism": "Harness rule for step 7 needs clarification",
+      "representative_cases": []
+    },
+    {
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "source_types": [],
+      "count": 5,
+      "pattern": "Model misclassifies step 8 (làm_rõ)",
+      "mechanism": "Harness rule for step 8 needs clarification",
+      "representative_cases": []
+    }
+  ]
+}

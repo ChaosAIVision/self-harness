@@ -1,0 +1,85 @@
+{
+  "round_id": "Cup.0.2.0_to_vCup.1.0",
+  "from_version": "Cup.0.2.0",
+  "to_version": "vCup.1.0",
+  "baseline_in": 0.654320987654321,
+  "baseline_out": 0.5333333333333333,
+  "final_in": 0.7901234567901234,
+  "final_out": 0.7111111111111111,
+  "proposals_tried": [
+    {
+      "proposal_id": "p_001",
+      "target_failure": "làm_dịu misclassification at steps 4, 7",
+      "proposed_change_summary": "Add to <group id=\"1,4,7\" name=\"LÀM DỊU\">: Telesales must demonstrate genuine empathy toward the customer's specific objection in the current round. A perfunctory acknowledgment like 'Dạ' or 'Dạ vâng' ",
+      "accepted": true,
+      "delta_in": 0.07407407407407407,
+      "delta_out": 0.1777777777777778
+    },
+    {
+      "proposal_id": "p_002",
+      "target_failure": "làm_hài_lòng misclassification at step 6",
+      "proposed_change_summary": "Add to <group id=\"3,6,9\" name=\"LÀM HÀI LÒNG\">: Telesales must address the customer's specific objection directly. Indirect reassurance (e.g., mentioning product benefits without connecting to the obje",
+      "accepted": true,
+      "delta_in": 0.061728395061728336,
+      "delta_out": 0.1333333333333333
+    },
+    {
+      "proposal_id": "p_003",
+      "target_failure": "làm_dịu incomplete ending at step 4",
+      "proposed_change_summary": "Add to <group id=\"1,4,7\" name=\"LÀM DỊU\">: If the telesales response to làm_dịu is cut off mid-sentence or ends abruptly without completing the empathetic statement, mark as incomplete. The response mu",
+      "accepted": true,
+      "delta_in": 0.1358024691358024,
+      "delta_out": 0.15555555555555556
+    },
+    {
+      "proposal_id": "combo_001_002",
+      "target_failure": "",
+      "proposed_change_summary": "",
+      "accepted": true,
+      "delta_in": 0.03703703703703698,
+      "delta_out": 0.022222222222222254
+    }
+  ],
+  "failure_statuses": [
+    {
+      "pattern": "Model misclassifies step 4 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 6,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 6 (làm_hài_lòng)",
+      "step_type": "làm_hài_lòng",
+      "first_seen": "Cup.0.2.0",
+      "still_present": true,
+      "attempts": [
+        "p_002"
+      ],
+      "count_before": 5,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 7 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 4,
+      "count_after": null
+    }
+  ],
+  "what_worked": "Parse error — could not generate reflection",
+  "what_failed": "",
+  "what_persists": "",
+  "lesson": "",
+  "avoid_next": ""
+}

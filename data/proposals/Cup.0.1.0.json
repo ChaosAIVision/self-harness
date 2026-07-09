@@ -1,0 +1,29 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "làm_dịu steps 4 & 7 misclassification",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"1,4,7\" name=\"LÀM DỊU\">: Step passes if telesales uses genuine empathetic language (e.g., 'em hiểu', 'em thông cảm', 'dạ em biết') that directly references the customer's specific objection from that round, NOT just a one-word acknowledgment like 'dạ' or 'vâng' followed by a sales pitch.",
+    "insertion_point": "after STEP RULES section",
+    "expected_gain": "Reduce false S on làm_dịu by requiring substantive empathetic content tied to the actual objection rather than keyword presence alone",
+    "risk": "May increase false U if telesales uses subtle empathy not captured by the examples; needs calibration on edge cases"
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "làm_rõ step 8 misclassification",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"2,5,8\" name=\"LÀM RÕ\">: Step passes only if telesales asks a clarifying or open-ended question about the customer's objection (e.g., 'Dạ anh/chị có thể chia sẻ thêm lý do...?'). Step fails if telesales only repeats the objection, gives a one-word answer, or pivots to selling without probing.",
+    "insertion_point": "after STEP RULES section",
+    "expected_gain": "Reduce false S on làm_rõ by explicitly requiring open-ended probing behavior and defining failure conditions clearly",
+    "risk": "May flag as U when telesales asks a brief but relevant question; needs to distinguish between probing and confirming"
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "làm_dịu incomplete ending false positive",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to <group id=\"1,4,7\" name=\"LÀM DỊU\">: Step passes only if telesales completes a genuine soothing attempt that includes both empathy AND a soft transition (e.g., 'em hiểu... nên em muốn chia sẻ thêm...'). Step fails if telesales ends abruptly after empathy without any attempt to continue the conversation or address the objection.",
+    "insertion_point": "after STEP RULES section",
+    "expected_gain": "Reduce false S on làm_dịu by requiring a complete soothing attempt with transition, not just empathy alone",
+    "risk": "May increase false U when telesales uses empathy but the transition is implicit or very brief"
+  }
+]

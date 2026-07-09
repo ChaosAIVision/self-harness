@@ -1,0 +1,44 @@
+{
+  "round_id": "Cup.0.2.0_to_no_change",
+  "from_version": "Cup.0.2.0",
+  "to_version": null,
+  "baseline_in": 0.654320987654321,
+  "baseline_out": 0.5111111111111111,
+  "final_in": null,
+  "final_out": null,
+  "proposals_tried": [],
+  "failure_statuses": [
+    {
+      "pattern": "Model misclassifies step 4 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 6,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 6 (làm_hài_lòng)",
+      "step_type": "làm_hài_lòng",
+      "first_seen": "Cup.0.2.0",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 5,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 7 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [],
+      "count_before": 4,
+      "count_after": null
+    }
+  ],
+  "what_worked": "Parse error — could not generate reflection",
+  "what_failed": "",
+  "what_persists": "",
+  "lesson": "",
+  "avoid_next": ""
+}
