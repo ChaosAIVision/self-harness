@@ -1,0 +1,29 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "làm_dịu steps 4, 7 — model accepts perfunctory acknowledgments",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Replace the current làm_dịu rule with: 'Cần: telesales phải thể hiện sự đồng cảm thực sự với cảm xúc khách hàng (ví dụ: 'em hiểu chị lo lắng', 'em biết điều này khó khăn cho chị'), không chỉ xác nhận khách có từ chối. Nếu telesales chỉ nói 'vâng', 'dạ' rồi chuyển sang giải thích → U.'",
+    "insertion_point": "after STEP RULES section, before scoring",
+    "expected_gain": "Eliminates false S on làm_dịu by requiring specific empathetic phrases rather than generic acknowledgment",
+    "risk": "May increase false U if telesales uses subtle empathy that doesn't match exact phrases — but this is preferable to accepting perfunctory responses"
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "làm_rõ step 5 — model misclassifies closed/irrelevant questions as S",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to làm_rõ rule: 'Câu hỏi được tính là làm_rõ khi: (a) mở để khách chia sẻ thêm lý do từ chối (ví dụ: 'chị có thể chia sẻ thêm lý do chị chưa muốn dùng không ạ?'), (b) hoặc khách tự nêu lý do rõ ràng và telesales không cần hỏi thêm. Câu hỏi đóng (có/không) hoặc chuyển sang giới thiệu sản phẩm ngay → U.'",
+    "insertion_point": "after STEP RULES section, before scoring",
+    "expected_gain": "Clarifies what constitutes a valid làm_rõ attempt, reducing false S on closed or irrelevant questions",
+    "risk": "None significant — the rule is more specific and should reduce false positives"
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "làm_dịu steps 4, 7 — model fails to detect abrupt/incomplete endings",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to làm_dịu rule: 'Nếu telesales cắt ngang câu khách đang nói, không hoàn thành câu đồng cảm, hoặc kết thúc cuộc gọi ngay sau khi khách từ chối → U. Telesales phải có đủ câu đồng cảm trước khi chuyển sang bước tiếp theo.'",
+    "insertion_point": "after STEP RULES section, before scoring",
+    "expected_gain": "Catches cases where telesales abruptly ends without completing empathy, preventing false S on incomplete làm_dịu attempts",
+    "risk": "None significant — the rule is more specific and should reduce false positives"
+  }
+]

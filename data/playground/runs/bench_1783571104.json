@@ -1,0 +1,1597 @@
+{
+  "run_id": "bench_1783571104",
+  "label": "U_678",
+  "created_at": "2026-07-09T11:43:08",
+  "model": "qc",
+  "n_records": 14,
+  "n_failed": 0,
+  "overall": 0.6111111111111112,
+  "step_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 2,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 3,
+      "type": "làm_hài_lòng"
+    },
+    {
+      "id": 4,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 5,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 6,
+      "type": "làm_hài_lòng"
+    },
+    {
+      "id": 7,
+      "type": "làm_dịu"
+    },
+    {
+      "id": 8,
+      "type": "làm_rõ"
+    },
+    {
+      "id": 9,
+      "type": "làm_hài_lòng"
+    }
+  ],
+  "by_step": {
+    "1": {
+      "matched": 13,
+      "total": 14,
+      "rate": 0.9285714285714286,
+      "step_type": "làm_dịu"
+    },
+    "2": {
+      "matched": 13,
+      "total": 14,
+      "rate": 0.9285714285714286,
+      "step_type": "làm_rõ"
+    },
+    "3": {
+      "matched": 12,
+      "total": 14,
+      "rate": 0.8571428571428571,
+      "step_type": "làm_hài_lòng"
+    },
+    "4": {
+      "matched": 6,
+      "total": 14,
+      "rate": 0.42857142857142855,
+      "step_type": "làm_dịu"
+    },
+    "5": {
+      "matched": 7,
+      "total": 14,
+      "rate": 0.5,
+      "step_type": "làm_rõ"
+    },
+    "6": {
+      "matched": 6,
+      "total": 14,
+      "rate": 0.42857142857142855,
+      "step_type": "làm_hài_lòng"
+    },
+    "7": {
+      "matched": 7,
+      "total": 14,
+      "rate": 0.5,
+      "step_type": "làm_dịu"
+    },
+    "8": {
+      "matched": 6,
+      "total": 14,
+      "rate": 0.42857142857142855,
+      "step_type": "làm_rõ"
+    },
+    "9": {
+      "matched": 7,
+      "total": 14,
+      "rate": 0.5,
+      "step_type": "làm_hài_lòng"
+    }
+  },
+  "by_type": {
+    "làm_dịu": 0.6190476190476191,
+    "làm_rõ": 0.6190476190476191,
+    "làm_hài_lòng": 0.5952380952380952
+  },
+  "matrix": [
+    {
+      "task_id": "rec-1",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-2",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-3",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.3333333333333333,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-4",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.3333333333333333,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-5",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-6",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-7",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-8",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.3333333333333333,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-9",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.7777777777777778,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-10",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.5555555555555556,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "S",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-11",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.6666666666666666,
+      "cells": [
+        {
+          "id": 1,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-12",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.2222222222222222,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-13",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.3333333333333333,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 6,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 7,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 8,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 9,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        }
+      ]
+    },
+    {
+      "task_id": "rec-14",
+      "source": "manual",
+      "status": "ok",
+      "agreement": 0.8888888888888888,
+      "cells": [
+        {
+          "id": 1,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 2,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 3,
+          "model": "S",
+          "gt": "U",
+          "state": "diverge"
+        },
+        {
+          "id": 4,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 5,
+          "model": "S",
+          "gt": "S",
+          "state": "agree"
+        },
+        {
+          "id": 6,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 7,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 8,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        },
+        {
+          "id": 9,
+          "model": "U",
+          "gt": "U",
+          "state": "agree"
+        }
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "task_id": "rec-1",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[Telesale] [01:07-01:08] 'Dạ rồi em hiểu rồi' ; [Telesale] [01:29-01:30] 'Dạ rồi em hiểu rồi' — Shows understanding of customer's situation about family not drinking much",
+      "gt_evidence": "[Customer] [00:09] 'chưa tại vì là chị chưa uống hết thì chưa mua được đâu em' ; [Telesale] [00:13] 'À chưa hết' — Only acknowledged, no empathy or understanding expressed",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer's main objection is that she still has milk left (didn't finish it), and she wants to split delivery to two locations, which isn't possible. She also mentions she's traveling and family members don't drink much.\n\n**Round 1 (Steps 1-3):**\n- Customer's objection: \"chị muốn chuyển hai nơi\" (wants to split delivery) and \"chưa hết\" (still has milk)\n- Step 1 (Làm dịu): Telesale at"
+    },
+    {
+      "task_id": "rec-1",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách chốt đơn — Telesale không cần xử lý từ chối thêm",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer's main objection is that she still has milk left (didn't finish it), and she wants to split delivery to two locations, which isn't possible. She also mentions she's traveling and family members don't drink much.\n\n**Round 1 (Steps 1-3):**\n- Customer's objection: \"chị muốn chuyển hai nơi\" (wants to split delivery) and \"chưa hết\" (still has milk)\n- Step 1 (Làm dịu): Telesale at"
+    },
+    {
+      "task_id": "rec-1",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách chốt đơn — Telesale không cần xử lý từ chối thêm",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer's main objection is that she still has milk left (didn't finish it), and she wants to split delivery to two locations, which isn't possible. She also mentions she's traveling and family members don't drink much.\n\n**Round 1 (Steps 1-3):**\n- Customer's objection: \"chị muốn chuyển hai nơi\" (wants to split delivery) and \"chưa hết\" (still has milk)\n- Step 1 (Làm dịu): Telesale at"
+    },
+    {
+      "task_id": "rec-1",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách chốt đơn — Telesale không cần xử lý từ chối thêm",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer's main objection is that she still has milk left (didn't finish it), and she wants to split delivery to two locations, which isn't possible. She also mentions she's traveling and family members don't drink much.\n\n**Round 1 (Steps 1-3):**\n- Customer's objection: \"chị muốn chuyển hai nơi\" (wants to split delivery) and \"chưa hết\" (still has milk)\n- Step 1 (Làm dịu): Telesale at"
+    },
+    {
+      "task_id": "rec-2",
+      "step_id": 1,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [01:35] 'Dạ.' ; [telesales] [02:36] 'Dạ.' ; [telesales] [03:10] 'Dạ.' — Chỉ nói 'Dạ' đơn thuần, không thể hiện sự đồng cảm với việc khách muốn hủy đơn hàng và không có thời gian.",
+      "gt_evidence": "[telesales] [01:16] 'Liên hệ tổng đài có nghĩa là chị phải liên hệ số hotline của tổng đài chứ chị gọi vào cái số tụi em chị cũng không gọi được.' — Telesale giải thích tình huống, thể hiện sự thấu hiểu về sự nhầm lẫn của khách",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 9 steps.\n\n**Context:** The customer wants to cancel a single order (one bottle of Ensure Gold). She says she doesn't have time, doesn't want to deal with the hassle, and the previous customer service rep didn't give her the hotline number. She's also concerned about spending money.\n\n**Round 1 (Steps 1-3):**\n- Customer's objection: She wants to cancel the order, doesn't have time, doesn't want to deal with the hassle.\n- Step 1 (Làm dịu): Telesale says \"Dạ\" at"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-3",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer says she's away for half a month, not using milk, and doesn't have time. She's ending the call.\n- Telesale tries to engage but customer ends the conversation.\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\" - This is more of a probing question, not empathy/acknowledgment of the customer's situation. No empathy shown for the fact that she's away and not using milk.\n\n**Step 2 - Làm rõ:** Telesale asks \"mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\" - This is an open-ended probing question to understand the objection. This counts as làm rõ.\n\n**Step 3 - Làm hài lòng:** Custom"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [01:00 - 01:05] Dạ em cũng biết là hiện tại là mình chưa có nhu cầu để sử dụng sữa anh. Giờ bồi bổ sức khỏe của mình là tốt nhất ha anh ạ.",
+      "gt_evidence": "[customer] [00:56] À em không có nhu cầu. ; [telesales] [00:58] Dạ.",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [01:00 - 01:05] Dạ em cũng biết là hiện tại là mình chưa có nhu cầu để sử dụng sữa anh. Giờ bồi bổ sức khỏe của mình là tốt nhất ha anh ạ.",
+      "gt_evidence": "[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[telesales] [01:07 - 01:11] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.",
+      "gt_evidence": "[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-4",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "Khách cúp máy — Auto-S",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "Looking at this transcript, I need to identify the rounds of objection handling.\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-5",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [03:01-03:10] 'mình đã dùng 12 mình mới mua hai lốc mà mình đã cách đây là 12 ngày 15 rồi nè. Thì bây giờ là cũng hết rồi á anh.' — Telesale giải thích lý do cần mua thêm, nhắc lại tình trạng sản phẩm.",
+      "gt_evidence": "[telesales] [03:18 - 03:21] 'nếu mà hiện tại anh chưa có nhu cầu em có thể gọi lại cho mình' — Khách nói còn sữa cho chồng, telesale không đưa ra giải pháp phù hợp (mua trước dùng sau, hẹn giao), chỉ từ bỏ",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI (handling objections).\n\nLet me identify the rounds of objection handling:\n\n**Round 1:**\n- Customer objection"
+    },
+    {
+      "task_id": "rec-6",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] 02:27:600 'À dạ ý là cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi.' — Telesale đã hiểu rõ objection của khách (còn sữa, muốn dùng hết rồi mới mua thêm) từ các vòng trước, không cần hỏ",
+      "gt_evidence": "[Customer] [02:25] Nhưng mà em định khi nào hết thì mình mua thêm. ; [Telesale] [02:27] Không hỏi thêm câu hỏi mở để tìm hiểu lý do thực sự, nhảy thẳng vào giải thích chương trình.",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI (handling objections).\n\n**Context:**\n- Customer's objection: Still has milk at home (2-3 packs), people visit and bring more, so no need to buy more.\n- Source: Not specified, but I'll evaluate based on what's present.\n\n**Round 1 (Steps 1-3):**\n\n**Step 1 - Làm dịu:** Telesale at 01:49:000 says \"À là còn mấy lốc ở nhà á chị?\" - This is a clarifying question, not empathy/acknowledgment of the customer's situation. No empathy shown.\n\n**Step 2 - Làm rõ:** At 01:49:000 \"À là còn mấy lốc ở nhà á chị?\" - This is an open-ended probing question to understand the objection better. SUCCESS.\n\n**Step 3 - Làm hài lòng:** At 01:53:500, telesale responds by addressing the objection (2-3 packs = 2-3 weeks), then offers a solution: "
+    },
+    {
+      "task_id": "rec-7",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[Telesale] [02:54 - 02:55] Con hiểu quá chú — thể hiện sự đồng cảm với khách về khó khăn tài chính",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer is objecting about buying milk. Key objections:\n1. Price difference from other stores (chợ, tiệm thuốc tây)\n2. Concern about fake/counterfeit products, wants to buy from a shop for safety\n3. Doesn't care about gifts/promotions, only quality matters\n4. Financial concern - hasn't received salary yet, needs to wait until tomorrow\n5. Will finish current milk in 2 days\n\n**Round 1 (Steps 1-3):** Customer's first objection is about price difference and wanting to buy from a shop for safety.\n\n**Step 1 - Làm dịu:** Telesale says \"Dạ\" and \"Dạ đúng rồi\" - \"Dạ đúng rồi\" shows acknowledgment of the customer's concern about safety/fake products. This is empathy/acknowledgment.\n\n**Step 2 - Làm rõ:** T"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "[Customer] [00:48] 'Không em không, chị không tin đâu, cậu gần đây chị cũng có rồi em. Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em.' ; [Telesale] [00:54] 'Ừ dạ.'",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "[Customer] [00:48] 'Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em' ; [Telesale] [00:55-1:04] Không hỏi thêm câu hỏi mở về lý do tin tưởng cửa hàng hơn, nhảy thẳng vào nói về giá tiết kiệm.",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "[Telesale] [00:55-1:04] 'bên hãng cũng đang có hỗ trợ và giá cả cũng đó rất là tiết kiệm cho mình rất là nhiều' — Chỉ nhắc giá, không đáp ứng trực tiếp lo ngại về độ tin cậy/kênh mua, không có close attempt rõ ràng trong đoạn này.",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-8",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: She already has Ensure Original, can buy at Bách hóa Xanh or other stores, doesn't need to buy from telesale.\n- This is Round 1 of objection handling.\n\n**Step 1 - Làm dịu:**\nAt"
+    },
+    {
+      "task_id": "rec-9",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[customer] [01:46 - 01:49] Rồi, để cho uống hết đi đã. Để nhiều quá bả chửi. — Telesale không có phản hồi làm dịu sau từ chối lần 2.",
+      "gt_evidence": "[telesales] [01:33 - 01:36] 'Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.' — Thể hiện sự lắng nghe và giải thích thêm cho khách hiểu ý nghĩa quà tặng.",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 9 steps.\n\n**Context:** The customer has already received a gift (hộp cơm) and doesn't want more. The telesale tries to sell 2 cans of milk. The customer objects multiple times.\n\n**Round 1 Objection:** Customer says \"Rồi, lấy cho người ta rồi có dùng đâu\" (already got it, won't use it)\n\n**Step 1 - Làm dịu:** Telesale says \"Vậy hả?\" - This is just a reaction, not empathy or acknowledgment of the customer's concern. \"Vậy hả\" is more of a surprise reaction than empathy.\n\n**Step 2 - Làm rõ:** Telesale doesn't ask any open-ended question to understand the objection better. Goes straight to pitching.\n\n**Step 3 - Làm hài lòng:** Telesale responds by explaining the gift is from the brand, then pivots"
+    },
+    {
+      "task_id": "rec-9",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[customer] [01:46 - 01:49] Rồi, để cho uống hết đi đã. Để nhiều quá bả chửi. — Telesale không có phản hồi làm hài lòng sau từ chối lần 2.",
+      "gt_evidence": "[telesales] [01:39 - 01:45] 'Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh. Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.' — Tạo urgency về hạn sử dụng, đề xuất mua trước dùng sau, có cl",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 9 steps.\n\n**Context:** The customer has already received a gift (hộp cơm) and doesn't want more. The telesale tries to sell 2 cans of milk. The customer objects multiple times.\n\n**Round 1 Objection:** Customer says \"Rồi, lấy cho người ta rồi có dùng đâu\" (already got it, won't use it)\n\n**Step 1 - Làm dịu:** Telesale says \"Vậy hả?\" - This is just a reaction, not empathy or acknowledgment of the customer's concern. \"Vậy hả\" is more of a surprise reaction than empathy.\n\n**Step 2 - Làm rõ:** Telesale doesn't ask any open-ended question to understand the objection better. Goes straight to pitching.\n\n**Step 3 - Làm hài lòng:** Telesale responds by explaining the gift is from the brand, then pivots"
+    },
+    {
+      "task_id": "rec-10",
+      "step_id": 2,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[Customer] [02:41.000] 'chị mới lấy cho mẹ chị rồi, cho nên là đợt này từ từ đã nhé.' ; [Telesale] [02:46.200] 'À dạ, chị lấy cái hộp cơm này.' — Telesale không hỏi thêm để tìm hiểu lý do từ chối thực sự, chuyển thẳng sang đề xuất mới.",
+      "gt_evidence": "Auto-S — Khách nói 'mới lấy cho mẹ chị rồi' thuộc exempt list (mới mua/vừa mua), không cần hỏi thêm.",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 3 rounds of objections.\n\n**Round 1 Objection:**"
+    },
+    {
+      "task_id": "rec-10",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "U",
+      "gt": "S",
+      "model_evidence": "[Customer] [02:57.800] 'chị không lấy.' ; [Telesale] [03:02.000] 'Không thì đợt này chị à dạ không thì chị có thể mình hỗ trợ các chương trình ba lon á...' — Telesale không hỏi thêm lý do từ chối, chuyển thẳng sang đề xuất mới.",
+      "gt_evidence": "Auto-S — Khách nói 'còn nhiều lắm' thuộc exempt list (còn nhiều sữa), không cần hỏi thêm.",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 3 rounds of objections.\n\n**Round 1 Objection:**"
+    },
+    {
+      "task_id": "rec-10",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[Telesale] [03:24.200] 'Dạ vâng, dạ đúng rồi, em thấy là mình cũng là khách hàng thân thiết lâu năm của bên hãng này.' ; [Telesale] [03:28.700] 'Dạ nên là đang được các chương trình tri ân khách hàng này bên em mới liên hệ lại để hỗ trợ thê",
+      "gt_evidence": "[Telesale] [03:45.300] 'tại vì các phần quà thì bên em nó cũng có hạn á chị' — Có tạo urgency về quà tặng nhưng không đề xuất giải pháp cụ thể cho việc khách còn nhiều sữa (giảm combo, dời lịch giao, mua trước dùng sau...) và không có close",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 3 rounds of objections.\n\n**Round 1 Objection:**"
+    },
+    {
+      "task_id": "rec-10",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[Telesale] [03:39.400] 'Dạ, nhưng mà bác còn nhiều không chị?' — Telesale hỏi mở để tìm hiểu tình trạng sử dụng sản phẩm của khách.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill across 3 rounds of objections.\n\n**Round 1 Objection:**"
+    },
+    {
+      "task_id": "rec-11",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Transcript kết thúc sau từ chối của khách, không có phản hồi tiếp theo từ telesale.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer has multiple objections:\n1. Wants only one can, says she's broke (\"không có tiền\")\n2. Already bought one can from a hospital, it was sent to the north, she opened it and saw it\n3. Says it's expensive (\"đắt lắm\")\n4. Says she only drinks powdered milk, not liquid\n\nLet me map the rounds:\n\n**Round 1:**\n- Customer objection: \"chị lấy một lon thôi... không có tiền thì thôi\" (wants just one, says no money)\n- Step 1 (Làm dịu): Telesale says \"Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn\" - This acknowledges and agrees to her request for one can. This shows empathy/acknowledgment.\n- Step 2 (Làm rõ): Telesale asks \"Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị"
+    },
+    {
+      "task_id": "rec-11",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Transcript kết thúc sau từ chối của khách, không có phản hồi tiếp theo từ telesale.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer has multiple objections:\n1. Wants only one can, says she's broke (\"không có tiền\")\n2. Already bought one can from a hospital, it was sent to the north, she opened it and saw it\n3. Says it's expensive (\"đắt lắm\")\n4. Says she only drinks powdered milk, not liquid\n\nLet me map the rounds:\n\n**Round 1:**\n- Customer objection: \"chị lấy một lon thôi... không có tiền thì thôi\" (wants just one, says no money)\n- Step 1 (Làm dịu): Telesale says \"Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn\" - This acknowledges and agrees to her request for one can. This shows empathy/acknowledgment.\n- Step 2 (Làm rõ): Telesale asks \"Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị"
+    },
+    {
+      "task_id": "rec-11",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Transcript kết thúc sau từ chối của khách, không có phản hồi tiếp theo từ telesale.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:** The customer has multiple objections:\n1. Wants only one can, says she's broke (\"không có tiền\")\n2. Already bought one can from a hospital, it was sent to the north, she opened it and saw it\n3. Says it's expensive (\"đắt lắm\")\n4. Says she only drinks powdered milk, not liquid\n\nLet me map the rounds:\n\n**Round 1:**\n- Customer objection: \"chị lấy một lon thôi... không có tiền thì thôi\" (wants just one, says no money)\n- Step 1 (Làm dịu): Telesale says \"Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn\" - This acknowledges and agrees to her request for one can. This shows empathy/acknowledgment.\n- Step 2 (Làm rõ): Telesale asks \"Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[telesales] [01:17] 'lần này bên em á đang có cái loại nước á thì cũng đang có cái chương trình hỗ trợ cho mình nè' — Đáp ứng trực tiếp objection bằng cách giới thiệu sản phẩm dạng nước không cần pha, kèm nhắc CTKM",
+      "gt_evidence": "[Telesale] [01:17] Giới thiệu 'loại nước' và 'chương trình hỗ trợ' nhưng không đáp ứng trực tiếp vấn đề 'không có thời gian pha', không có lời mời chốt đơn trong đoạn này.",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript",
+      "gt_evidence": "[Telesale] [01:42] 'Tại vì em thấy là mình cũng đang sử dụng sữa đều mà' — Đây là phản biện ngược lại quan điểm khách, không phải lời đồng cảm hay làm dịu.",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-12",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI.\n\n**Context:**\n- Customer's objection: \"Em không có thời gian pha chị ơi\" (no time to prepare/mix)\n- Telesale responds and then customer says \"để em tham khảo lại. Dạ em đang ăn cơm á\" (let me think about it, I'm eating)\n- Telesale responds: \"Tại vì em thấy là mình cũng đang sử dụng sữa đều mà\"\n\n**Round 1 analysis:**\n\n**Step 1 - Làm dịu:** Telesale says \"À, không có thời gian pha hả chị? Dạ.\" - This is more of a restatement/acknowledgment, not really empathy. \"Dạ\" alone isn't empathy. The restatement \"không có thời gian pha hả chị?\" is more of a confirmation. This is borderline - it's an acknowledgment but lacks empathy like \"em hiểu\" or \"em thông cảm.\"\n\n**Step 2 - Làm rõ:** The objection is \"không có thời gian ph"
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 4,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 5,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 6,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 7,
+      "step_type": "làm_dịu",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 8,
+      "step_type": "làm_rõ",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-13",
+      "step_id": 9,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong transcript.",
+      "gt_evidence": "NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi",
+      "model_thinking": "I need to analyze this transcript carefully for the XỬ LÝ TỪ CHỐI (objection handling) skill.\n\n**Context:** The customer is objecting about wanting to wait until the next month to ask their mother's opinion before deciding to use the milk product. The telesale has already explained that they share the same hotline channel.\n\n**Round 1 identification:**\n- Customer's objection: \"để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em\" (wants to wait until next month to ask mother's opinion)\n\n**Step 1 - Làm dịu:** The telesale responds by explaining the hotline situation, not by empathizing with the customer's desire to wait. The telesale says \"Dạ ý là bạn với em là như nhau á anh, đều dùng chung một "
+    },
+    {
+      "task_id": "rec-14",
+      "step_id": 3,
+      "step_type": "làm_hài_lòng",
+      "model": "S",
+      "gt": "U",
+      "model_evidence": "[Telesales] [04:39] Dạ do là cái đây là cái dòng sữa cao cấp được Bộ Y tế khuyên dùng á nên là giá nó hơi cao. Nhưng mà bù lại nó hỗ trợ tốt dinh dưỡng cho chị Bích tốt á. ; [Telesales] [04:48] Dạ thì chị Bích cứ dùng mỗi ngày một ly thôi l",
+      "gt_evidence": "[Telesales] [04:39] 'Dạ do là cái đây là cái dòng sữa cao cấp được Bộ Y tế khuyên dùng á nên là giá nó hơi cao' ; [Telesales] [04:48] 'chị Bích cứ dùng mỗi ngày một ly thôi là được' — Có giải thích giá trị sản phẩm nhưng không có close atte",
+      "model_thinking": "I need to analyze this transcript carefully for the 9 steps of XỬ LÝ TỪ CHỐI (handling objections).\n\n**Context:** The customer is objecting about the price (\"đắt thế thôi\", \"mắc thế, đắt quá\") and about the weather making her lazy about drinking milk (\"lười\" because it's hot).\n\nLet me map the rounds:\n\n**Round 1 - Objection: Price is too expensive**\n- Customer"
+    }
+  ],
+  "prompt": "<system>\n<role>ABBOTT QUALITY CONTROL XỬ LÝ TỪ CHỐI</role>\n\n<task>\nRead transcript → score 9 steps → output JSON array only.\n</task>\n\n<pre_processing>\nTrước khi chấm điểm, đọc toàn transcript và xác định:\n\nOBJECTION_MAP = {\n\"round_1\": \"objection customer nêu lần đầu\",\n\"round_2\": \"objection customer nêu lần hai\",\n\"round_3\": \"objection customer nêu lần ba\"\n}\n\nNếu round_3 khác hẳn round_1/2 → ghi \"(reset)\",\nđánh giá độc lập, không so sánh với vòng trước.\n\nOBJECTION_MAP là chuẩn duy nhất để chấm điểm.\nXử lý sai objection của vòng = UNSUCCESS dù hành động kỹ thuật đúng.\n</pre_processing>\n\n<steps>\n<group id=\"1,4,7\" name=\"LÀM DỊU\">\nCần: empathy, acknowledgment, validation đúng objection của vòng.\n</group>\n<group id=\"2,5,8\" name=\"LÀM RÕ\">\nCần: câu hỏi mở để hiểu sâu objection của vòng.\n</group>\n<group id=\"3,6,9\" name=\"LÀM HÀI LÒNG\">\nCần: xử lý trực tiếp objection của vòng.\nVí dụ: nhắc CTKM, giảm combo, giữ quà tặng,\ndời lịch giao, mua trước dùng sau, giải thích đúng trọng tâm.\n</group>\n</steps>\n\n<scoring>\n<success>\nHành động đúng kỹ thuật VÀ nhắm đúng objection của vòng.\n</success>\n<unsuccess>\nThiếu hành động, né tránh, chuyển sang bán hàng ngay,\nhoặc xử lý sai objection của vòng.\n</unsuccess>\n</scoring>\n\n<output_format>\nJSON array only. No explanation outside JSON.\n\nIf S: omit \"g\"\nIf U: \"g\" required, must start with \"Cải thiện:\"\n\n[\n{\"id\":1,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":2,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":3,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":4,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":5,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":6,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":7,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":8,\"r\":\"S\",\"e\":\"...\"},\n{\"id\":9,\"r\":\"S\",\"e\":\"...\"}\n]\n\nEVIDENCE FORMAT:\n[Telesale] [timestamp] quote ; [Customer] [timestamp] quote\nIf no evidence: \"e\":\"NO_DATA\"\n</output_format>\n</system>",
+  "prompt_chars": 1734,
+  "records": [
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-07-01 17:17:00\\n[customer] [01:34 - 01:46] Đúng rồi. Chị đang vướng tại vì là nếu như mà hai lon thì chị muốn chuyển hai nơi á là không không có được.\\n[telesales] [01:47 - 01:50] Ờ vậy hả? Đúng rồi, vậy không có được thì.\\n[telesales] [01:51 - 01:54] Ừm dạ. Nếu mà hai lon chuyển hai nơi hả?\\n[telesales] [01:55 - 02:03] Ây da, hai lon chuyển hai nơi thì em có thể tách cho mình hai đơn hàng khác nhau. Tuy nhiên á là cái này nếu mà tách hai đơn như vậy thì chị không có nhận được cái bộ hộp cơm.\\n[customer] [02:04 - 02:04] Đúng rồi.\\n[telesales] [02:05 - 02:06] Ờ đó thì nó hơi khó một tí.\\n[telesales] [02:06 - 02:11] Thì cái cái này là chị muốn gửi về cho cho mình với gia đình mỗi người lon hả chị?\\n[customer] [02:12 - 02:18] Đúng rồi, chứ anh xài đợt này thì chị xài vẫn chưa hết nữa.\\n[customer] [02:19 - 02:28] Em vừa rồi nói vừa rồi nói là đi du lịch mười mấy ngày á xong rồi chưa có xài hết nữa.\\n[telesales] [02:29 - 02:30] Xài ờ vậy hả?\\n[telesales] [02:31 - 02:38] Bây giờ thì một lon thì nó chưa có cái combo quà tặng nè, cho nên là phải được đó thì có combo quà tặng một lon thì em lấy cho mình một lon cũng được.\\n[telesales] [02:39 - 02:52] Nhưng mà đợt này ví dụ như là chưa có cái combo quà tặng này, mình lấy em em gửi cho mình hai lon về một địa chỉ đó xong rồi chị gửi về nhà được không chị Lan? Tại vì bây giờ em cũng không không có cái này em cũng không có tách đơn cho mình được, nó tách đơn thì mình bị mất quà nó uổng lắm.\\n[customer] [02:52 - 02:54] Chị chị suy nghĩ cái đó. Ok.\\n[customer] [02:54 - 03:01] Thôi vậy từ từ nha, có gì chị nếu mà chị mua thì chị nhớ rồi đăng Quang được.\\n\\nNgày 2026-07-02\\n[customer] [00:09 - 00:13] chưa tại vì là chị chưa uống hết thì chưa mua được đâu em.\\n[telesales] [00:13 - 00:13] À chưa hết.\\n[customer] [00:14 - 00:17] chị lưu ý bên em ở chỗ em.\\n[telesales] [00:17 - 00:17] Dạ dạ.\\n[telesales] [00:18 - 00:23] Tại vì đợt hôm em cũng có có có hỏi đó là chị muốn là mình muốn giao mỗi nơi một lon hơn.\\n[telesales] [00:23 - 00:33] nhưng mà bây giờ em có xin công ty rồi nhưng mà cũng không có được hỗ trợ cái chương trình ví dụ như là gửi hai nơi mà tặng quà thì giờ nó không có, em có xin rồi nhưng mà không có được đó chị Lan.\\n[customer] [00:34 - 00:34] Ừ.\\n[customer] [00:34 - 00:38] Chị biết mà, có gì chị chị muốn hết là chị sẽ mua ủng hộ em.\\n[telesales] [00:39 - 00:39] Vậy hả?\\n[telesales] [00:40 - 00:40] Dạ dạ.\\n[telesales] [00:41 - 00:42] Này nhà còn nhiêu sữa lận chị Lan?\\n[customer] [00:43 - 00:49] Tại vì vừa rồi chị cũng đi du lịch 15 ngày.\\n[customer] [00:49 - 01:02] như là ai nữa là cả nhà luôn, cả bà cũng không uống, bà lại không chịu không uống. Không uống nhiều quá. Người mà có nghĩa là vừa rồi là chị ship hai hộp liền ấy, ý là thế.\\n[customer] [01:03 - 01:07] có uống đâu, còn còn lại.\\n[telesales] [01:07 - 01:08] Dạ rồi em hiểu rồi.\\n[telesales] [01:09 - 01:13] Vậy thôi cái này nếu mà mình có uống được này thì gắng khuyến khích là là gia đình dùng đi.\\n[telesales] [01:13 - 01:15] Ờ mà cái này bà dùng sao mà bà không chịu dùng nữa vậy chị Lan?\\n[customer] [01:16 - 01:17] Có dùng nhưng mà vừa rồi là đấy.\\n[customer] [01:18 - 01:20] đi chơi mất.\\n[telesales] [01:20 - 01:21] À bà đi chơi.\\n[customer] [01:21 - 01:29] ngày rồi là cả chị nữa, với hai nữa đi đường thì đâu có mang đi được, nó cồng kềnh với lại đi chỗ này chỗ kia các thứ.\\n[telesales] [01:29 - 01:30] Dạ rồi em hiểu rồi.\\n[telesales] [01:31 - 01:31] Dạ dạ.\\n[customer] [01:32 - 01:35] Chị có ở nhà thì làm với đều đặn đều đặn được em.\\n[telesales] [01:35 - 01:35] Vậy hả?\\n[telesales] [01:36 - 01:37] Dạ rồi.\\n[telesales] [01:37 - 01:38] Dạ em hiểu rồi.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:29] 'Xài ờ vậy hả?' — Acknowledgment of customer's situation ; [Telesale] [01:07] 'Dạ rồi em hiểu rồi' — Empathy shown when customer explained still has milk left\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:06] 'Thì cái cái này là chị muốn gửi về cho cho mình với gia đình mỗi người lon hả chị?' — Open-ended probing to understand real objection ; [Telesale] [00:41] 'Này nhà còn nhiêu sữa lận chị Lan?' — Probing about remaining quantity\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:31-02:52] 'một lon thì nó chưa có cái combo quà tặng nè... em lấy cho mình một lon cũng được' ; 'em gửi cho mình hai lon về một địa chỉ đó xong rồi chị gửi về nhà được không chị Lan?' — Offers alternative solutions addressing delivery concern and combo option ; [Telesale] [01:09-01:13] 'nếu mà mình có uống được này thì gắng khuyến khích là gia đình dùng đi' — Addresses objection about having milk left\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:09] 'chưa tại vì là chị chưa uống hết thì chưa mua được đâu em' ; [Telesale] [00:13] 'À chưa hết' — Only acknowledged, no empathy or understanding expressed\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ em hiểu chị, sữa còn nhiều thì chị chưa cần gấp ạ' thay vì chỉ lặp lại 'À chưa hết'\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [00:41] 'Này nhà còn nhiêu sữa lận chị Lan?' — Open-ended probing question to understand how much milk remains\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:09-01:13] 'nếu mà mình có uống được này thì gắng khuyến khích là gia đình dùng đi' — Suggests using existing milk but no close attempt, no direct response to objection about wanting to buy more\",\n    \"g\": \"Cải thiện: Cần đưa ra giải pháp cụ thể cho việc còn sữa (dời lịch giao, mua trước dùng sau) kèm lời mời chốt đơn như 'Vậy em giữ ưu đãi cho chị, khi nào chị dùng hết em gọi lại nha'\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-1",
+      "recordID": "rec-1",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:29] 'Xài ờ vậy hả?' — Acknowledgment of customer's situation ; [Telesale] [01:07] 'Dạ rồi em hiểu rồi' — Empathy shown when customer explained still has milk left\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:06] 'Thì cái cái này là chị muốn gửi về cho cho mình với gia đình mỗi người lon hả chị?' — Open-ended probing to understand real objection ; [Telesale] [00:41] 'Này nhà còn nhiêu sữa lận chị Lan?' — Probing about remaining quantity\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:31-02:52] 'một lon thì nó chưa có cái combo quà tặng nè... em lấy cho mình một lon cũng được' ; 'em gửi cho mình hai lon về một địa chỉ đó xong rồi chị gửi về nhà được không chị Lan?' — Offers alternative solutions addressing delivery concern and combo option ; [Telesale] [01:09-01:13] 'nếu mà mình có uống được này thì gắng khuyến khích là gia đình dùng đi' — Addresses objection about having milk left\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:09] 'chưa tại vì là chị chưa uống hết thì chưa mua được đâu em' ; [Telesale] [00:13] 'À chưa hết' — Only acknowledged, no empathy or understanding expressed\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ em hiểu chị, sữa còn nhiều thì chị chưa cần gấp ạ' thay vì chỉ lặp lại 'À chưa hết'\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [00:41] 'Này nhà còn nhiêu sữa lận chị Lan?' — Open-ended probing question to understand how much milk remains\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:09-01:13] 'nếu mà mình có uống được này thì gắng khuyến khích là gia đình dùng đi' — Suggests using existing milk but no close attempt, no direct response to objection about wanting to buy more\",\n    \"g\": \"Cải thiện: Cần đưa ra giải pháp cụ thể cho việc còn sữa (dời lịch giao, mua trước dùng sau) kèm lời mời chốt đơn như 'Vậy em giữ ưu đãi cho chị, khi nào chị dùng hết em gọi lại nha'\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] [01:00] Chị mới, đúng rồi, bởi chị mới rút lại một câu thôi, cưng làm ơn cưng hủy cái đơn hàng đó giùm chị.\\n[customer] [01:06] Tại vì chị không có thời gian để chị liên hệ tổng đài.\\n[customer] [01:10] Tổng đài tụi cưng điện cho chị được chứ tụi chị vô đâu có được đâu mà liên hệ tổng đài.\\n[telesales] [01:16] Liên hệ tổng đài có nghĩa là chị phải liên hệ số hotline của tổng đài chứ chị gọi vào cái số tụi em chị cũng không gọi được.\\n[telesales] [01:21] Tại vì cái số tụi em gọi ra là để hỗ trợ cho khách thôi, nên là cái chị chị chỉ nghe được thôi.\\n[customer] [01:26] Nhưng mà con bé đó nó nói như vậy á, chị liên hệ tổng đài giùm em chứ nó không có nói ừ số của tổng đài là như vậy, như vậy, nó không có nói.\\n[telesales] [01:35] Dạ.\\n[customer] [01:36] Chị mới thôi, cưng làm ơn cưng hủy đơn hàng chị, chị cho địa chỉ rồi nhưng khi mà tư vấn nói rõ ràng rồi thì nó nói như vậy, chị mới chốt lại một câu là thôi cưng làm ơn cưng hủy đơn hàng đó giùm chị đi.\\n[customer] [01:49] Chị không có không không có mua đâu, mắc công rắc rối lắm.\\n[customer] [01:53] Tại vì chị là cái người công nhân, đi làm công nhân làm mướn chứ chị không có ở nhà ở không, chị không có thời gian.\\n[telesales] [02:00] Ừ.\\n[customer] [02:01] Cái nó nói là em thôi chị, em nói nãy giờ thôi chị để đơn hàng đó đi, mười mấy ngày lận em mới giao.\\n[customer] [02:09] Chị nói không, bây giờ mười mấy ngày em giao giờ chị cũng không nhận nữa, chị đã nói chị không mua là không mua.\\n[customer] [02:15] Chị rút lại một câu chị không mua chứ chị không có phải mà mua rồi bơm hàng.\\n[customer] [02:20] Chưa bao giờ là chị bơm hàng nha.\\n[customer] [02:23] Đó, kể cả hàng tốt hàng xấu lỡ một lần rồi lần sau là chị không mua nữa của cái cái cái chỗ đó thôi.\\n[customer] [02:31] Chứ không bao giờ mà nói ừ đem hàng tới rồi giao chị không nhận là chị không có cái cửa đó.\\n[telesales] [02:36] Dạ.\\n[customer] [02:37] Cho nên con bé đó từ ồ shipper nó điện chị từ hôm bữa tới giờ chị mới nói với shipper, chị mới phân trần cho shipper là con bé đó nó nói vậy á, chị shipper cứ giao đi rồi chị không nhận chứ tôi đem về.\\n[customer] [02:50] Cái chị mới nói là em nói như vậy là nó phiền phức lắm, chị không có thích cái kiểu vậy.\\n[customer] [02:54] Thôi, hủy, tóm lại là hủy đơn hàng giùm chị ngay lúc đó luôn.\\n[customer] [03:01] Đó, mà nó cố tình nó giao cho chị, chị đâu có nhận.\\n[customer] [03:04] Chị đã nói là chị không nhận là không nhận.\\n[customer] [03:07] Chứ không có nói một lời hai lời, chị không có nói vậy.\\n[telesales] [03:10] Dạ.\\n[customer] [03:11] Ừ, cho nên với lại chị cũng không có thời gian nữa.\\n[customer] [03:14] Chị mua Ensure chai á, chị bỏ vô tủ lạnh đó, rồi ổng thích thì ổng lấy ổng uống nửa chai, không thích ổng quăng vô tủ lại vậy thôi chứ còn.\\n[customer] [03:22] Ừ, đúng rồi, chị không có thời gian.\\n[telesales] [03:25] Dạ, chứ ở nhà mình là dùng Ensure chai Gold luôn hay là chai thường chị?\\n[customer] [03:29] Gold đó.\\n[telesales] [03:31] Ừ, dạ Gold luôn ha.\\n[customer] [03:32] Uống mấy chục lốc rồi đó mà ổng nói chung là khỏe thì có khỏe.\\n[customer] [03:37] Dạ thì nói chung là sức khỏe cũng thấy ổn vậy thôi chứ không có đến nỗi tệ.\\n[telesales] [03:44] Dạ, dạ.\\n[customer] [03:46] Ừ.\\n[telesales] [03:47] Thì đó là đúng rồi, thấy mấy bạn nói không có rõ đó chị, tại vì nếu mà số gọi lên tổng đài có nghĩa là mình gọi là số hotline đó là 19001519 đó chị.\\n[telesales] [03:56] Dạ, để được hỗ trợ. Dạ chứ mình gọi vào cái số mà tụi em đang gọi cho mình đó là không có được, tại vì đây là số một chiều.\\n[customer] [04:02] Đúng rồi, bữa chị vô chị bấm thử đâu có được đâu.\\n[telesales] [04:05] Đúng rồi, tại vì đây là số một chiều.\\n[customer] [04:06] Cho nên chị mới rút lại là chị nói thôi, cưng làm ơn cưng hủy cái đó giùm chị đi, chị không có mua đâu.\\n[customer] [04:12] Với lại chị cũng ngán ngán tiền lắm, tại vì chị mua một lần ví dụ như 10 ngày đi, chị mua cho ổng 350.000đ.\\n[customer] [04:20] Cố gắng vậy đó, chứ còn bỏ ra mà 9 trăm mấy là chị cũng ngán dữ lắm, mặc dù là biết uống nó lâu hết nhưng mà chia ra một lần ngán lắm.\\n[customer] [04:30] Tại mình lãnh lương hàng tháng rồi chứ đâu phải mình có tiền đâu.\\n[telesales] [04:34] Ừ.\\n[customer] [04:35] Cho nên ngán.\\n[telesales] [04:36] Ừ.\\n[customer] [04:37] Ờ, cái chị nói, chị nói vậy mà nó, ví dụ như trưa giờ này giống như cưng điện vậy nè, là ngày mai là shipper nó điện cho chị, nó nói chị ơi chị có đơn hàng 9 trăm mấy 3 ngàn đó.\\n[telesales] [04:50] Dạ.\\n[customer] [04:50] Trời ơi, chị giật mình luôn á, chị nói trời ơi cái con nhỏ này nó chị nói là hủy giùm rồi.\\n[customer] [04:56] Mà nó nó nó vậy đó.\\n[customer] [04:58] Từ xưa giờ chị mua hàng ít hàng nhiều chưa bao giờ chị bơm hàng người ta, nói thật sự luôn.\\n[customer] [05:04] Chị nói biết cái shop đó bán chất lượng là tốt là chị có thể chị mua nữa.\\n[customer] [05:11] Còn nếu mà chị cảm thấy là nó không ok đối với bản thân chị rồi là chị dứt khoát chị không mua nữa vậy thôi.\\n[customer] [05:17] Chứ chị không bao giờ chị bơm hàng.\\n[telesales] [05:21] Dạ.\\n[customer] [05:21] Con bé đó nó làm chị cũng hơi bực mình lắm.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:16] 'Liên hệ tổng đài có nghĩa là chị phải liên hệ số hotline của tổng đài chứ chị gọi vào cái số tụi em chị cũng không gọi được.' — Telesale giải thích tình huống, thể hiện sự thấu hiểu về sự nhầm lẫn của khách\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [03:25] 'chứ ở nhà mình là dùng Ensure chai Gold luôn hay là chai thường chị?' — Telesale đặt câu hỏi mở để tìm hiểu thêm về nhu cầu sử dụng sản phẩm của khách\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [03:47-04:05] Chỉ giải thích lại về số một chiều, không đưa ra giải pháp cụ thể cho việc khách muốn hủy đơn, không có close attempt\",\n    \"g\": \"Cải thiện: Sau khi giải thích xong, cần đề xuất giải pháp thay thế như hẹn giao sau, giảm combo, hoặc mời khách chốt đơn với ưu đãi phù hợp, kèm close attempt rõ ràng\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [04:34] 'Ừ' ; [telesales] [04:36] 'Ừ' — Khách nói ngán ngán tiền, telesale chỉ phản hồi ngắn gọn, không thể hiện sự đồng cảm\",\n    \"g\": \"Cải thiện: Khi khách nói ngán/ngại chi tiêu, cần thể hiện sự thấu hiểu như 'Dạ em hiểu chị lo lắng về chi phí ạ' trước khi xử lý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [04:34-04:36] Chỉ nói 'Ừ' khi khách nói ngán tiền, không hỏi thêm câu hỏi mở để tìm hiểu mức ngân sách hay nhu cầu thực tế\",\n    \"g\": \"Cải thiện: Cần hỏi mở như 'Dạ chị ơi, ngoài chi phí này thì chị còn băn khoăn điều gì nữa không ạ?' để hiểu rõ hơn\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[telesales] Không đưa ra giải pháp cho vấn đề tài chính, không có close attempt trong round 2\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại về giá bằng cách gợi ý combo tiết kiệm hơn, hẹn giao sau, hoặc mời chốt đơn với ưu đãi hiện tại, kèm close attempt\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-2",
+      "recordID": "rec-2",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:16] 'Liên hệ tổng đài có nghĩa là chị phải liên hệ số hotline của tổng đài chứ chị gọi vào cái số tụi em chị cũng không gọi được.' — Telesale giải thích tình huống, thể hiện sự thấu hiểu về sự nhầm lẫn của khách\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [03:25] 'chứ ở nhà mình là dùng Ensure chai Gold luôn hay là chai thường chị?' — Telesale đặt câu hỏi mở để tìm hiểu thêm về nhu cầu sử dụng sản phẩm của khách\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [03:47-04:05] Chỉ giải thích lại về số một chiều, không đưa ra giải pháp cụ thể cho việc khách muốn hủy đơn, không có close attempt\",\n    \"g\": \"Cải thiện: Sau khi giải thích xong, cần đề xuất giải pháp thay thế như hẹn giao sau, giảm combo, hoặc mời khách chốt đơn với ưu đãi phù hợp, kèm close attempt rõ ràng\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [04:34] 'Ừ' ; [telesales] [04:36] 'Ừ' — Khách nói ngán ngán tiền, telesale chỉ phản hồi ngắn gọn, không thể hiện sự đồng cảm\",\n    \"g\": \"Cải thiện: Khi khách nói ngán/ngại chi tiêu, cần thể hiện sự thấu hiểu như 'Dạ em hiểu chị lo lắng về chi phí ạ' trước khi xử lý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [04:34-04:36] Chỉ nói 'Ừ' khi khách nói ngán tiền, không hỏi thêm câu hỏi mở để tìm hiểu mức ngân sách hay nhu cầu thực tế\",\n    \"g\": \"Cải thiện: Cần hỏi mở như 'Dạ chị ơi, ngoài chi phí này thì chị còn băn khoăn điều gì nữa không ạ?' để hiểu rõ hơn\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[telesales] Không đưa ra giải pháp cho vấn đề tài chính, không có close attempt trong round 2\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại về giá bằng cách gợi ý combo tiết kiệm hơn, hẹn giao sau, hoặc mời chốt đơn với ưu đãi hiện tại, kèm close attempt\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] 01:34 Vâng, nhưng mà thôi để khi nào về tôi chắc về chưa khi nào về thì ấy sau. Bây giờ đang ở trên đấy rồi.\\n[telesales] 01:42 Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?\\n[customer] 01:46 Tôi đi nửa tháng rồi.\\n[telesales] 01:48 À, đi nửa tháng rồi hả cô?\\n[telesales] 01:50 Dạ, ủa mà mình mình mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?\\n[customer] 01:56 Vâng, vâng, vâng.\\n[customer] 01:57 Dạ, thì cô Hợp không không không không có thời gian mà cũng không có bận ở trên đấy thì là không uống được. Vâng, để khi nào thì ấy thì ấy sau nhá. Vâng, vâng, chào chị.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] 01:42 'Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?' — Không thể hiện sự đồng cảm hay thấu hiểu tình huống khách đang vắng nhà, chỉ hỏi thăm thông tin.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước như 'Dạ, vậy cô đang bận chăm cháu nên không tiện ạ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] 01:50 'ủa mà mình mình mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?' — Hỏi mở để tìm hiểu nguyên nhân thực sự khách không dùng sữa.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] Sau khi khách nói không có thời gian uống sữa, telesale không đưa ra giải pháp (giảm combo, dời lịch giao, mua trước dùng sau), không nhắc CTKM, không chốt đơn.\",\n    \"g\": \"Cải thiện: Cần đưa ra giải pháp phù hợp như hẹn gọi lại khi khách về, đề xuất combo nhỏ hơn, nhắc ưu đãi hiện tại kèm lời mời chốt đơn.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-3",
+      "recordID": "rec-3",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] 01:42 'Dạ, nhưng mà cô Hợp lên chăm cháu lâu chưa?' — Không thể hiện sự đồng cảm hay thấu hiểu tình huống khách đang vắng nhà, chỉ hỏi thăm thông tin.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước như 'Dạ, vậy cô đang bận chăm cháu nên không tiện ạ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] 01:50 'ủa mà mình mình mình bữa nay mình không có sử dụng sữa luôn từ ngày mình đi chăm cháu đến giờ là mình không uống sữa luôn?' — Hỏi mở để tìm hiểu nguyên nhân thực sự khách không dùng sữa.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] Sau khi khách nói không có thời gian uống sữa, telesale không đưa ra giải pháp (giảm combo, dời lịch giao, mua trước dùng sau), không nhắc CTKM, không chốt đơn.\",\n    \"g\": \"Cải thiện: Cần đưa ra giải pháp phù hợp như hẹn gọi lại khi khách về, đề xuất combo nhỏ hơn, nhắc ưu đãi hiện tại kèm lời mời chốt đơn.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-06-24\\n[customer] [00:45 - 00:46] Em không ạ.\\n[telesales] [00:47 - 00:55] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn. Thì để em hỗ trợ cho mình nó tốt hơn ạ, tăng cường sức đề kháng cho mình luôn cũng như dinh dưỡng của mình đó anh.\\n[customer] [00:56 - 00:57] À em không có nhu cầu.\\n[telesales] [00:58 - 00:58] Dạ.\\n[customer] [00:59 - 00:59] Vâng vâng vâng.\\n[telesales] [01:00 - 01:05] Dạ em cũng biết là hiện tại là mình chưa có nhu cầu để sử dụng sữa anh. Giờ bồi bổ sức khỏe của mình là tốt nhất ha anh ạ.\\n[customer] [01:06 - 01:06] Vâng ạ.\\n[telesales] [01:07 - 01:11] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.\\n[customer] [01:12 - 01:14] À lúc nào em có nhu cầu thì em gọi cho em nhé.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[customer] [00:45] Em không ạ. ; [telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn.\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi tư vấn, ví dụ 'Dạ em hiểu anh chưa muốn dùng ngay ạ' thay vì đi thẳng vào giới thiệu sản phẩm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn. Thì để em hỗ trợ cho mình nó tốt hơn ạ, tăng cường sức đề kháng cho mình luôn cũng như dinh dưỡng của mình đó anh.\",\n    \"g\": \"Cải thiện: Cần đặt câu hỏi mở để tìm hiểu lý do từ chối thực sự, ví dụ 'Dạ anh ơi, không biết là anh đang băn khoăn điều gì ạ?' thay vì chỉ pitch sản phẩm.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn. Thì để em hỗ trợ cho mình nó tốt hơn ạ, tăng cường sức đề kháng cho mình luôn cũng như dinh dưỡng của mình đó anh.\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lý do từ chối, nhắc CTKM cụ thể và đưa ra lời mời chốt đơn rõ ràng trong vòng 1.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[customer] [00:56] À em không có nhu cầu. ; [telesales] [00:58] Dạ.\",\n    \"g\": \"Cải thiện: 'Dạ' đơn thuần không phải biểu hiện đồng cảm. Cần thể hiện thấu hiểu như 'Dạ em hiểu anh ạ' trước khi tiếp tục.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]\n",
+      "callID": "rec-4",
+      "recordID": "rec-4",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[customer] [00:45] Em không ạ. ; [telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn.\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi tư vấn, ví dụ 'Dạ em hiểu anh chưa muốn dùng ngay ạ' thay vì đi thẳng vào giới thiệu sản phẩm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn. Thì để em hỗ trợ cho mình nó tốt hơn ạ, tăng cường sức đề kháng cho mình luôn cũng như dinh dưỡng của mình đó anh.\",\n    \"g\": \"Cải thiện: Cần đặt câu hỏi mở để tìm hiểu lý do từ chối thực sự, ví dụ 'Dạ anh ơi, không biết là anh đang băn khoăn điều gì ạ?' thay vì chỉ pitch sản phẩm.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [00:47] Dạ, tại vì sữa này rất là tốt về cho cơ thể cũng sức khỏe của mình luôn. Thì để em hỗ trợ cho mình nó tốt hơn ạ, tăng cường sức đề kháng cho mình luôn cũng như dinh dưỡng của mình đó anh.\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lý do từ chối, nhắc CTKM cụ thể và đưa ra lời mời chốt đơn rõ ràng trong vòng 1.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[customer] [00:56] À em không có nhu cầu. ; [telesales] [00:58] Dạ.\",\n    \"g\": \"Cải thiện: 'Dạ' đơn thuần không phải biểu hiện đồng cảm. Cần thể hiện thấu hiểu như 'Dạ em hiểu anh ạ' trước khi tiếp tục.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:07] Chứ mà anh nói là không biết là ở nhà mình có ai không để em có thể hỗ trợ cho mình cái ưu đãi như với mình.\"\n  },\n  \"n\",\n   {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]\n"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-06-15 14:13:06\\n[customer] [02:02 - 02:04] Ờ thôi bạn ơi, có gì lúc nào mình lấy thì mình sẽ liên hệ.\\n[telesales] [02:05 - 02:07] À, dạ, không biết là hiện tại mình đang băn khoăn vấn đề gì không?\\n[customer] [02:09 - 02:14] Không, mình chưa dùng hết, mình để một thời gian sẽ thế nào rồi mình mình liên hệ lại nhé.\\n[telesales] [02:15 - 02:17] À, là hiện tại là ở nhà anh là hiện tại là anh còn bao nhiêu?\\n[customer] [02:19 - 02:20] Mình không để ý nhưng mà vẫn còn mà.\\n[customer] [02:21 - 02:21] Ok.\\n[telesales] [02:22 - 02:24] À, anh mua ở đây lâu chưa? Anh mua từ khi nào á?\\n[telesales] [02:25 - 02:29] Anh mua ngày 1 tháng 6 đúng không? À, anh mua ngày 1 tháng 6, anh lấy hai lốc như vậy.\\n[telesales] [02:29 - 02:39] Nếu mà một ngày như vậy là anh dùng một chai. Dạ, thì trung bình khoảng là một lốc 12 chai, 12 ngày là mình đã hết một lốc rồi mà anh. Dạ, 12 ngày là mình đã hết hai lốc rồi nè.\\n[telesales] [02:39 - 02:40] Dạ đúng không ạ?\\n[telesales] [02:41 - 02:44] Dạ. Thì hiện tại là bên em thì giao tới cho mình là date mới hoàn toàn nè.\\n[telesales] [02:45 - 02:47] Nếu mà được thì em hỗ trợ mình lấy hai lốc thôi cũng được. Hai lốc thôi.\\n[customer] [02:48 - 02:50] Thôi có gì mình sẽ liên hệ lại nhé.\\n[telesales] [02:51 - 02:53] Không biết là anh có đang băn khoăn vấn đề gì không để em hỗ trợ tư vấn thêm cho mình?\\n[customer] [02:54 - 02:57] Không, mình thì không nhưng mà hiện tại giờ mình chưa ấy nhá, chưa chưa chưa ấy nữa nhá.\\n[telesales] [02:58 - 03:01] À anh anh cho em hỏi là làm sao à dạ mình không lấy mình về mình dùng luôn đi anh.\\n[telesales] [03:01 - 03:10] Tại vì em thấy là mình đã dùng 12 mình mới mua hai lốc mà mình đã cách đây là 12 ngày 15 rồi nè. Thì bây giờ là cũng hết rồi á anh.\\n[customer] [03:10 - 03:12] Chứ có có có ba.\\n[customer] [03:12 - 03:14] cho ăn trước của chồng.\\n[telesales] [03:15 - 03:16] Dạ alo ạ.\\n[telesales] [03:18 - 03:21] À dạ vâng, nếu mà hiện tại anh chưa có nhu cầu em có thể gọi lại cho mình.\\n\\nNgày 2026-06-18\\n[customer] 00:31 Mình đang bận nhá, khi nào rảnh gọi lại nhá.\\n[telesales] 00:34 Em xin phép một chút thôi được không ạ?\\n\\n<add>\\n[telesales] [00:13] Dạ em từ bộ phận chăm sóc khách hàng và tư vấn dinh dưỡng.\\n[telesales] [00:17] Dạ thì hôm nay em gọi điện hỏi thăm sức khỏe cũng như trải nghiệm của mình về sản phẩm Ensure Gold.\\n[telesales] [00:25] À nhưng mà hiện tại là em cũng muốn tư vấn thêm cho mình. Không biết là mình đang còn dùng Ensure không anh?\\n[customer] [00:21] Hôm trước có người gọi mình rồi nhá, mình đang bận nhá.\\n</add>",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [02:05 - 02:07] 'À, dạ, không biết là hiện tại mình đang băn khoăn vấn đề gì không?' — Chỉ hỏi thăm, không thể hiện sự đồng cảm hay thấu hiểu với việc khách nói 'thôi'\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu anh, em cảm ơn anh đã chia sẻ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:05 - 02:07] 'không biết là hiện tại mình đang băn khoăn vấn đề gì không?' ; [telesales] [02:15 - 02:17] 'hiện tại là ở nhà anh là hiện tại là anh còn bao nhiêu?' — Hỏi mở để tìm hiểu lý do từ chối thực sự\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:29 - 02:39] Giải thích timeline sử dụng 'trung bình khoảng là một lốc 12 chai, 12 ngày là mình đã hết một lốc rồi mà anh' ; [telesales] [02:41 - 02:47] Đề xuất giảm combo 'em hỗ trợ mình lấy hai lốc thôi cũng được' ; [telesales] [02:41 - 02:44] Nhắc ưu đãi 'date mới hoàn toàn nè'\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [02:51 - 02:53] 'Không biết là anh có đang băn khoăn vấn đề gì không để em hỗ trợ tư vấn thêm cho mình?' — Lại hỏi thăm thay vì thể hiện đồng cảm với việc khách nói 'thôi có gì mình sẽ liên hệ lại nhé'\",\n    \"g\": \"Cải thiện: Nên thể hiện sự thấu hiểu trước, ví dụ 'Dạ em hiểu anh, em không dám làm phiền anh đâu ạ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:51 - 02:53] 'anh có đang băn khoăn vấn đề gì không để em hỗ trợ tư vấn thêm cho mình?' — Hỏi mở để tìm hiểu lý do từ chối thực sự\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [03:18 - 03:21] 'nếu mà hiện tại anh chưa có nhu cầu em có thể gọi lại cho mình' — Khách nói còn sữa cho chồng, telesale không đưa ra giải pháp phù hợp (mua trước dùng sau, hẹn giao), chỉ từ bỏ\",\n    \"g\": \"Cải thiện: Khi khách nói còn sữa, nên đề xuất mua trước dùng sau, hẹn giao sau khi dùng hết, kèm nhắc CTKM và chốt đơn.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-5",
+      "recordID": "rec-5",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [02:05 - 02:07] 'À, dạ, không biết là hiện tại mình đang băn khoăn vấn đề gì không?' — Chỉ hỏi thăm, không thể hiện sự đồng cảm hay thấu hiểu với việc khách nói 'thôi'\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu anh, em cảm ơn anh đã chia sẻ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:05 - 02:07] 'không biết là hiện tại mình đang băn khoăn vấn đề gì không?' ; [telesales] [02:15 - 02:17] 'hiện tại là ở nhà anh là hiện tại là anh còn bao nhiêu?' — Hỏi mở để tìm hiểu lý do từ chối thực sự\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:29 - 02:39] Giải thích timeline sử dụng 'trung bình khoảng là một lốc 12 chai, 12 ngày là mình đã hết một lốc rồi mà anh' ; [telesales] [02:41 - 02:47] Đề xuất giảm combo 'em hỗ trợ mình lấy hai lốc thôi cũng được' ; [telesales] [02:41 - 02:44] Nhắc ưu đãi 'date mới hoàn toàn nè'\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [02:51 - 02:53] 'Không biết là anh có đang băn khoăn vấn đề gì không để em hỗ trợ tư vấn thêm cho mình?' — Lại hỏi thăm thay vì thể hiện đồng cảm với việc khách nói 'thôi có gì mình sẽ liên hệ lại nhé'\",\n    \"g\": \"Cải thiện: Nên thể hiện sự thấu hiểu trước, ví dụ 'Dạ em hiểu anh, em không dám làm phiền anh đâu ạ' trước khi hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [02:51 - 02:53] 'anh có đang băn khoăn vấn đề gì không để em hỗ trợ tư vấn thêm cho mình?' — Hỏi mở để tìm hiểu lý do từ chối thực sự\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [03:18 - 03:21] 'nếu mà hiện tại anh chưa có nhu cầu em có thể gọi lại cho mình' — Khách nói còn sữa cho chồng, telesale không đưa ra giải pháp phù hợp (mua trước dùng sau, hẹn giao), chỉ từ bỏ\",\n    \"g\": \"Cải thiện: Khi khách nói còn sữa, nên đề xuất mua trước dùng sau, hẹn giao sau khi dùng hết, kèm nhắc CTKM và chốt đơn.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] 01:41:900 Em vẫn còn vì căn bản là mọi người mua cho cũng nhiều nên hiện tại là vẫn còn nên vẫn chưa có nhu cầu mua thêm ấy ạ.\\n[telesales] 01:49:000 À là còn mấy lốc ở nhà á chị?\\n[customer] 01:51:400 Vâng, còn khoảng hai ba lốc cơ.\\n[telesales] 01:53:500 À hai ba lốc ha. Dạ hai ba lốc thì mình có thể dùng khoảng tầm hai đến ba tuần á chị. Thì đằng nào cũng hết sữa thì đợt này nếu mà chị sợ thì em hỗ trợ cho mình chỉ cần hai lốc 12 chai thôi là em vẫn tặng cho mình một phần quà tặng chất sức khỏe từ Ensugo, đó là một cái ly tự khuấy cao cấp của Ensugo trị giá 200.000đ á chị.\\n[telesales] 02:09:500 Dạ, thì cái ly này ví dụ mình lấy về chạy bằng pin á và có tay cầm thì nó cũng nhỏ gọn là 350ml, bên trong là cũng inox á chị. Mình khuấy xong thì mình cứ đậy kỹ nắp lại rồi khoảng tầm á hả 15 20 phút sau mình mở nắp ra mình dùng tiếp được luôn á chị.\\n[customer] 02:24:000 Vâng ạ. Dạ.\\n[customer] 02:25:200 Nhưng mà em định khi nào hết thì mình mua thêm.\\n[telesales] 02:27:600 À dạ ý là cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi. Đó thì ví dụ như là đợt này nè, em lấy mình hai lốc là có 12 chai thôi là để sẵn ở nhà hạn sử dụng của nó một năm lận chị. Đó là để hai ba tuần sau mình dùng hết hai ba lốc kia thì lốc này mình để sẵn mình để ở nhà thôi. Rồi sẵn đợt này em tặng cho mình cái ly tự khuấy cao cấp luôn, để sẵn ở nhà mình có pha bột hay đi đâu thì mình mang theo.\\n[customer] 02:50:800 Căn bản là mọi người đến chơi mọi người cũng mang đến nhiều ấy là thành ra là nó cứ còn còn xong rồi mọi người lại mang đến cho nhiều cho nên là em vẫn chưa có nhu cầu muốn mua.\n",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [01:41] Em vẫn còn vì căn bản là mọi người mua cho cũng nhiều nên hiện tại là vẫn còn nên vẫn chưa có nhu cầu mua thêm ấy ạ. ; [Telesale] [01:49] À là còn mấy lốc ở nhà á chị?\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm/thấu hiểu trước khi hỏi thêm, ví dụ 'Dạ em hiểu chị vẫn còn sữa ạ' thay vì nhảy thẳng vào hỏi số lượng.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [01:49] À là còn mấy lốc ở nhà á chị? — Hỏi mở để tìm hiểu tình trạng tồn kho thực tế của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [01:53] hai ba lốc thì mình có thể dùng khoảng tầm hai đến ba tuần á chị. Thì đằng nào cũng hết sữa thì đợt này nếu mà chị sợ thì em hỗ trợ cho mình chỉ cần hai lốc 12 chai thôi là em vẫn tặng cho mình một phần quà tặng chất sức khỏe từ Ensugo, đó là một cái ly tự khuấy cao cấp của Ensugo trị giá 200.000đ á chị. — Giảm combo xuống 2 lốc, nhắc quà tặng, chốt đơn.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:25] Nhưng mà em định khi nào hết thì mình mua thêm. ; [Telesale] [02:27] À dạ ý là cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi.\",\n    \"g\": \"Cải thiện: Cần làm dịu trước bằng cách đồng cảm, ví dụ 'Dạ em hiểu ý chị muốn dùng hết rồi mới mua thêm ạ' trước khi đưa ra giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:25] Nhưng mà em định khi nào hết thì mình mua thêm. ; [Telesale] [02:27] Không hỏi thêm câu hỏi mở để tìm hiểu lý do thực sự, nhảy thẳng vào giải thích chương trình.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ vậy chị dự tính khi nào hết sữa thì mua thêm ạ?' để hiểu rõ hơn trước khi tư vấn.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:27] cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi. Đó thì ví dụ như là đợt này nè, em lấy mình hai lốc là có 12 chai thôi là để sẵn ở nhà hạn sử dụng của nó một năm lận chị. Đó là để hai ba tuần sau mình dùng hết hai ba lốc kia thì lốc này mình để sẵn mình để ở nhà thôi. Rồi sẵn đợt này em tặng cho mình cái ly tự khuấy cao cấp luôn, để sẵn ở nhà mình có pha bột hay đi đâu thì mình mang theo. — Giải quyết lo ngại còn sữa bằng cách gợi ý giữ sẵn, nhắc quà, dài hạn sử dụng.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-6",
+      "recordID": "rec-6",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [01:41] Em vẫn còn vì căn bản là mọi người mua cho cũng nhiều nên hiện tại là vẫn còn nên vẫn chưa có nhu cầu mua thêm ấy ạ. ; [Telesale] [01:49] À là còn mấy lốc ở nhà á chị?\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm/thấu hiểu trước khi hỏi thêm, ví dụ 'Dạ em hiểu chị vẫn còn sữa ạ' thay vì nhảy thẳng vào hỏi số lượng.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [01:49] À là còn mấy lốc ở nhà á chị? — Hỏi mở để tìm hiểu tình trạng tồn kho thực tế của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [01:53] hai ba lốc thì mình có thể dùng khoảng tầm hai đến ba tuần á chị. Thì đằng nào cũng hết sữa thì đợt này nếu mà chị sợ thì em hỗ trợ cho mình chỉ cần hai lốc 12 chai thôi là em vẫn tặng cho mình một phần quà tặng chất sức khỏe từ Ensugo, đó là một cái ly tự khuấy cao cấp của Ensugo trị giá 200.000đ á chị. — Giảm combo xuống 2 lốc, nhắc quà tặng, chốt đơn.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:25] Nhưng mà em định khi nào hết thì mình mua thêm. ; [Telesale] [02:27] À dạ ý là cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi.\",\n    \"g\": \"Cải thiện: Cần làm dịu trước bằng cách đồng cảm, ví dụ 'Dạ em hiểu ý chị muốn dùng hết rồi mới mua thêm ạ' trước khi đưa ra giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:25] Nhưng mà em định khi nào hết thì mình mua thêm. ; [Telesale] [02:27] Không hỏi thêm câu hỏi mở để tìm hiểu lý do thực sự, nhảy thẳng vào giải thích chương trình.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ vậy chị dự tính khi nào hết sữa thì mua thêm ạ?' để hiểu rõ hơn trước khi tư vấn.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:27] cái chương trình này á chị là một khách hàng được áp dụng một phần quà tặng duy nhất thôi. Đó thì ví dụ như là đợt này nè, em lấy mình hai lốc là có 12 chai thôi là để sẵn ở nhà hạn sử dụng của nó một năm lận chị. Đó là để hai ba tuần sau mình dùng hết hai ba lốc kia thì lốc này mình để sẵn mình để ở nhà thôi. Rồi sẵn đợt này em tặng cho mình cái ly tự khuấy cao cấp luôn, để sẵn ở nhà mình có pha bột hay đi đâu thì mình mang theo. — Giải quyết lo ngại còn sữa bằng cách gợi ý giữ sẵn, nhắc quà, dài hạn sử dụng.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] [02:06 - 02:13] Cái này giờ về con nha. Bữa cô mày nó đi hỏi ở ngoài chợ á rồi mấy tiệm thuốc tây nó cũng có bán á.\\n[telesales] [02:13 - 02:13] Dạ.\\n[customer] [02:14 - 02:18] Rồi hình như là cái giá nó có cái chênh lệch đôi ba chục gì đó chú không hiểu.\\n[telesales] [02:18 - 02:19] Dạ.\\n[customer] [02:19 - 2:32] Nhưng mà chú thì chú nghĩ là nếu mua mà ngay shop rồi là ngay ấy này nọ thì nó nó an toàn an tâm hơn chứ bây giờ cái chuyện là hàng giả, hàng nhái, hàng này nọ mà uống vô sức khỏe nó thấy này nọ giờ chú...\\n[telesales] [02:32 - 02:33] Dạ đúng rồi.\\n[customer] [02:33 - 2:44] Cũng tin tưởng như vậy. Bây giờ cái chuyện mà hỗ trợ hay là quà viết thì đối với ông con chú thì chú cũng không không không không cần quan tâm nó nhiều mà quan trọng là cái chất lượng đó cho nó đúng.\\n[telesales] [02:44 - 02:45] Dạ rồi, con hiểu.\\n[customer] [02:45 - 02:46] Đúng rồi.\\n[telesales] [02:46 - 02:47] Dạ, cái này...\\n[customer] [02:47 - 2:54] Bây giờ thôi để mai mốt ngang là chú chú điện nếu như chắc chú uống nhưng đâu còn khoảng ngày hai ngày nữa nó hết á, mà cũng chưa có lương con hè.\\n[telesales] [02:54 - 02:55] Con hiểu quá chú.\\n[telesales] [02:56 - 3:11] À chú Đức cái này, chú Đức biết sao không? Tại vì tụi con hỗ trợ cho chú Đức thì cũng không có giao liền cho mình nay mai nữa. Thì cũng tầm 3 đến 5 ngày nữa mới giao tới cho chú Đức. Thì lúc đó sữa của mình cũng vơi vơi cũng hết rồi, cái mình có sữa này mình tiếp tục dùng luôn, không có bị gián đoạn quá trình uống sữa của chú Đức á.\\n[telesales] [03:11 - 03:12] Dạ.\\n[telesales] [03:12 - 03:18] Thì con cũng...\n",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:32] Dạ đúng rồi. ; [Telesale] [02:44] Dạ rồi, con hiểu. — Thể hiện sự đồng cảm với lo ngại của khách về chất lượng sản phẩm\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:19-02:32] nói lo ngại hàng giả, hàng nhái, mua ngoài chợ ; [Telesale] chỉ phản hồi 'Dạ' và 'Dạ đúng rồi', không đặt câu hỏi mở để tìm hiểu thêm nhu cầu thực sự của khách\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Chú ơi, chú đang băn khoăn cụ thể điều gì ạ?' hoặc 'Chú thường mua loại nào bên ngoài ạ?' để hiểu rõ hơn nhu cầu\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [02:56-03:11] đề cập thời gian giao hàng 3-5 ngày để giải quyết vấn đề sữa hết, nhưng không đáp ứng trực tiếp lo ngại chính của khách về mua hàng chính hãng, không có close attempt trong phần này\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại mua hàng chính hãng (ví dụ: cam kết nguồn gốc, tem nhãn, kênh phân phối chính hãng) và kèm close attempt như 'Vậy chú cho con giữ đơn giúp chú nha'\"\n  },\n  \"n\",\n   {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]\n",
+      "callID": "rec-7",
+      "recordID": "rec-7",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:32] Dạ đúng rồi. ; [Telesale] [02:44] Dạ rồi, con hiểu. — Thể hiện sự đồng cảm với lo ngại của khách về chất lượng sản phẩm\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:19-02:32] nói lo ngại hàng giả, hàng nhái, mua ngoài chợ ; [Telesale] chỉ phản hồi 'Dạ' và 'Dạ đúng rồi', không đặt câu hỏi mở để tìm hiểu thêm nhu cầu thực sự của khách\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Chú ơi, chú đang băn khoăn cụ thể điều gì ạ?' hoặc 'Chú thường mua loại nào bên ngoài ạ?' để hiểu rõ hơn nhu cầu\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [02:56-03:11] đề cập thời gian giao hàng 3-5 ngày để giải quyết vấn đề sữa hết, nhưng không đáp ứng trực tiếp lo ngại chính của khách về mua hàng chính hãng, không có close attempt trong phần này\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại mua hàng chính hãng (ví dụ: cam kết nguồn gốc, tem nhãn, kênh phân phối chính hãng) và kèm close attempt như 'Vậy chú cho con giữ đơn giúp chú nha'\"\n  },\n  \"n\",\n   {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]\n"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [00:24 - 00:27] [customer] Ờ chị mua có chị, em mua chị mua ngoài có được cưng ơi.\\n[00:28 - 00:33] [telesales] Ờ dạ. Tại vì đợt này bên hãng bên em cũng đang có chương trình rất là tốt nên mới gọi ra là hỗ trợ cho mình đó chị ạ.\\n[00:34 - 00:34] [customer] À.\\n[00:34 - 00:35] [telesales] Dạ, dạ.\\n[00:35 - 00:43] [telesales] Đâu biết sẵn thì tiện đợt này bên em, bên hãng em nè, hỗ trợ cho mình dòng nước của Ensure Original nó vẫn tốt cho mình đó chị, mà giá thành nó vẫn có ưu đãi cho mình đó chị ạ.\\n[00:44 - 00:47] [telesales] Vậy thì em không biết đợt này em lấy cho mình hai lốc của Ensure Original ha?\\n[00:48 - 00:54] [customer] Không em không, chị không tin đâu, cậu gần đây chị cũng có rồi em. Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em.\\n[00:54 - 00:55] [telesales] Ừ dạ.\\n[00:55 - 1:04] [telesales] Tại vì đợt này thì bên hãng cũng đang có hỗ trợ và giá cả cũng đó rất là tiết kiệm cho mình rất là nhiều nên em mới gọi lên để hỗ trợ cho mình á, thì giá cả này á hả? Dạ.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:24] 'chị mua có chị, em mua chị mua ngoài có được cưng ơi' ; [Telesale] [00:28] 'Ờ dạ. Tại vì đợt này bên hãng bên em cũng đang có chương trình rất là tốt...'\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi pitch, ví dụ 'Dạ em hiểu ý chị, mua ngoài cũng tiện lợi lắm ạ' thay vì chỉ nói 'Dạ' rồi chuyển sang giới thiệu chương trình.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:24] 'chị mua có chị, em mua chị mua ngoài có được cưng ơi' ; [Telesale] [00:28-00:43] Không đặt câu hỏi mở để tìm hiểu lý do khách muốn mua ngoài, nhảy thẳng vào giới thiệu chương trình và chốt đơn.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ lý do từ chối, ví dụ 'Dạ chị ơi, chị thấy mua ngoài tiện hơn chỗ nào ạ?' để hiểu nhu cầu thực sự trước khi tư vấn.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [00:35-00:43] 'giá thành nó vẫn có ưu đãi cho mình đó chị ạ' ; [Telesale] [00:44-00:47] 'Vậy thì em không biết đợt này em lấy cho mình hai lốc của Ensure Original ha?' — Đáp ứng objection bằng giá ưu đãi và có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:48] 'Không em không, chị không tin đâu, cậu gần đây chị cũng có rồi em. Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em.' ; [Telesale] [00:54] 'Ừ dạ.'\",\n    \"g\": \"Cải thiện: Cần thể hiện sự thấu hiểu khi khách đã có sản phẩm và mua quen ở cửa hàng, ví dụ 'Dạ em hiểu chị đã có rồi ạ, em hoàn toàn tôn trọng chị' thay vì chỉ 'Ừ dạ'.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:48] 'Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em' ; [Telesale] [00:55-1:04] Không hỏi thêm câu hỏi mở về lý do tin tưởng cửa hàng hơn, nhảy thẳng vào nói về giá tiết kiệm.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ chị ơi, chị mua ở Bách hóa Xanh thì chị thấy tiện ở điểm nào ạ?' để hiểu rào cản thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [00:55-1:04] 'bên hãng cũng đang có hỗ trợ và giá cả cũng đó rất là tiết kiệm cho mình rất là nhiều' — Chỉ nhắc giá, không đáp ứng trực tiếp lo ngại về độ tin cậy/kênh mua, không có close attempt rõ ràng trong đoạn này.\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại của khách (ví dụ: cam kết chính hãng, nguồn gốc), kèm close attempt như 'Em mời chị lấy giúp em nha'.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-8",
+      "recordID": "rec-8",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:24] 'chị mua có chị, em mua chị mua ngoài có được cưng ơi' ; [Telesale] [00:28] 'Ờ dạ. Tại vì đợt này bên hãng bên em cũng đang có chương trình rất là tốt...'\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi pitch, ví dụ 'Dạ em hiểu ý chị, mua ngoài cũng tiện lợi lắm ạ' thay vì chỉ nói 'Dạ' rồi chuyển sang giới thiệu chương trình.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:24] 'chị mua có chị, em mua chị mua ngoài có được cưng ơi' ; [Telesale] [00:28-00:43] Không đặt câu hỏi mở để tìm hiểu lý do khách muốn mua ngoài, nhảy thẳng vào giới thiệu chương trình và chốt đơn.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ lý do từ chối, ví dụ 'Dạ chị ơi, chị thấy mua ngoài tiện hơn chỗ nào ạ?' để hiểu nhu cầu thực sự trước khi tư vấn.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [00:35-00:43] 'giá thành nó vẫn có ưu đãi cho mình đó chị ạ' ; [Telesale] [00:44-00:47] 'Vậy thì em không biết đợt này em lấy cho mình hai lốc của Ensure Original ha?' — Đáp ứng objection bằng giá ưu đãi và có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:48] 'Không em không, chị không tin đâu, cậu gần đây chị cũng có rồi em. Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em.' ; [Telesale] [00:54] 'Ừ dạ.'\",\n    \"g\": \"Cải thiện: Cần thể hiện sự thấu hiểu khi khách đã có sản phẩm và mua quen ở cửa hàng, ví dụ 'Dạ em hiểu chị đã có rồi ạ, em hoàn toàn tôn trọng chị' thay vì chỉ 'Ừ dạ'.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [00:48] 'Chị mua ở Bách hóa Xanh hoặc cửa hàng ấy nó cũng có tiện lợi nó cũng có em' ; [Telesale] [00:55-1:04] Không hỏi thêm câu hỏi mở về lý do tin tưởng cửa hàng hơn, nhảy thẳng vào nói về giá tiết kiệm.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ chị ơi, chị mua ở Bách hóa Xanh thì chị thấy tiện ở điểm nào ạ?' để hiểu rào cản thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [00:55-1:04] 'bên hãng cũng đang có hỗ trợ và giá cả cũng đó rất là tiết kiệm cho mình rất là nhiều' — Chỉ nhắc giá, không đáp ứng trực tiếp lo ngại về độ tin cậy/kênh mua, không có close attempt rõ ràng trong đoạn này.\",\n    \"g\": \"Cải thiện: Cần đáp ứng trực tiếp lo ngại của khách (ví dụ: cam kết chính hãng, nguồn gốc), kèm close attempt như 'Em mời chị lấy giúp em nha'.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-06-29 11:35:08\\n[customer] [01:13 - 01:16] Có, bữa đưa có hộp có hộp cơm gì đó anh cho người ta luôn rồi.\\n[telesales] [01:17 - 01:18] Ờ vậy hả anh?\\n[telesales] [01:19 - 01:23] Đợt này đang có chương trình ưu đãi anh lấy thêm hai lon đi, lấy thêm hai lon em tặng cho mình một bộ hộp cơm để dành dùng.\\n[customer] [01:25 - 01:27] Rồi, lấy cho người ta rồi có dùng đâu.\\n[telesales] [01:28 - 01:28] Vậy hả?\\n[customer] [01:29 - 01:33] Tôi chỉ lấy sữa cho bà già uống thôi chứ đâu có lấy mấy cái đó làm gì.\\n[telesales] [01:33 - 01:36] Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.\\n[customer] [01:37 - 01:37] Ừ.\\n[telesales] [01:39 - 01:42] Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh.\\n[telesales] [01:43 - 01:45] Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.\\n[customer] [01:46 - 01:49] Rồi, để cho uống hết đi đã. Để nhiều quá bả chửi.\\n\\nNgày 2026-06-29\\n[customer] [01:13 - 01:16] Có, bữa đưa có hộp có hộp cơm gì đó anh cho người ta luôn rồi.\\n[telesales] [01:17 - 01:18] Ờ vậy hả anh?\\n[telesales] [01:19 - 01:23] Đợt này đang có chương trình ưu đãi anh lấy thêm hai lon đi, lấy thêm hai lon em tặng cho mình một bộ hộp cơm để dành dùng.\\n[customer] [01:25 - 01:27] Rồi, lấy cho người ta rồi có dùng đâu.\\n[telesales] [01:28 - 01:28] Vậy hả?\\n[customer] [01:29 - 01:33] Tôi chỉ lấy sữa cho bà già uống thôi chứ đâu có lấy mấy cái đó làm gì.\\n[telesales] [01:33 - 01:36] Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.\\n[customer] [01:37 - 01:37] Ừ.\\n[telesales] [01:39 - 01:42] Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh.\\n[telesales] [01:43 - 01:45] Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.\\n[customer] [01:46 - 01:49] Rồi, để cho uống hết đi đã. Để nhiều quá bả chửi.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:17 - 01:18] 'Ờ vậy hả anh?' — Chỉ phản hồi ngắn gọn, không thể hiện sự đồng cảm hay thấu hiểu khi khách nói đã nhận quà.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ vâng, vậy là anh đã được tặng quà rồi ạ' thay vì chỉ hỏi lại.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:19 - 01:23] Không hỏi thêm về lý do từ chối, nhảy thẳng vào pitch chương trình ưu đãi.\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Dạ vậy anh ơi, ngoài quà tặng thì anh còn quan tâm điều gì nữa không ạ?' để tìm hiểu nhu cầu thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:33 - 01:36] 'Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.' ; [telesales] [01:39 - 01:45] 'Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh. Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.' — Giải thích quà tặng miễn phí, tạo urgency về hạn sử dụng, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:33 - 01:36] 'Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.' — Thể hiện sự lắng nghe và giải thích thêm cho khách hiểu ý nghĩa quà tặng.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:39 - 01:45] Không hỏi thêm câu hỏi mở để tìm hiểu lý do từ chối sâu hơn, nhảy thẳng vào đề xuất đăng ký.\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Dạ vậy anh ơi, hiện tại nhà mình còn bao nhiêu sữa ạ?' để hiểu tình hình sử dụng thực tế.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:39 - 01:45] 'Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh. Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.' — Tạo urgency về hạn sử dụng, đề xuất mua trước dùng sau, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-9",
+      "recordID": "rec-9",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:17 - 01:18] 'Ờ vậy hả anh?' — Chỉ phản hồi ngắn gọn, không thể hiện sự đồng cảm hay thấu hiểu khi khách nói đã nhận quà.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ vâng, vậy là anh đã được tặng quà rồi ạ' thay vì chỉ hỏi lại.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:19 - 01:23] Không hỏi thêm về lý do từ chối, nhảy thẳng vào pitch chương trình ưu đãi.\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Dạ vậy anh ơi, ngoài quà tặng thì anh còn quan tâm điều gì nữa không ạ?' để tìm hiểu nhu cầu thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:33 - 01:36] 'Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.' ; [telesales] [01:39 - 01:45] 'Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh. Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.' — Giải thích quà tặng miễn phí, tạo urgency về hạn sử dụng, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:33 - 01:36] 'Dạ, thì đó quà tặng thêm bên hãng tụi em tặng kèm đó mà.' — Thể hiện sự lắng nghe và giải thích thêm cho khách hiểu ý nghĩa quà tặng.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:39 - 01:45] Không hỏi thêm câu hỏi mở để tìm hiểu lý do từ chối sâu hơn, nhảy thẳng vào đề xuất đăng ký.\",\n    \"g\": \"Cải thiện: Nên hỏi mở như 'Dạ vậy anh ơi, hiện tại nhà mình còn bao nhiêu sữa ạ?' để hiểu tình hình sử dụng thực tế.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[telesales] [01:39 - 01:45] 'Nhưng mà ở nhà mình đang có sữa dùng tầm là tháng là hết rồi anh. Đang có chương trình ưu đãi anh đăng ký luôn cho bác hai lon tháng sau bác dùng.' — Tạo urgency về hạn sử dụng, đề xuất mua trước dùng sau, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] [01:48.300 - 01:50.990] Nó bằng cái gì? Chất nhựa bằng cái gì?\\n[telesales] [01:51.500 - 01:53.190] Dạ cái này là nhựa PP cao cấp chị.\\n[customer] [01:54.500 - 01:57.990] Thế còn bên trong là nó cái gì? Bên trong là cái gì? Cũng nhựa à?\\n[telesales] [01:58.700 - 02:04.590] Dạ đúng rồi, cái này bằng nhựa PP, nhưng mà cái nhựa này là nhựa cao cấp. Dạ, thì để trong lò vi sóng nó cũng không có bị chảy nhựa.\\n[telesales] [02:05.000 - 02:10.990] Dạ, tại vì đây là phần quà mà bên em bên hãng đang đặt làm riêng để hỗ trợ tặng cho khách hàng đó, nên là chị cũng có thể yên tâm.\\n[telesales] [02:11.000 - 02:16.990] Dạ. Hai lon lớn 800 gram thì sẽ được tặng lại cái bộ đựng cơm này đó, với bên em miễn phí ship vận chuyển cho chị nữa.\\n[customer] [02:17.600 - 02:17.900] Ừ ừ.\\n[telesales] [02:18.500 - 02:22.290] Dạ vâng, hai lon lớn thì đang hỗ trợ cho mình giá chỉ có là 1.866.000 thôi.\\n[customer] [02:23.700 - 02:23.990] Dạ.\\n[customer] [02:24.700 - 02:26.290] Khoảng 900 đúng không?\\n[telesales] [02:27.000 - 02:29.290] Dạ khoảng tầm 930 chị, 930.\\n[telesales] [02:29.700 - 02:31.290] Hai lon lớn 800 gram.\\n[telesales] [02:32.400 - 02:36.490] Dạ, mình lấy được combo hai lon là em sẽ được tặng lại cho mình cái bộ đựng cơm này rồi đó.\\n[telesales] [02:37.000 - 02:39.590] Được chị cho em hỗ trợ thêm cho bác hai lon ha, để dành dùng.\\n[customer] [02:41.000 - 02:45.590] À không, chị chị mới lấy cho mẹ chị rồi, cho nên là đợt này từ từ đã nhé.\\n[telesales] [02:46.200 - 02:47.990] À dạ, chị lấy cái hộp cơm này.\\n[customer] [02:47.990 - 02:52.590] Chị tưởng cái cặp đựng cơm nó bằng inox thì bên trong nó bằng inox thì chị lấy được không?\\n[telesales] [02:53.200 - 02:54.290] À dạ vâng chị.\\n[telesales] [02:54.290 - 02:57.090] Dạ em hiểu, nhưng mà hiện tại cái bộ đựng cơm này em thấy nó cũng tiện mà.\\n[customer] [02:57.800 - 02:59.590] Ờ không không, chị không lấy.\\n[telesales] [03:01.300 - 03:01.690] Dạ.\\n[telesales] [03:02.000 - 03:09.490] Không thì đợt này chị à dạ không thì chị có thể mình hỗ trợ các chương trình ba lon á, em tặng lại được cho chị cái máy đo huyết áp, máy máy massage cầm tay cho bác.\\n[telesales] [03:09.490 - 03:11.290] Dạ có loại này mình có thể thay đổi các đầu.\\n[customer] [03:11.800 - 03:13.990] Những cái đấy, những cái đấy chị có hết rồi.\\n[telesales] [03:14.900 - 03:15.590] À dạ.\\n[customer] [03:16.200 - 03:22.790] Chị chị cũng đã có rất nhiều chương trình lần trước bên sữa không biết bạn nào gọi đến chị lấy rồi mà.\\n[customer] [03:23.200 - 03:23.590] Mới lấy.\\n[telesales] [03:24.200 - 03:28.290] Dạ vâng, dạ đúng rồi, em thấy là mình cũng là khách hàng thân thiết lâu năm của bên hãng này.\\n[telesales] [03:28.700 - 03:33.490] Dạ nên là đang được các chương trình tri ân khách hàng này bên em mới liên hệ lại để hỗ trợ thêm cho nhà mình đó.\\n[telesales] [03:34.000 - 03:36.790] Dạ, thì coi như đợt này chị ủng hộ thêm bên hãng hai lon đi.\\n[customer] [03:37.400 - 03:38.790] Thôi thôi nhá.\\n[telesales] [03:39.400 - 03:40.690] Dạ, nhưng mà bác còn nhiều không chị?\\n[customer] [03:41.100 - 03:42.290] Còn còn nhiều lắm.\\n[telesales] [03:43.200 - 03:44.290] À còn khoảng tầm.\\n[telesales] [03:45.300 - 03:48.490] Dạ, tại vì các phần quà thì bên em nó cũng có hạn á chị.\\n[customer] [03:48.900 - 03:50.690] Ừ chị biết rồi, để đợt khác nhá.\\n[telesales] [03:51.700 - 03:52.190] Dạ rồi.\\n[customer] [03:52.200 - 03:56.390] Lần trước chị mới lấy cái lần trước chị mới lấy cái đo huyết áp xong mà.\\n[telesales] [03:56.800 - 03:58.290] À cái cái máy đo huyết áp á hả?\\n[telesales] [03:59.600 - 04:03.690] Dạ vâng, cái máy đo huyết áp đó chị dùng cũng cũng thấy tiện lợi hả chị ha, cũng tốt ha?\\n[customer] [04:03.700 - 04:04.000] Ừ ừ.\\n[telesales] [04:04.400 - 04:11.690] Dạ đúng rồi, cái máy đó là bên em cũng đặt làm riêng để hỗ trợ tặng cho khách hàng mà. Thường là khách hàng cũng báo là dùng vài ba năm luôn á, mà dùng vẫn tốt hơn các chị.\\n[telesales] [04:11.900 - 04:12.290] Ừ dạ.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:41.000] 'chị mới lấy cho mẹ chị rồi, cho nên là đợt này từ từ đã nhé' ; [Telesale] [02:46.200] 'Dạ' — Chỉ nói 'Dạ', không thể hiện sự đồng cảm hay thấu hiểu tình huống khách mới mua.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu rồi ạ, chị mới lấy cho mẹ thì chắc chắn là tốt quá' trước khi chuyển hướng.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"Auto-S — Khách nói 'mới lấy cho mẹ chị rồi' thuộc exempt list (mới mua/vừa mua), không cần hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [03:02.000] 'chị có thể mình hỗ trợ các chương trình ba lon á, em tặng lại được cho chị cái máy đo huyết áp, máy massage cầm tay cho bác' ; [Telesale] [03:28.700] 'đang được các chương trình tri ân khách hàng này bên em mới liên hệ lại để hỗ trợ thêm cho nhà mình đó' ; [Telesale] [03:34.000] 'chị ủng hộ thêm bên hãng hai lon đi' — Đề xuất thay đổi quà tặng, nhấn mạnh tri ân khách hàng, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [03:37.400] 'Thôi thôi nhá' ; [Telesale] [03:39.400] 'Dạ, nhưng mà bác còn nhiều không chị?' — Không thể hiện đồng cảm, chỉ hỏi ngược lại.\",\n    \"g\": \"Cải thiện: Nên làm dịu trước, ví dụ 'Dạ em hiểu chị, bác còn nhiều thì chị chưa vội đâu ạ' trước khi hỏi thêm thông tin.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"Auto-S — Khách nói 'còn nhiều lắm' thuộc exempt list (còn nhiều sữa), không cần hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [03:45.300] 'tại vì các phần quà thì bên em nó cũng có hạn á chị' — Có tạo urgency về quà tặng nhưng không đề xuất giải pháp cụ thể cho việc khách còn nhiều sữa (giảm combo, dời lịch giao, mua trước dùng sau...) và không có close attempt rõ ràng.\",\n    \"g\": \"Cải thiện: Nên đưa ra giải pháp phù hợp với tình trạng còn nhiều sữa của khách, ví dụ giảm combo xuống 1 lon, hẹn giao sau, kèm close attempt như 'Vậy em giữ ưu đãi cho chị nha'.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-10",
+      "recordID": "rec-10",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:41.000] 'chị mới lấy cho mẹ chị rồi, cho nên là đợt này từ từ đã nhé' ; [Telesale] [02:46.200] 'Dạ' — Chỉ nói 'Dạ', không thể hiện sự đồng cảm hay thấu hiểu tình huống khách mới mua.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu rồi ạ, chị mới lấy cho mẹ thì chắc chắn là tốt quá' trước khi chuyển hướng.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"Auto-S — Khách nói 'mới lấy cho mẹ chị rồi' thuộc exempt list (mới mua/vừa mua), không cần hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [03:02.000] 'chị có thể mình hỗ trợ các chương trình ba lon á, em tặng lại được cho chị cái máy đo huyết áp, máy massage cầm tay cho bác' ; [Telesale] [03:28.700] 'đang được các chương trình tri ân khách hàng này bên em mới liên hệ lại để hỗ trợ thêm cho nhà mình đó' ; [Telesale] [03:34.000] 'chị ủng hộ thêm bên hãng hai lon đi' — Đề xuất thay đổi quà tặng, nhấn mạnh tri ân khách hàng, có close attempt.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [03:37.400] 'Thôi thôi nhá' ; [Telesale] [03:39.400] 'Dạ, nhưng mà bác còn nhiều không chị?' — Không thể hiện đồng cảm, chỉ hỏi ngược lại.\",\n    \"g\": \"Cải thiện: Nên làm dịu trước, ví dụ 'Dạ em hiểu chị, bác còn nhiều thì chị chưa vội đâu ạ' trước khi hỏi thêm thông tin.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"Auto-S — Khách nói 'còn nhiều lắm' thuộc exempt list (còn nhiều sữa), không cần hỏi thêm.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [03:45.300] 'tại vì các phần quà thì bên em nó cũng có hạn á chị' — Có tạo urgency về quà tặng nhưng không đề xuất giải pháp cụ thể cho việc khách còn nhiều sữa (giảm combo, dời lịch giao, mua trước dùng sau...) và không có close attempt rõ ràng.\",\n    \"g\": \"Cải thiện: Nên đưa ra giải pháp phù hợp với tình trạng còn nhiều sữa của khách, ví dụ giảm combo xuống 1 lon, hẹn giao sau, kèm close attempt như 'Vậy em giữ ưu đãi cho chị nha'.\"\n  },\n  \"n\",\n {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-06-25 15:42:24\\n[customer] [01:56.200 - 02:01.500] Ôi thôi thôi mà chị lấy một lon thôi, lấy lon thôi về có tiền thì nó không có tiền thì thôi, lon đang cố gắng thôi.\\n[telesales] [02:02.000 - 02:04.000] Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn.\\n[customer] [02:04.500 - 02:11.500] Ôi cái cái cái cái cái combo mình mới mua một lon đang gửi về ngoài Bắc thì mình đã mở ra xem được đâu.\\n[telesales] [02:12.500 - 02:15.000] Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị mua về chị chưa dùng hả?\\n[customer] [02:15.500 - 02:37.000] Đúng rồi, lần đầu tiên mình lên bệnh viện Sài Gòn khám mình có các bạn uống mua một tuổi lon bé uống thử, sau đó là mình thấy các bạn mà nó gọi điện cứ như vậy là thế nào các bạn bạn đang có khuyến mãi tặng quà thì mình mua thử lon mình mua mình mới nữa, to đấy để họ gửi về mình đã mở đâu vì mình hiện tại đang ở Cà Mau đang giờ đang trên đường về nhà ngoài Bắc đấy.\\n[telesales] [02:38.000 - 02:41.000] À là mình à là mình chưa khui là cái đơn hàng lần đó mình chưa khui ra luôn.\\n[customer] [02:42.000 - 02:48.500] Đúng rồi, các bạn gửi về ngoài Bắc nhà mình mình đã mở ra đâu, mình thì lúc ấy mình đang ở Cà Mau giờ mới bắt đầu về Bắc đây.\\n[telesales] [02:49.500 - 02:55.000] À dạ, tại vì đợt này bên hãng là đang có chương trình quà tặng, cho nên nếu mà được thì đợt này chị đăng ký thì nó sẽ tiện hơn cho mình.\\n[customer] [02:56.000 - 02:59.000] Ờ đúng rồi nhưng mà cái này có điều kiện được vì cái này đắt lắm.\\n[telesales] [03:00.500 - 03:05.000] Dạ, hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị? Bởi vì một thùng 24 chai á giá cũng chưa tới 1 triệu.\\n[customer] [03:05.500 - 03:10.000] Ờ mình mình chỉ uống cái uống sữa bột thôi, còn lon thì mình.\\n\\nNgày 2026-06-25\\n[customer] [01:56.200 - 02:01.500] Ôi thôi thôi mà chị lấy một lon thôi, lấy lon thôi về có tiền thì nó không có tiền thì thôi, lon đang cố gắng thôi.\\n[telesales] [02:02.000 - 02:04.000] Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn.\\n[customer] [02:04.500 - 02:11.500] Ôi cái cái cái cái cái combo mình mới mua một lon đang gửi về ngoài Bắc thì mình đã mở ra xem được đâu.\\n[telesales] [02:12.500 - 02:15.000] Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị mua về chị chưa dùng hả?\\n[customer] [02:15.500 - 02:37.000] Đúng rồi, lần đầu tiên mình lên bệnh viện Sài Gòn khám mình có các bạn uống mua một tuổi lon bé uống thử, sau đó là mình thấy các bạn mà nó gọi điện cứ như vậy là thế nào các bạn bạn đang có khuyến mãi tặng quà thì mình mua thử lon mình mua mình mới nữa, to đấy để họ gửi về mình đã mở đâu vì mình hiện tại đang ở Cà Mau đang giờ đang trên đường về nhà ngoài Bắc đấy.\\n[telesales] [02:38.000 - 02:41.000] À là mình à là mình chưa khui là cái đơn hàng lần đó mình chưa khui ra luôn.\\n[customer] [02:42.000 - 02:48.500] Đúng rồi, các bạn gửi về ngoài Bắc nhà mình mình đã mở ra đâu, mình thì lúc ấy mình đang ở Cà Mau giờ mới bắt đầu về Bắc đây.\\n[telesales] [02:49.500 - 02:55.000] À dạ, tại vì đợt này bên hãng là đang có chương trình quà tặng, cho nên nếu mà được thì đợt này chị đăng ký thì nó sẽ tiện hơn cho mình.\\n[customer] [02:56.000 - 02:59.000] Ờ đúng rồi nhưng mà cái này có điều kiện được vì cái này đắt lắm.\\n[telesales] [03:00.500 - 03:05.000] Dạ, hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị? Bởi vì một thùng 24 chai á giá cũng chưa tới 1 triệu.\\n[customer] [03:05.500 - 03:10.000] Ờ mình mình chỉ uống cái uống sữa bột thôi, còn lon thì mình.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:02.000] 'Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn.' — Telesale đồng ý giảm số lượng xuống 1 lon, thể hiện sự thấu hiểu mong muốn của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:12.500] 'Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị mua về chị chưa dùng hả?' — Câu hỏi mở tìm hiểu thêm tình huống mua hàng trước đó của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:49.500] 'tại vì đợt này bên hãng là đang có chương trình quà tặng, cho nên nếu mà được thì đợt này chị đăng ký thì nó sẽ tiện hơn cho mình.' — Đề cập CTKM quà tặng, gợi ý đăng ký lại cho tiện lợi, đáp ứng nhu cầu khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:56.000] 'cái này có điều kiện được vì cái này đắt lắm' ; [Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị?' — Telesale không thể hiện sự đồng cảm với lo ngại về giá cao, nhảy thẳng sang đề xuất sản phẩm thay thế.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu chị quan tâm về chi phí ạ', rồi mới đưa ra giải pháp thay thế phù hợp.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:56.000] 'cái này có điều kiện được vì cái này đắt lắm' ; [Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị?' — Telesale không hỏi làm rõ mức giá cụ thể khách đang cân nhắc hay lý do từ chối về giá, nhảy thẳng sang đề xuất sản phẩm khác.\",\n    \"g\": \"Cải thiện: Nên hỏi làm rõ trước, ví dụ 'Dạ chị ơi, mức giá nào thì chị thấy phù hợp ạ?' hoặc 'Chị đang cân nhắc khoảng bao nhiêu thì mua được ạ?'\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị? Bởi vì một thùng 24 chai á giá cũng chưa tới 1 triệu.' — Đề xuất sản phẩm thay thế rẻ hơn (lốc nước), đáp ứng trực tiếp lo ngại về giá cao của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-11",
+      "recordID": "rec-11",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:02.000] 'Vậy đợt này chị đăng ký một lon thì em sẽ hỗ trợ cho mình luôn.' — Telesale đồng ý giảm số lượng xuống 1 lon, thể hiện sự thấu hiểu mong muốn của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:12.500] 'Dạ là sao là sao chị? Bộ chị mua cái lon ở ngoài bệnh viện là chị mua về chị chưa dùng hả?' — Câu hỏi mở tìm hiểu thêm tình huống mua hàng trước đó của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [02:49.500] 'tại vì đợt này bên hãng là đang có chương trình quà tặng, cho nên nếu mà được thì đợt này chị đăng ký thì nó sẽ tiện hơn cho mình.' — Đề cập CTKM quà tặng, gợi ý đăng ký lại cho tiện lợi, đáp ứng nhu cầu khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:56.000] 'cái này có điều kiện được vì cái này đắt lắm' ; [Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị?' — Telesale không thể hiện sự đồng cảm với lo ngại về giá cao, nhảy thẳng sang đề xuất sản phẩm thay thế.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu chị quan tâm về chi phí ạ', rồi mới đưa ra giải pháp thay thế phù hợp.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [02:56.000] 'cái này có điều kiện được vì cái này đắt lắm' ; [Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị?' — Telesale không hỏi làm rõ mức giá cụ thể khách đang cân nhắc hay lý do từ chối về giá, nhảy thẳng sang đề xuất sản phẩm khác.\",\n    \"g\": \"Cải thiện: Nên hỏi làm rõ trước, ví dụ 'Dạ chị ơi, mức giá nào thì chị thấy phù hợp ạ?' hoặc 'Chị đang cân nhắc khoảng bao nhiêu thì mua được ạ?'\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"S\",\n    \"e\": \"[Telesale] [03:00.500] 'hay là đợt này chị có muốn đăng ký thử cái dạng lốc nước không chị? Bởi vì một thùng 24 chai á giá cũng chưa tới 1 triệu.' — Đề xuất sản phẩm thay thế rẻ hơn (lốc nước), đáp ứng trực tiếp lo ngại về giá cao của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: Ngày 2026-06-22 11:36:11\\n[customer] [01:14] Em không có thời gian pha chị ơi.\\n[telesales] [01:17] À, không có thời gian pha hả chị? Dạ. Thì lần này bên em á đang có cái loại nước á thì cũng đang có cái chương trình hỗ trợ cho mình nè.\\n[customer] [01:38] Ừm, vậy để em tham khảo lại. Dạ em đang ăn cơm á.\\n[telesales] [01:42] Tại vì em thấy là mình cũng đang sử dụng sữa đều mà.\\n\\nNgày 2026-06-22\\n[customer] [01:14] Em không có thời gian pha chị ơi.\\n[telesales] [01:17] À, không có thời gian pha hả chị? Dạ. Thì lần này bên em á đang có cái loại nước á thì cũng đang có cái chương trình hỗ trợ cho mình nè.\\n[customer] [01:38] Ừm, vậy để em tham khảo lại. Dạ em đang ăn cơm á.\\n[telesales] [01:42] Tại vì em thấy là mình cũng đang sử dụng sữa đều mà.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] 'À, không có thời gian pha hả chị?' — Chỉ lặp lại câu khách nói, không thể hiện sự đồng cảm hay thấu hiểu khó khăn của khách.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ em hiểu ạ, chị bận rộn thì việc pha sữa cũng mất thời gian' trước khi đưa ra giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] Không đặt câu hỏi mở để tìm hiểu thêm lý do từ chối, nhảy thẳng vào giới thiệu sản phẩm 'lần này bên em á đang có cái loại nước á'.\",\n    \"g\": \"Cải thiện: Nên hỏi làm rõ như 'Dạ chị ơi, không có thời gian pha là do chị chưa biết cách pha hay do chị đang bận ạ?' để hiểu nhu cầu thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] Giới thiệu 'loại nước' và 'chương trình hỗ trợ' nhưng không đáp ứng trực tiếp vấn đề 'không có thời gian pha', không có lời mời chốt đơn trong đoạn này.\",\n    \"g\": \"Cải thiện: Cần giải quyết trực tiếp nỗi lo về thời gian (ví dụ: loại nước uống sẵn không cần pha), kèm theo lời mời chốt đơn cụ thể.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:42] 'Tại vì em thấy là mình cũng đang sử dụng sữa đều mà' — Đây là phản biện ngược lại quan điểm khách, không phải lời đồng cảm hay làm dịu.\",\n    \"g\": \"Cải thiện: Nên làm dịu trước bằng cách thừa nhận 'Dạ em hiểu chị muốn tham khảo thêm ạ' rồi mới đưa ra thông tin bổ sung.\"\n  },\n  \"n\",\n    {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-12",
+      "recordID": "rec-12",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] 'À, không có thời gian pha hả chị?' — Chỉ lặp lại câu khách nói, không thể hiện sự đồng cảm hay thấu hiểu khó khăn của khách.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm như 'Dạ em hiểu ạ, chị bận rộn thì việc pha sữa cũng mất thời gian' trước khi đưa ra giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] Không đặt câu hỏi mở để tìm hiểu thêm lý do từ chối, nhảy thẳng vào giới thiệu sản phẩm 'lần này bên em á đang có cái loại nước á'.\",\n    \"g\": \"Cải thiện: Nên hỏi làm rõ như 'Dạ chị ơi, không có thời gian pha là do chị chưa biết cách pha hay do chị đang bận ạ?' để hiểu nhu cầu thực sự.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:17] Giới thiệu 'loại nước' và 'chương trình hỗ trợ' nhưng không đáp ứng trực tiếp vấn đề 'không có thời gian pha', không có lời mời chốt đơn trong đoạn này.\",\n    \"g\": \"Cải thiện: Cần giải quyết trực tiếp nỗi lo về thời gian (ví dụ: loại nước uống sẵn không cần pha), kèm theo lời mời chốt đơn cụ thể.\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"[Telesale] [01:42] 'Tại vì em thấy là mình cũng đang sử dụng sữa đều mà' — Đây là phản biện ngược lại quan điểm khách, không phải lời đồng cảm hay làm dịu.\",\n    \"g\": \"Cải thiện: Nên làm dịu trước bằng cách thừa nhận 'Dạ em hiểu chị muốn tham khảo thêm ạ' rồi mới đưa ra thông tin bổ sung.\"\n  },\n  \"n\",\n    {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] [01:23.400 - 1:33.600] À vậy bây giờ anh anh có số điện thoại của bạn tư vấn đầu tiên rồi, bây giờ bạn đã chào anh trước rồi nhưng mà để khi nào anh có thì anh gọi bạn đó rồi em nữa thì sao? Tại vì các bạn đầu tiên đã mời chào hàng anh là anh đã lấy bạn đó rồi.\\n[customer] [01:38.200 - 1:40.500] Bây giờ à bây giờ ý nó có em có ảnh hưởng gì không?\\n[telesales] [01:41.200 - 1:48.700] Dạ ý là bạn với em là như nhau á anh, đều dùng chung một cái kênh tổng đài thôi ạ. Tại cái số anh gọi đó chưa chắc đã là số của bạn đâu, là số tổng đài chung thôi.\\n[telesales] [01:49.200 - 1:56.000] Thì bây giờ là em hỗ trợ được cho anh là bạn bán cho anh rồi thì giờ tới phiên em bán cho anh là công ty chia luân phiên như vậy đó để mà chăm sóc khách hàng tối ưu hơn ấy ạ.\\n[customer] [01:56.500 - 1:58.000] Ừ ừ ừ ừ.\\n[customer] [01:58.800 - 2:08.000] Vậy em em để cho anh đầu tháng nữa nha, anh hỏi mẹ ý kiến của mẹ về việc dùng sữa này như thế nào rồi mà mẹ quyết định rồi anh mới tiếp tục anh dùng nữa nha em. Chứ bây giờ anh chưa hỏi ý kiến của ờ anh chưa hỏi ý kiến của mẹ anh hỏi bắt công lấy về bắt công bị mẹ anh dùng nữa.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:41.200 - 1:48.700] 'Dạ ý là bạn với em là như nhau á anh, đều dùng chung một cái kênh tổng đài thôi.' — Không thể hiện sự đồng cảm hay thấu hiểu mong muốn chờ hỏi ý kiến mẹ của khách, chỉ giải thích về kênh tổng đài.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu anh muốn hỏi ý kiến mẹ trước, điều đó hoàn toàn hợp lý ạ' thay vì chỉ giải thích về kênh tổng đài.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:49.200 - 1:56.000] 'Thì bây giờ là em hỗ trợ được cho anh là bạn bán cho anh rồi thì giờ tới phiên em bán cho anh là công ty chia luân phiên...' — Không đặt câu hỏi mở để tìm hiểu lý do thực sự khách muốn đợi, không hỏi thêm về lo ngại cụ thể của khách.\",\n    \"g\": \"Cải thiện: Nên hỏi mở để hiểu rõ hơn, ví dụ 'Dạ anh ơi, ngoài việc hỏi ý kiến mẹ ra thì anh còn băn khoăn điều gì nữa không ạ?' để nắm rõ nhu cầu.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:49.200 - 1:56.000] 'công ty chia luân phiên như vậy đó để mà chăm sóc khách hàng tối ưu hơn' — Chỉ giải thích hệ thống luân phiên, không đáp ứng trực tiếp nguyện vọng chờ hỏi mẹ, không đề xuất giải pháp (dời lịch giao, giữ ưu đãi, mua trước dùng sau), không có close attempt.\",\n    \"g\": \"Cải thiện: Nên đáp ứng trực tiếp nguyện vọng chờ hỏi mẹ bằng cách đề xuất dời lịch giao hàng, đồng thời nhắc lại ưu đãi đang có và chốt đơn nhanh, ví dụ 'Em xin phép giữ ưu đãi cho anh, em hẹn gọi lại cho anh vào đầu tháng sau nha anh' kèm close attempt.\"\n  },\n  \"n\",\n   {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-13",
+      "recordID": "rec-13",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:41.200 - 1:48.700] 'Dạ ý là bạn với em là như nhau á anh, đều dùng chung một cái kênh tổng đài thôi.' — Không thể hiện sự đồng cảm hay thấu hiểu mong muốn chờ hỏi ý kiến mẹ của khách, chỉ giải thích về kênh tổng đài.\",\n    \"g\": \"Cải thiện: Nên thể hiện sự đồng cảm trước, ví dụ 'Dạ em hiểu anh muốn hỏi ý kiến mẹ trước, điều đó hoàn toàn hợp lý ạ' thay vì chỉ giải thích về kênh tổng đài.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:49.200 - 1:56.000] 'Thì bây giờ là em hỗ trợ được cho anh là bạn bán cho anh rồi thì giờ tới phiên em bán cho anh là công ty chia luân phiên...' — Không đặt câu hỏi mở để tìm hiểu lý do thực sự khách muốn đợi, không hỏi thêm về lo ngại cụ thể của khách.\",\n    \"g\": \"Cải thiện: Nên hỏi mở để hiểu rõ hơn, ví dụ 'Dạ anh ơi, ngoài việc hỏi ý kiến mẹ ra thì anh còn băn khoăn điều gì nữa không ạ?' để nắm rõ nhu cầu.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[telesales] [01:49.200 - 1:56.000] 'công ty chia luân phiên như vậy đó để mà chăm sóc khách hàng tối ưu hơn' — Chỉ giải thích hệ thống luân phiên, không đáp ứng trực tiếp nguyện vọng chờ hỏi mẹ, không đề xuất giải pháp (dời lịch giao, giữ ưu đãi, mua trước dùng sau), không có close attempt.\",\n    \"g\": \"Cải thiện: Nên đáp ứng trực tiếp nguyện vọng chờ hỏi mẹ bằng cách đề xuất dời lịch giao hàng, đồng thời nhắc lại ưu đãi đang có và chốt đơn nhanh, ví dụ 'Em xin phép giữ ưu đãi cho anh, em hẹn gọi lại cho anh vào đầu tháng sau nha anh' kèm close attempt.\"\n  },\n  \"n\",\n   {\n    \"id\": 4,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 2 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 2\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    },
+    {
+      "input": "Module: xulytuchoi Transcript section: [customer] 02:59 Cái này là nó là dinh dưỡng, tưởng nó là dinh dưỡng rồi đói uống là tốt thì hóa ra là phải ăn no mới uống á.\\n[telesales] 03:06 Ờ dạ không phải là ăn no mà là ăn trước một cái gì đó nhẹ bụng thôi. Ví dụ như là một miếng bánh mì, một cái lát bánh mì mỏng mỏng thôi cho sữa nó hấp thu nó hấp thấu, nó hấp thấu từ từ qua dạ dày á. Chứ không á là cái đường nó sẽ bị hấp thấu nhanh thì nó không hấp thu được tốt cái dinh dưỡng có trong sữa. Nha. Giống như mình uống thuốc vậy á, mình uống thuốc mà bụng đói thì nó bị cào ruột khó chịu bụng á là phải ăn trước ăn trước cái gì đó để uống thuốc á chị Bích. Thì nó thì cái chất trong thuốc nó mới lan từ từ trong toàn cơ thể được. Còn không á thì nó sẽ không được.\\n[customer] 04:21 Trời ơi nó nó mắc thế, đắt quá, chả biết uống như nào nhưng mà nó thế.\\n[telesales] 04:27 Dạ thì một lần chị Bích cứ pha tầm hai tới ba muỗng thôi xong rồi pha thêm nước ấm ấm là được.\\n[customer] 04:32 Ừ.\\n[telesales] 04:33 Mình uống trong vòng cái lon đó mình uống được từ hai tuần á chị Bích.\\n[customer] 04:37 Đắt thế thôi.\\n[telesales] 04:39 Dạ do là cái đây là cái dòng sữa cao cấp được Bộ Y tế khuyên dùng á nên là giá nó hơi cao. Nhưng mà bù lại nó hỗ trợ tốt dinh dưỡng cho chị Bích tốt á. Dạ.\\n[telesales] 04:48 Dạ thì chị Bích cứ dùng mỗi ngày một ly thôi là được, là hỗ trợ về xương khớp này, sau chủ yếu là mình khỏe trong người á chị Bích.\\n[customer] 04:54 Ờ.\\n[customer] 04:56 Cái bản là tại vì nó là một nóng nực, cái mà Bắc bây giờ nó đang nóng lắm nên đâm ra là cái vấn đề về uống sữa thì lười.\\n[telesales] 05:06 Dạ đúng rồi. Ở trong Nam tụi em cũng rất là nóng luôn nè. Nó bị hầm á chị Bích, đổ mồ hôi quá trời luôn.\\n[telesales] 05:12 Ngoài ngoài Bắc là gió nóng hay sao ta? Hay là nắng ta?\\n[customer] 05:15 Bữa nay mấy bữa nay thì bắt đầu nó thời tiết nó lại thay đổi nó là nó nó nắng lên ấy.\\n[telesales] 05:20 Ờ dạ. Nó có bị hầm không chị Bích?\\n[customer] 05:22 Có hầm hập hầm hập rồi.\\n[telesales] 05:24 Hầm hập hầm hập thì mình uống nhiều nước lọc thôi. Uống nhiều nước lọc vô cho nó ra mồ hôi cho nó mát người thôi chứ trong tụi em cũng nóng rất là nóng luôn. Tụi em không có máy lạnh hết.",
+      "label": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [04:21] 'Trời ơi nó nó mắc thế, đắt quá' ; [Telesales] [04:27] 'Dạ thì một lần chị Bích cứ pha tầm hai tới ba muỗng thôi...' — Không có lời đồng cảm hay làm dịu trước khi đưa giải pháp.\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi tư vấn, ví dụ 'Dạ em hiểu chị lo lắng về chi phí ạ' trước khi đưa giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [04:21] 'Trời ơi nó nó mắc thế, đắt quá' ; [Telesales] [04:27] 'Dạ thì một lần chị Bích cứ pha tầm hai tới ba muỗng thôi...' — Không hỏi thêm về mức giá khách thấy phù hợp hay lý do cụ thể khách thấy đắt.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ chị thấy mức giá nào thì phù hợp hơn ạ?' hoặc 'Chị đang so sánh với sản phẩm nào ạ?' để hiểu rõ nhu cầu.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesales] [04:39] 'Dạ do là cái đây là cái dòng sữa cao cấp được Bộ Y tế khuyên dùng á nên là giá nó hơi cao' ; [Telesales] [04:48] 'chị Bích cứ dùng mỗi ngày một ly thôi là được' — Có giải thích giá trị sản phẩm nhưng không có close attempt/chốt đơn.\",\n    \"g\": \"Cải thiện: Sau khi giải thích giá trị cần chốt đơn, ví dụ 'Vậy chị lấy giúp em một lon nha chị Bích ạ.'\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"S\",\n    \"e\": \"[Customer] [04:56] 'Bắc bây giờ nó đang nóng lắm nên đâm ra là cái vấn đề về uống sữa thì lười' ; [Telesales] [05:06] 'Dạ đúng rồi. Ở trong Nam tụi em cũng rất là nóng luôn nè. Nó bị hầm á chị Bích, đổ mồ hôi quá trời luôn.' — Thể hiện sự đồng cảm với tình trạng nóng bức của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[Telesales] [05:12] 'Ngoài ngoài Bắc là gió nóng hay sao ta? Hay là nắng ta?' ; [Telesales] [05:20] 'Nó có bị hầm không chị Bích?' — Hỏi làm rõ loại nhiệt độ khách gặp phải.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesales] [05:24] 'Hầm hập hầm hập thì mình uống nhiều nước lọc thôi. Uống nhiều nước lọc vô cho nó ra mồ hôi cho nó mát người thôi' — Chỉ đưa mẹo uống nước lọc, không đáp ứng trực tiếp nỗi lo khách lười uống sữa do nóng, không có close attempt.\",\n    \"g\": \"Cải thiện: Cần giải quyết trực tiếp vấn đề lười uống sữa do nóng (ví dụ gợi ý cách pha loãng, uống vào buổi sáng sớm), kèm close attempt như 'Em gửi chị một lon nhỏ dùng thử nha chị Bích ạ.'\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]",
+      "callID": "rec-14",
+      "recordID": "rec-14",
+      "source": "manual",
+      "output": "[\n  \"n\",\n  {\n    \"id\": 1,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [04:21] 'Trời ơi nó nó mắc thế, đắt quá' ; [Telesales] [04:27] 'Dạ thì một lần chị Bích cứ pha tầm hai tới ba muỗng thôi...' — Không có lời đồng cảm hay làm dịu trước khi đưa giải pháp.\",\n    \"g\": \"Cải thiện: Cần thể hiện sự đồng cảm trước khi tư vấn, ví dụ 'Dạ em hiểu chị lo lắng về chi phí ạ' trước khi đưa giải pháp.\"\n  },\n  \"n\",\n  {\n    \"id\": 2,\n    \"r\": \"U\",\n    \"e\": \"[Customer] [04:21] 'Trời ơi nó nó mắc thế, đắt quá' ; [Telesales] [04:27] 'Dạ thì một lần chị Bích cứ pha tầm hai tới ba muỗng thôi...' — Không hỏi thêm về mức giá khách thấy phù hợp hay lý do cụ thể khách thấy đắt.\",\n    \"g\": \"Cải thiện: Cần hỏi làm rõ, ví dụ 'Dạ chị thấy mức giá nào thì phù hợp hơn ạ?' hoặc 'Chị đang so sánh với sản phẩm nào ạ?' để hiểu rõ nhu cầu.\"\n  },\n  \"n\",\n  {\n    \"id\": 3,\n    \"r\": \"U\",\n    \"e\": \"[Telesales] [04:39] 'Dạ do là cái đây là cái dòng sữa cao cấp được Bộ Y tế khuyên dùng á nên là giá nó hơi cao' ; [Telesales] [04:48] 'chị Bích cứ dùng mỗi ngày một ly thôi là được' — Có giải thích giá trị sản phẩm nhưng không có close attempt/chốt đơn.\",\n    \"g\": \"Cải thiện: Sau khi giải thích giá trị cần chốt đơn, ví dụ 'Vậy chị lấy giúp em một lon nha chị Bích ạ.'\"\n  },\n  \"n\",\n  {\n    \"id\": 4,\n    \"r\": \"S\",\n    \"e\": \"[Customer] [04:56] 'Bắc bây giờ nó đang nóng lắm nên đâm ra là cái vấn đề về uống sữa thì lười' ; [Telesales] [05:06] 'Dạ đúng rồi. Ở trong Nam tụi em cũng rất là nóng luôn nè. Nó bị hầm á chị Bích, đổ mồ hôi quá trời luôn.' — Thể hiện sự đồng cảm với tình trạng nóng bức của khách.\"\n  },\n  \"n\",\n  {\n    \"id\": 5,\n    \"r\": \"S\",\n    \"e\": \"[Telesales] [05:12] 'Ngoài ngoài Bắc là gió nóng hay sao ta? Hay là nắng ta?' ; [Telesales] [05:20] 'Nó có bị hầm không chị Bích?' — Hỏi làm rõ loại nhiệt độ khách gặp phải.\"\n  },\n  \"n\",\n  {\n    \"id\": 6,\n    \"r\": \"U\",\n    \"e\": \"[Telesales] [05:24] 'Hầm hập hầm hập thì mình uống nhiều nước lọc thôi. Uống nhiều nước lọc vô cho nó ra mồ hôi cho nó mát người thôi' — Chỉ đưa mẹo uống nước lọc, không đáp ứng trực tiếp nỗi lo khách lười uống sữa do nóng, không có close attempt.\",\n    \"g\": \"Cải thiện: Cần giải quyết trực tiếp vấn đề lười uống sữa do nóng (ví dụ gợi ý cách pha loãng, uống vào buổi sáng sớm), kèm close attempt như 'Em gửi chị một lon nhỏ dùng thử nha chị Bích ạ.'\"\n  },\n  \"n\",\n  {\n    \"id\": 7,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 2 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tiếp tục xử lý từ chối ở vòng 3 nếu khách vẫn chưa đồng ý\"\n  },\n  \"n\",\n  {\n    \"id\": 8,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần hỏi thêm thông tin khách để tìm cơ hội chốt đơn ở vòng 3\"\n  },\n  \"n\",\n  {\n    \"id\": 9,\n    \"r\": \"U\",\n    \"e\": \"NO_DATA — Không có vòng từ chối thứ 3 trong cuộc gọi\",\n    \"g\": \"Cải thiện: Cần tạo urgency/scarcity và chốt đơn ở vòng cuối cùng\"\n  },\n  \"n\"\n]"
+    }
+  ]
+}

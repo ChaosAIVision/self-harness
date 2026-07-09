@@ -15,6 +15,7 @@ const rateClass = (r) => (r >= 0.7 ? "g" : r >= 0.5 ? "y" : "r");
 const go = (h) => { location.hash = h; };
 const STEP_TYPES = ["làm_dịu", "làm_rõ", "làm_hài_lòng"];
 const STEP_LABEL = { 1: "dịu", 2: "rõ", 3: "hl", 4: "dịu", 5: "rõ", 6: "hl", 7: "dịu", 8: "rõ", 9: "hl" };
+const STEP_TYPE  = { 1: "làm_dịu", 2: "làm_rõ", 3: "làm_hài_lòng", 4: "làm_dịu", 5: "làm_rõ", 6: "làm_hài_lòng", 7: "làm_dịu", 8: "làm_rõ", 9: "làm_hài_lòng" };
 const TYPE_COLOR = { "làm_dịu": "#d95926", "làm_rõ": "#9085e9", "làm_hài_lòng": "#199e70", overall: "#3987e5" };
 
 // ── Router ──
@@ -752,6 +753,307 @@ async function openBenchRun(runId, scroll = true) {
   const r = await api("/bench/runs/" + runId);
   bench.result = r; renderBenchResult(r); loadBenchHistory();
   if (scroll) document.getElementById("bResult").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// ── Compare (multi-version diff) ────────────────────────────────────
+let compareState = { versions: ["", ""], allVersions: [] };
+
+route(/^\/compare$/, async () => {
+  const vs = await api("/versions").catch(() => ({ versions: [] }));
+  compareState.allVersions = vs.versions || [];
+  app.innerHTML = compareShell();
+  // Auto-load nếu đã có đủ 2 versions được chọn từ lần trước
+  if (compareState.versions.filter(Boolean).length >= 2) {
+    document.getElementById("cResult").innerHTML = `<div class="loading">Loading…</div>`;
+    loadCompare();
+  }
+});
+
+function compareVersionOpts(selected) {
+  return compareState.allVersions.map(v =>
+    `<option value="${esc(v)}" ${v === selected ? "selected" : ""}>${esc(v)}</option>`
+  ).join("");
+}
+
+function compareShell() {
+  const [a, b, c] = compareState.versions;
+  const hasThird = compareState.versions.length >= 3;
+  return `
+    <div class="row" style="margin-bottom:18px;align-items:center;flex-wrap:wrap;gap:14px">
+      <h1 style="margin:0">Compare Versions</h1>
+      <span class="muted" style="font-size:12px">Chọn 2–3 versions để xem cải thiện</span>
+    </div>
+    <div class="compare-selector">
+      <div class="cs-group">
+        <label class="cs-label">Version A</label>
+        <select onchange="compareSetVersion(0,this.value)">
+          <option value="">— chọn —</option>${compareVersionOpts(a || "")}
+        </select>
+      </div>
+      <div class="cs-arrow">→</div>
+      <div class="cs-group">
+        <label class="cs-label">Version B</label>
+        <select onchange="compareSetVersion(1,this.value)">
+          <option value="">— chọn —</option>${compareVersionOpts(b || "")}
+        </select>
+      </div>
+      ${hasThird ? `
+      <div class="cs-arrow">→</div>
+      <div class="cs-group">
+        <label class="cs-label">Version C</label>
+        <select onchange="compareSetVersion(2,this.value)">
+          <option value="">— chọn —</option>${compareVersionOpts(c || "")}
+        </select>
+        <button class="mini" onclick="compareRemoveThird()" title="Bỏ version C">✕</button>
+      </div>` : `
+      <button class="ghost" onclick="compareAddThird()" style="align-self:flex-end;padding:7px 14px;font-size:12px">+ Add version C</button>`}
+      <div class="grow"></div>
+      <button onclick="loadCompare()" style="align-self:flex-end">Compare</button>
+    </div>
+    <div id="cResult" style="margin-top:24px"></div>`;
+}
+
+window.compareSetVersion = (idx, val) => {
+  compareState.versions[idx] = val;
+};
+window.compareAddThird = () => {
+  compareState.versions = [compareState.versions[0] || "", compareState.versions[1] || "", ""];
+  app.innerHTML = compareShell();
+};
+window.compareRemoveThird = () => {
+  compareState.versions = [compareState.versions[0] || "", compareState.versions[1] || ""];
+  app.innerHTML = compareShell();
+  if (compareState.versions.filter(Boolean).length >= 2) loadCompare();
+};
+
+async function loadCompare() {
+  const sel = compareState.versions.filter(Boolean);
+  if (sel.length < 2) {
+    document.getElementById("cResult").innerHTML =
+      `<div class="panel muted" style="text-align:center;padding:32px">Chọn ít nhất 2 versions để so sánh.</div>`;
+    return;
+  }
+  const el = document.getElementById("cResult");
+  el.innerHTML = `<div class="loading">Đang tải dữ liệu…</div>`;
+  try {
+    const data = await api("/compare?versions=" + sel.map(encodeURIComponent).join(","));
+    compareState.lastData = data;
+    el.innerHTML = renderCompareResult(data);
+    // Wire diff accordions
+    el.querySelectorAll(".diff-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (!target) return;
+        const open = target.style.display !== "none";
+        target.style.display = open ? "none" : "block";
+        btn.textContent = btn.dataset.label + (open ? " ▾" : " ▴");
+      });
+    });
+  } catch (e) {
+    el.innerHTML = `<div class="panel"><span class="pill bad">Error</span> ${esc(e.message)}</div>`;
+  }
+}
+
+function renderCompareResult(data) {
+  const vs = data.versions;
+  const overall = data.overall || {};
+  const byStep = data.by_step || {};
+  const byType = data.by_type || {};
+  const patterns = data.failure_patterns || [];
+  const diffs = data.diffs || {};
+
+  // ── Overall bar ──
+  const overallCards = vs.map((v, i) => {
+    const rate = overall[v] || 0;
+    const prev = i > 0 ? (overall[vs[i - 1]] || 0) : null;
+    const delta = prev !== null ? rate - prev : null;
+    return `
+      <div class="cv-card">
+        <div class="cv-version">${esc(v)}</div>
+        <div class="cv-pct">${pct(rate)}</div>
+        ${delta !== null ? `<div class="delta ${delta >= 0 ? "up" : "down"}">${delta >= 0 ? "▲" : "▼"}${(Math.abs(delta) * 100).toFixed(1)}%</div>` : ""}
+      </div>`;
+  }).join('<div class="cv-sep">→</div>');
+
+  // ── By-type summary ──
+  const allTypes = [...new Set(Object.keys(byType))];
+  const typeRows = allTypes.map(stype => {
+    const color = TYPE_COLOR[stype] || "var(--accent)";
+    const cells = vs.map((v, i) => {
+      const rate = (byType[stype] || {})[v];
+      if (rate == null) return `<td class="num cmp-cell"><span class="muted">–</span><div></div></td>`;
+      const prev = i > 0 ? (byType[stype] || {})[vs[i - 1]] : null;
+      const delta = prev != null ? rate - prev : null;
+      const dc = delta == null ? "" : delta > 0.005 ? "up" : delta < -0.005 ? "down" : "";
+      const badge = delta != null && Math.abs(delta) >= 0.001
+        ? `<div class="delta ${dc}">${delta >= 0 ? "▲" : "▼"}${(Math.abs(delta) * 100).toFixed(1)}%</div>` : "<div></div>";
+      return `<td class="num cmp-cell"><span class="cell ${rateClass(rate)}">${pct(rate)}</span>${badge}</td>`;
+    }).join("");
+    return `<tr><td><span style="color:${color};font-weight:600">${esc(stype)}</span></td>${cells}</tr>`;
+  }).join("");
+
+  // ── Per-step heatmap ──
+  const stepIds = Object.keys(byStep).map(Number).sort((a, b) => a - b);
+  const stepRows = stepIds.map(sid => {
+    const sdata = byStep[String(sid)] || {};
+    const stype = STEP_TYPE[sid] || "";
+    const cells = vs.map((v, i) => {
+      const rate = sdata[v];
+      if (rate == null) return `<td class="num cmp-cell"><span class="muted">–</span><div></div></td>`;
+      const prev = i > 0 ? sdata[vs[i - 1]] : null;
+      const delta = prev != null ? rate - prev : null;
+      const dc = delta == null ? "" : delta > 0.005 ? "up" : delta < -0.005 ? "down" : "";
+      const badge = delta != null && Math.abs(delta) >= 0.001
+        ? `<div class="delta ${dc}">${delta >= 0 ? "▲" : "▼"}${(Math.abs(delta) * 100).toFixed(1)}%</div>` : "<div></div>";
+      return `<td class="num cmp-cell"><span class="cell ${rateClass(rate)}">${pct(rate)}</span>${badge}</td>`;
+    }).join("");
+    return `<tr><td>${sid}</td><td class="muted">${esc(stype)}</td>${cells}</tr>`;
+  }).join("");
+
+  const vHeaders = vs.map(v => `<th class="num cmp-vh">${esc(v)}</th>`).join("");
+
+  // ── Failure patterns ──
+  const patRows = patterns.map(p => {
+    const vmap = p.versions || {};
+    const cells = vs.map((v, i) => {
+      const present = vmap[v];
+      const prevPresent = i > 0 ? vmap[vs[i - 1]] : null;
+      // fixed = was present before, not now
+      const fixed = prevPresent === true && present === false;
+      // new = was not present before, now is
+      const appeared = prevPresent === false && present === true;
+      let icon, cls;
+      if (present) { icon = "✗"; cls = "pat-bad"; }
+      else if (fixed) { icon = "✓ fixed"; cls = "pat-ok"; }
+      else if (appeared) { icon = "✗ new"; cls = "pat-bad"; }
+      else { icon = "–"; cls = "pat-na"; }
+      return `<td class="num cmp-cell"><span class="${cls}">${icon}</span><div></div></td>`;
+    }).join("");
+    return `<tr><td style="font-size:12.5px;line-height:1.6;white-space:normal;min-width:260px">${esc(p.pattern)}</td>
+      <td style="white-space:nowrap"><span class="pill neutral">${esc(p.step_type || "–")}</span></td>${cells}</tr>`;
+  }).join("");
+
+  // ── Prompt diffs ──
+  const diffKeys = Object.keys(diffs);
+  const diffBlocks = diffKeys.map((key, i) => {
+    const id = `cdiff_${i}`;
+    return `
+      <button class="ghost diff-toggle" data-target="${id}" data-label="${esc(key)}" style="margin:0 8px 0 0;font-family:var(--mono);font-size:12px">
+        ${esc(key)} ▾
+      </button>
+      <div id="${id}" style="display:none;margin-top:10px">
+        ${diffs[key] ? `<pre class="diff">${renderDiff(diffs[key])}</pre>` : `<p class="muted">Không có diff.</p>`}
+      </div>`;
+  }).join("");
+
+  return `
+    <!-- Overall -->
+    <div class="panel">
+      <h2 style="margin-top:0">Overall Agreement</h2>
+      <div class="cv-overall">${overallCards}</div>
+    </div>
+
+    <!-- By type -->
+    ${typeRows ? `<div class="panel">
+      <h2 style="margin-top:0">By Step Type</h2>
+      <table><thead><tr><th>Type</th>${vHeaders}</tr></thead><tbody>${typeRows}</tbody></table>
+    </div>` : ""}
+
+    <!-- Per-step heatmap -->
+    <div class="panel">
+      <h2 style="margin-top:0">Per-Step Agreement</h2>
+      ${stepRows ? `<table><thead><tr><th>Step</th><th>Type</th>${vHeaders}</tr></thead><tbody>${stepRows}</tbody></table>`
+        : `<p class="muted">Không có trace data cho các versions này.</p>`}
+    </div>
+
+    <!-- Failure patterns -->
+    <div class="panel">
+      <h2 style="margin-top:0">Failure Patterns <span class="muted" style="font-weight:400;font-size:12px">(✗ = còn lỗi · ✓ fixed = đã fix · – = không xuất hiện)</span></h2>
+      ${patRows ? `<table><thead><tr><th>Pattern</th><th>Type</th>${vHeaders}</tr></thead><tbody>${patRows}</tbody></table>`
+        : `<p class="muted">Không có failure pattern data.</p>`}
+    </div>
+
+    <!-- Prompt diffs -->
+    ${diffKeys.length ? `<div class="panel">
+      <h2 style="margin-top:0">Prompt Diff</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">${diffBlocks}</div>
+    </div>` : ""}
+
+    <!-- Export -->
+    <div style="margin-top:8px;text-align:right">
+      <button class="ghost" onclick="exportCompareHTML()" style="font-size:12px;padding:7px 16px">
+        ⬇ Export HTML
+      </button>
+    </div>`;
+}
+
+function exportCompareHTML() {
+  const data = compareState.lastData;
+  if (!data) return;
+
+  const vs = data.versions || [];
+  const title = `Compare: ${vs.join(" → ")}`;
+  const generated = new Date().toLocaleString("vi-VN");
+
+  // Rebuild content with diffs expanded (no toggle buttons — all visible)
+  const diffs = data.diffs || {};
+  const diffSection = Object.keys(diffs).map(key =>
+    `<h3 style="margin:18px 0 8px;font-size:13px">${esc(key)}</h3>
+     ${diffs[key] ? `<pre class="diff">${renderDiff(diffs[key])}</pre>` : `<p class="muted">Không có diff.</p>`}`
+  ).join("");
+
+  // Reuse renderCompareResult but strip interactive elements
+  // Build a static version: re-render with diffs inline
+  const bodyHTML = renderCompareResult(data)
+    // Remove the export button block
+    .replace(/<div style="margin-top:8px;text-align:right">[\s\S]*?<\/div>/, "")
+    // Remove diff-toggle buttons, replace diff containers with visible content
+    .replace(/<button class="ghost diff-toggle"[^>]*>[\s\S]*?<\/button>/g, "")
+    .replace(/style="display:none;margin-top:10px"/g, 'style="margin-top:10px"');
+
+  // Fetch current CSS inline
+  const cssText = [...document.styleSheets].flatMap(s => {
+    try { return [...s.cssRules].map(r => r.cssText); } catch { return []; }
+  }).join("\n");
+
+  const html = `<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>${esc(title)}</title>
+  <style>
+    ${cssText}
+    /* Export overrides */
+    body { background: #0d1013; color: #e6e8ec; padding: 0; margin: 0; }
+    main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    .export-header { margin-bottom: 28px; border-bottom: 1px solid #262b33; padding-bottom: 16px; }
+    .export-header h1 { margin: 0 0 4px; font-size: 20px; }
+    .export-header .meta { color: #7a838e; font-size: 12px; }
+    .diff-toggle { display: none; }
+    [id^="cdiff_"] { display: block !important; }
+    pre.diff { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="export-header">
+      <h1>${esc(title)}</h1>
+      <div class="meta">Xuất lúc ${esc(generated)} · Self-Harness Dashboard</div>
+    </div>
+    ${bodyHTML}
+    ${diffSection ? `<div class="panel"><h2 style="margin-top:0">Prompt Diff (đầy đủ)</h2>${diffSection}</div>` : ""}
+  </main>
+</body>
+</html>`;
+
+  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `compare_${vs.join("_vs_")}_${new Date().toISOString().slice(0,10)}.html`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 render();

@@ -1,0 +1,85 @@
+{
+  "round_id": "D.0.1.0_to_vD.1.0",
+  "from_version": "D.0.1.0",
+  "to_version": "vD.1.0",
+  "baseline_in": 0.375,
+  "baseline_out": 0.3333333333333333,
+  "final_in": 1.0,
+  "final_out": 0.3333333333333333,
+  "proposals_tried": [
+    {
+      "proposal_id": "p_001",
+      "target_failure": "làm_dịu steps 4, 7 — model accepts perfunctory acknowledgments",
+      "proposed_change_summary": "Replace the current làm_dịu rule with: 'Cần: telesales phải thể hiện sự đồng cảm thực sự với cảm xúc khách hàng (ví dụ: 'em hiểu chị lo lắng', 'em biết điều này khó khăn cho chị'), không chỉ xác nhận ",
+      "accepted": true,
+      "delta_in": 0.25,
+      "delta_out": 0.0
+    },
+    {
+      "proposal_id": "p_002",
+      "target_failure": "làm_rõ step 5 — model misclassifies closed/irrelevant questions as S",
+      "proposed_change_summary": "Add to làm_rõ rule: 'Câu hỏi được tính là làm_rõ khi: (a) mở để khách chia sẻ thêm lý do từ chối (ví dụ: 'chị có thể chia sẻ thêm lý do chị chưa muốn dùng không ạ?'), (b) hoặc khách tự nêu lý do rõ rà",
+      "accepted": true,
+      "delta_in": 0.625,
+      "delta_out": 0.0
+    },
+    {
+      "proposal_id": "p_003",
+      "target_failure": "làm_dịu steps 4, 7 — model fails to detect abrupt/incomplete endings",
+      "proposed_change_summary": "Add to làm_dịu rule: 'Nếu telesales cắt ngang câu khách đang nói, không hoàn thành câu đồng cảm, hoặc kết thúc cuộc gọi ngay sau khi khách từ chối → U. Telesales phải có đủ câu đồng cảm trước khi chuy",
+      "accepted": true,
+      "delta_in": 0.375,
+      "delta_out": 0.0
+    },
+    {
+      "proposal_id": "combo_001_002",
+      "target_failure": "",
+      "proposed_change_summary": "",
+      "accepted": true,
+      "delta_in": 0.25,
+      "delta_out": 0.0
+    }
+  ],
+  "failure_statuses": [
+    {
+      "pattern": "Model misclassifies step 4 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 1,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 5 (làm_rõ)",
+      "step_type": "làm_rõ",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_002"
+      ],
+      "count_before": 1,
+      "count_after": null
+    },
+    {
+      "pattern": "Model misclassifies step 7 (làm_dịu)",
+      "step_type": "làm_dịu",
+      "first_seen": "drop.0.1.0",
+      "still_present": true,
+      "attempts": [
+        "p_001",
+        "p_003"
+      ],
+      "count_before": 1,
+      "count_after": null
+    }
+  ],
+  "what_worked": "Parse error — could not generate reflection",
+  "what_failed": "",
+  "what_persists": "",
+  "lesson": "",
+  "avoid_next": ""
+}

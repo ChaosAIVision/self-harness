@@ -1,0 +1,16 @@
+{
+  "round_id": "vD.1.0_to_no_change",
+  "from_version": "vD.1.0",
+  "to_version": null,
+  "baseline_in": 1.0,
+  "baseline_out": 0.3333333333333333,
+  "final_in": null,
+  "final_out": null,
+  "proposals_tried": [],
+  "failure_statuses": [],
+  "what_worked": "Parse error — could not generate reflection",
+  "what_failed": "",
+  "what_persists": "",
+  "lesson": "",
+  "avoid_next": ""
+}

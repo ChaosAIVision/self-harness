@@ -181,19 +181,34 @@ class _LogStream(io.TextIOBase):
 
 # ── Input setup (prompt + data + split) ─────────────────────────────
 def _setup_run_inputs(prompt: str, data_text: str, held_in_n: int | None,
-                      held_out_n: int | None, base_version: str) -> dict:
-    """Write the provided prompt + dataset into the real harness so the pipeline
-    runs on THEM. Returns a small summary. Mutates config paths at runtime."""
+                      held_out_n: int | None, base_version: str,
+                      run_id: str | None = None) -> dict:
+    """Write the provided prompt + dataset into an isolated runner-session
+    directory so the pipeline runs on THEM without touching the original
+    benchmark files (docs/test/xltc/sample_test.jsonl and
+    configs/benchmarks/held_*.yaml).
+
+    Data is written to data/runner_sessions/<run_id>/ instead of the shared
+    data/benchmark/ directory. Config paths are redirected in-process only for
+    the current pipeline run.
+
+    Returns a small summary dict.
+    """
     summary: dict = {}
 
-    # 1) Dataset → benchmark file + held_in/held_out split
+    # 1) Dataset → isolated session directory (never overwrites shared benchmark)
     if data_text and data_text.strip():
         records, warnings = bench.parse_records(data_text)
         if not records:
             raise ValueError("No valid records in data (each record needs at least: input + label).")
-        bench_dir = config.DATA_DIR / "benchmark"
-        bench_dir.mkdir(parents=True, exist_ok=True)
-        bpath = bench_dir / "current.jsonl"
+
+        # Use a per-run subdirectory so concurrent/sequential runs don't clash
+        # and the original benchmark is never touched.
+        session_id = run_id or f"run_{int(time.time())}"
+        session_dir = config.DATA_DIR / "runner_sessions" / session_id
+        session_dir.mkdir(parents=True, exist_ok=True)
+
+        bpath = session_dir / "data.jsonl"
         bpath.write_text(
             "\n".join(json.dumps(r, ensure_ascii=False) for r in records) + "\n",
             encoding="utf-8",
@@ -205,12 +220,13 @@ def _setup_run_inputs(prompt: str, data_text: str, held_in_n: int | None,
         ho = min(ho, max(0, n - hi))
         held_in_ids = list(range(0, hi))
         held_out_ids = list(range(hi, hi + ho)) if ho > 0 else list(range(0, hi))
-        (bench_dir / "held_in.yaml").write_text(yaml.dump({"ids": held_in_ids}), encoding="utf-8")
-        (bench_dir / "held_out.yaml").write_text(yaml.dump({"ids": held_out_ids}), encoding="utf-8")
-        # Redirect config to the uploaded dataset for this process.
+        (session_dir / "held_in.yaml").write_text(yaml.dump({"ids": held_in_ids}), encoding="utf-8")
+        (session_dir / "held_out.yaml").write_text(yaml.dump({"ids": held_out_ids}), encoding="utf-8")
+
+        # Redirect config in-process only — original paths on disk are untouched.
         config.BENCHMARK_PATH = bpath
-        config.HELD_IN_IDS_FILE = bench_dir / "held_in.yaml"
-        config.HELD_OUT_IDS_FILE = bench_dir / "held_out.yaml"
+        config.HELD_IN_IDS_FILE = session_dir / "held_in.yaml"
+        config.HELD_OUT_IDS_FILE = session_dir / "held_out.yaml"
         summary.update(records=n, held_in=len(held_in_ids), held_out=len(held_out_ids), warnings=warnings)
 
     # 2) Prompt → base harness version + current.yaml
@@ -229,6 +245,20 @@ def _setup_run_inputs(prompt: str, data_text: str, held_in_n: int | None,
 
 
 # ── Pipeline background runner ──────────────────────────────────────
+# Original config paths, captured once at import time so we can restore them
+# after a runner session that redirected them to a temp directory.
+_ORIG_BENCHMARK_PATH = config.BENCHMARK_PATH
+_ORIG_HELD_IN_IDS_FILE = config.HELD_IN_IDS_FILE
+_ORIG_HELD_OUT_IDS_FILE = config.HELD_OUT_IDS_FILE
+
+
+def _restore_config_paths() -> None:
+    """Restore config to the original on-disk benchmark after a runner session."""
+    config.BENCHMARK_PATH = _ORIG_BENCHMARK_PATH
+    config.HELD_IN_IDS_FILE = _ORIG_HELD_IN_IDS_FILE
+    config.HELD_OUT_IDS_FILE = _ORIG_HELD_OUT_IDS_FILE
+
+
 def _run_pipeline_bg(run_id: str, max_rounds: int, min_improvement: float, dry_limit: int):
     from orchestrator import run_round  # imported lazily so read-only API stays cheap
 
@@ -281,6 +311,9 @@ def _run_pipeline_bg(run_id: str, max_rounds: int, min_improvement: float, dry_l
         pipeline_state["running"] = False
         pipeline_state["current_step"] = None
         _log("done", "Pipeline finished.")
+        # Restore config to original benchmark so subsequent CLI runs or
+        # dashboard read operations are not affected by this session's data.
+        _restore_config_paths()
 
 
 # ── Pipeline endpoints ──────────────────────────────────────────────
@@ -307,15 +340,16 @@ async def start_run(body: dict | None = None):
     dry_limit = int(body.get("dry_streak", 2))
     base_version = (body.get("base_version") or "v0.1.0").strip()
 
+    run_id = f"run_{int(time.time())}"
     try:
         setup = _setup_run_inputs(
             body.get("prompt", ""), body.get("data", ""),
             body.get("held_in"), body.get("held_out"), base_version,
+            run_id=run_id,
         )
     except Exception as e:  # noqa: BLE001
         return JSONResponse({"error": str(e)}, status_code=400)
 
-    run_id = f"run_{int(time.time())}"
     pipeline_state.update(
         running=True, run_id=run_id, logs=[], current_step="starting",
         current_round=0, max_rounds=max_rounds, stop_requested=False, summary=None,
@@ -651,6 +685,118 @@ async def review_stats():
 @app.get("/api/reflections")
 async def reflections():
     return [r.model_dump() for r in load_all_reflections()]
+
+
+# ── Compare (multi-version diff) ────────────────────────────────────
+@app.get("/api/compare")
+async def compare_versions(versions: str):
+    """Compare 2–3 harness versions side-by-side.
+
+    Query param: versions=v0.1.0,v0.2.0,v0.3.0  (comma-separated, max 3)
+
+    Returns:
+      overall      — {version: agreement_rate}
+      by_step      — {step_id: {version: rate}}
+      by_type      — {step_type: {version: rate}}
+      failure_patterns — [{pattern, step_type, versions: {v: bool}}]
+      diffs        — {"vA→vB": unified_diff_str, ...}
+    """
+    vs = [v.strip() for v in (versions or "").split(",") if v.strip()][:3]
+    if len(vs) < 2:
+        return JSONResponse({"error": "Cần ít nhất 2 versions để so sánh."}, status_code=400)
+
+    overall: dict = {}
+    by_step: dict = {}
+    by_type: dict = {}
+    failure_map: dict = {}   # pattern → {step_type, versions: {v: bool}}
+    diffs: dict = {}
+
+    for v in vs:
+        traces = _load_traces(v)
+
+        # ── overall ──
+        m_all = sum(t.verifier.steps_matched for t in traces if t.verifier)
+        t_all = sum(t.verifier.steps_total for t in traces if t.verifier)
+        overall[v] = m_all / t_all if t_all else 0.0
+
+        # ── per-step ──
+        for sid in range(1, 10):
+            m = tot = 0
+            for t in traces:
+                gt = {s.id: s.r for s in t.ground_truth_steps}
+                pred = {s.id: s.r for s in t.parsed_steps}
+                if sid in gt and sid in pred:
+                    tot += 1
+                    if gt[sid] == pred[sid]:
+                        m += 1
+            if tot:
+                by_step.setdefault(str(sid), {})[v] = m / tot
+
+        # ── per-type (aggregate of step rates) ──
+        groups: dict[str, list[float]] = {}
+        for sid_str, step_vs in by_step.items():
+            stype = STEP_TYPE.get(int(sid_str))
+            if stype and v in step_vs:
+                groups.setdefault(stype, []).append(step_vs[v])
+        for stype, rates in groups.items():
+            by_type.setdefault(stype, {})[v] = sum(rates) / len(rates)
+
+        # ── failure patterns from mined_failures/<v>.json ──
+        fp = config.DATA_DIR / "mined_failures" / f"{v}.json"
+        if fp.exists():
+            try:
+                bundle = json.loads(fp.read_text(encoding="utf-8"))
+                for c in bundle.get("clusters", []):
+                    pat = c.get("pattern", "")
+                    if not pat:
+                        continue
+                    if pat not in failure_map:
+                        failure_map[pat] = {"step_type": c.get("step_type", ""), "versions": {}}
+                    failure_map[pat]["versions"][v] = True
+            except Exception:
+                pass
+
+    # mark missing versions as False (pattern didn't appear = not a problem there)
+    for info in failure_map.values():
+        for v in vs:
+            info["versions"].setdefault(v, False)
+
+    # ── prompt diffs between consecutive versions ──
+    for i in range(len(vs) - 1):
+        a, b = vs[i], vs[i + 1]
+        pa = config.HARNESS_DIR / "versions" / f"{a}.md"
+        pb = config.HARNESS_DIR / "versions" / f"{b}.md"
+        if pa.exists() and pb.exists():
+            diffs[f"{a}→{b}"] = "".join(difflib.unified_diff(
+                pa.read_text(encoding="utf-8").splitlines(keepends=True),
+                pb.read_text(encoding="utf-8").splitlines(keepends=True),
+                fromfile=a, tofile=b,
+            ))
+
+    # Sort failure patterns: patterns fixed in later versions first, then still-present ones
+    def _pat_sort_key(item):
+        pat, info = item
+        _ = pat  # used as dict key — suppress unused-variable warning
+        vmap = info["versions"]
+        n_present = sum(1 for v in vs if vmap.get(v))
+        last_present = max((i for i, v in enumerate(vs) if vmap.get(v)), default=-1)
+        # fixed = present in early versions but not last → sort first (lowest key)
+        fixed = vmap.get(vs[0], False) and not vmap.get(vs[-1], False)
+        return (0 if fixed else 1, -n_present, -last_present)
+
+    sorted_patterns = [
+        {"pattern": pat, "step_type": info["step_type"], "versions": info["versions"]}
+        for pat, info in sorted(failure_map.items(), key=_pat_sort_key)
+    ]
+
+    return {
+        "versions": vs,
+        "overall": overall,
+        "by_step": by_step,
+        "by_type": by_type,
+        "failure_patterns": sorted_patterns,
+        "diffs": diffs,
+    }
 
 
 # ── Bench (prompt eval workbench) ───────────────────────────────────

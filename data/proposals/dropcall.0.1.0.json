@@ -1,0 +1,29 @@
+[
+  {
+    "proposal_id": "p_001",
+    "target_failure": "step 4 làm_dịu",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to the làm_dịu rules: 'Step 4 is S if telesales responds to the customer's first objection with a response that acknowledges the customer's concern or situation — this includes paraphrasing the concern, expressing understanding, or validating the customer's perspective. The response must be contextually connected to the customer's stated objection, not a generic or unrelated statement. Responses that only say 'dạ' or 'vâng' without any empathetic content toward the specific objection are U.'",
+    "insertion_point": "after the làm_dịu group definition in the <steps> section",
+    "expected_gain": "Distinguishes genuine empathy from perfunctory acknowledgments by requiring contextual connection to the customer's specific objection, reducing false S on minimal 'dạ/vâng' responses",
+    "risk": "May increase false U if telesales uses indirect or subtle empathy that doesn't explicitly paraphrase the objection"
+  },
+  {
+    "proposal_id": "p_002",
+    "target_failure": "step 6 làm_hài_lòng",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to the làm_hài_lòng rules: 'Step 6 is S if telesales responds to the customer's second objection with any attempt to address the objection — this includes directly answering the concern, offering a solution, or providing reassurance. The response does not need to include specific CTKM or Urbox. Indirect reassurance such as highlighting product benefits, suggesting alternatives, or offering to adjust the offer is acceptable. The response must be contextually relevant to the customer's second objection.'",
+    "insertion_point": "after the làm_hài_lòng group definition in the <steps> section",
+    "expected_gain": "Reduces false U by accepting indirect but contextually relevant reassurance instead of requiring specific CTKM/Urbox mentions, and by evaluating relevance to the second objection",
+    "risk": "May increase false S if telesales responds to a different objection than the customer's second one"
+  },
+  {
+    "proposal_id": "p_003",
+    "target_failure": "step 5 làm_rõ",
+    "editable_surface": "system_prompt",
+    "proposed_change": "Add to the làm_rõ rules: 'Step 5 is S if telesales asks a clarifying or open-ended question that helps understand the customer's second objection — this includes asking about the reason for refusal, the customer's situation, or any other relevant detail. The question must be contextually connected to the customer's second objection. If the customer's second objection is already clear and self-explanatory, telesales may skip probing and go directly to làm_hài_lòng — in this case, step 5 is S without probing. If the customer's second objection is already clear and self-explanatory, telesales may skip probing and go directly to làm_hài_lòng — in this case, step 5 is S without probing.'",
+    "insertion_point": "after the làm_rõ group definition in the <steps> section",
+    "expected_gain": "Reduces false U by exempting clear/self-explanatory second objections from the probing requirement, and by requiring contextual connection between the question and the objection",
+    "risk": "May increase false S if telesales asks a question that is not connected to the customer's objection"
+  }
+]
